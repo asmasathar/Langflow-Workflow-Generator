@@ -1,0 +1,2836 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-1aBcD",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "transcript_id",
+            "id": "AssemblyAITranscriptionJobPoller-AtD0i",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-ChatInput-1aBcD{œdataTypeœ:œChatInputœ,œidœ:œChatInput-1aBcDœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-AssemblyAITranscriptionJobPoller-AtD0i{œfieldNameœ:œtranscript_idœ,œidœ:œAssemblyAITranscriptionJobPoller-AtD0iœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "ChatInput-1aBcD",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-1aBcDœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "AssemblyAITranscriptionJobPoller-AtD0i",
+        "targetHandle": "{œfieldNameœ:œtranscript_idœ,œidœ:œAssemblyAITranscriptionJobPoller-AtD0iœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-1aBcD",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-3gHiJ",
+            "inputTypes": [
+              "Data",
+              "DataFrame",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-ChatInput-1aBcD{œdataTypeœ:œChatInputœ,œidœ:œChatInput-1aBcDœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-3gHiJ{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-3gHiJœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "ChatInput-1aBcD",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-1aBcDœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-3gHiJ",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-3gHiJœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "description": "Get chat inputs from the Playground.",
+          "display_name": "Meeting Audio Input",
+          "id": "ChatInput-1aBcD",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "Meeting Audio Input",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "sender",
+              "sender_name",
+              "should_store_message"
+            ],
+            "frozen": false,
+            "icon": "message-circle",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "files": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "file_path": "",
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "temp_file": true,
+                "list": true,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "files",
+                "value": "",
+                "display_name": "Files",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Files to be sent with the message.",
+                "title_case": false,
+                "type": "file",
+                "_input_type": "FileInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom lfx.base.io.chat import ChatComponent\nfrom lfx.inputs.inputs import BoolInput\nfrom lfx.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom lfx.schema.message import Message\nfrom lfx.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        # Ensure files is a list and filter out empty/None values\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        # Filter out None/empty values\n        files = [f for f in files if f is not None and f != \"\"]\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=files,\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "input_value": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "",
+                "display_name": "Input Text",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "sender": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender",
+                "value": "User",
+                "display_name": "Sender Type",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Type of sender.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "sender_name": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender_name",
+                "value": "User",
+                "display_name": "Sender Name",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "session_id": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "session_id",
+                "value": "",
+                "display_name": "Session ID",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "should_store_message": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "should_store_message",
+                "value": true,
+                "display_name": "Store Messages",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              }
+            }
+          },
+          "selected_output": "message",
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "ChatInput-1aBcD",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Loads content from one or more files.",
+          "display_name": "Audio File Loader",
+          "id": "File-iFzNE",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Loads content from one or more files.",
+            "display_name": "Audio File Loader",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "advanced_mode",
+              "concurrency_multithreading",
+              "delete_server_file_after_processing",
+              "doc_key",
+              "ignore_unspecified_files",
+              "ignore_unsupported_extensions",
+              "markdown",
+              "md_image_placeholder",
+              "ocr_engine",
+              "pipeline",
+              "separator",
+              "silent_errors",
+              "use_multithreading",
+              "file_path"
+            ],
+            "frozen": false,
+            "icon": "file-text",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Raw Content",
+                "group_outputs": false,
+                "method": "load_files_message",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "file_path": {
+                "trace_as_metadata": true,
+                "list": true,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "file_path",
+                "value": "/path/to/meeting_recording.mp3",
+                "display_name": "Server File Path",
+                "advanced": true,
+                "input_types": [
+                  "Data",
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Data object with a 'file_path' property pointing to server file or a Message object with a path to the file. Supercedes 'Path' but supports same file types.",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "path": {
+                "tool_mode": true,
+                "trace_as_metadata": true,
+                "file_path": "",
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "adoc",
+                  "asciidoc",
+                  "asc",
+                  "bmp",
+                  "dotx",
+                  "dotm",
+                  "docm",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "potx",
+                  "ppsx",
+                  "pptm",
+                  "potm",
+                  "ppsm",
+                  "pptx",
+                  "tiff",
+                  "xls",
+                  "xlsx",
+                  "xhtml",
+                  "webp",
+                  "zip",
+                  "tar",
+                  "tgz",
+                  "bz2",
+                  "gz"
+                ],
+                "temp_file": false,
+                "list": true,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "path",
+                "value": [],
+                "display_name": "Files",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Supported file extensions: csv, json, pdf, txt, md, mdx, yaml, yml, xml, html, htm, docx, py, sh, sql, js, ts, tsx, adoc, asciidoc, asc, bmp, dotx, dotm, docm, jpg, jpeg, png, potx, ppsx, pptm, potm, ppsm, pptx, tiff, xls, xlsx, xhtml, webp; optionally bundled in file extensions: zip, tar, tgz, bz2, gz",
+                "real_time_refresh": true,
+                "title_case": false,
+                "type": "file",
+                "_input_type": "FileInput"
+              },
+              "advanced_mode": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "advanced_mode",
+                "value": false,
+                "display_name": "Advanced Parser",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Enable advanced document processing and export with Docling for PDFs, images, and office documents. Note that advanced document processing can consume significant resources.",
+                "real_time_refresh": true,
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "\"\"\"Enhanced file component with Docling support and process isolation.\n\nNotes:\n-----\n- ALL Docling parsing/export runs in a separate OS process to prevent memory\n  growth and native library state from impacting the main Langflow process.\n- Standard text/structured parsing continues to use existing BaseFileComponent\n  utilities (and optional threading via `parallel_load_data`).\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport subprocess\nimport sys\nimport textwrap\nfrom copy import deepcopy\nfrom typing import Any\n\nfrom lfx.base.data.base_file import BaseFileComponent\nfrom lfx.base.data.utils import TEXT_FILE_TYPES, parallel_load_data, parse_text_file_to_data\nfrom lfx.inputs.inputs import DropdownInput, MessageTextInput, StrInput\nfrom lfx.io import BoolInput, FileInput, IntInput, Output\nfrom lfx.schema.data import Data\nfrom lfx.schema.dataframe import DataFrame  # noqa: TC001\nfrom lfx.schema.message import Message\n\n\nclass FileComponent(BaseFileComponent):\n    \"\"\"File component with optional Docling processing (isolated in a subprocess).\"\"\"\n\n    display_name = \"Read File\"\n    description = \"Loads content from one or more files.\"\n    documentation: str = \"https://docs.langflow.org/components-data#file\"\n    icon = \"file-text\"\n    name = \"File\"\n\n    # Docling-supported/compatible extensions; TEXT_FILE_TYPES are supported by the base loader.\n    VALID_EXTENSIONS = [\n        *TEXT_FILE_TYPES,\n        \"adoc\",\n        \"asciidoc\",\n        \"asc\",\n        \"bmp\",\n        \"dotx\",\n        \"dotm\",\n        \"docm\",\n        \"jpg\",\n        \"jpeg\",\n        \"png\",\n        \"potx\",\n        \"ppsx\",\n        \"pptm\",\n        \"potm\",\n        \"ppsm\",\n        \"pptx\",\n        \"tiff\",\n        \"xls\",\n        \"xlsx\",\n        \"xhtml\",\n        \"webp\",\n    ]\n\n    # Fixed export settings used when markdown export is requested.\n    EXPORT_FORMAT = \"Markdown\"\n    IMAGE_MODE = \"placeholder\"\n\n    _base_inputs = deepcopy(BaseFileComponent.get_base_inputs())\n\n    for input_item in _base_inputs:\n        if isinstance(input_item, FileInput) and input_item.name == \"path\":\n            input_item.real_time_refresh = True\n            break\n\n    inputs = [\n        *_base_inputs,\n        BoolInput(\n            name=\"advanced_mode\",\n            display_name=\"Advanced Parser\",\n            value=False,\n            real_time_refresh=True,\n            info=(\n                \"Enable advanced document processing and export with Docling for PDFs, images, and office documents. \"\n                \"Note that advanced document processing can consume significant resources.\"\n            ),\n            show=True,\n        ),\n        DropdownInput(\n            name=\"pipeline\",\n            display_name=\"Pipeline\",\n            info=\"Docling pipeline to use\",\n            options=[\"standard\", \"vlm\"],\n            value=\"standard\",\n            advanced=True,\n            real_time_refresh=True,\n        ),\n        DropdownInput(\n            name=\"ocr_engine\",\n            display_name=\"OCR Engine\",\n            info=\"OCR engine to use. Only available when pipeline is set to 'standard'.\",\n            options=[\"None\", \"easyocr\"],\n            value=\"easyocr\",\n            show=False,\n            advanced=True,\n        ),\n        StrInput(\n            name=\"md_image_placeholder\",\n            display_name=\"Image placeholder\",\n            info=\"Specify the image placeholder for markdown exports.\",\n            value=\"<!-- image -->\",\n            advanced=True,\n            show=False,\n        ),\n        StrInput(\n            name=\"md_page_break_placeholder\",\n            display_name=\"Page break placeholder\",\n            info=\"Add this placeholder between pages in the markdown output.\",\n            value=\"\",\n            advanced=True,\n            show=False,\n        ),\n        MessageTextInput(\n            name=\"doc_key\",\n            display_name=\"Doc Key\",\n            info=\"The key to use for the DoclingDocument column.\",\n            value=\"doc\",\n            advanced=True,\n            show=False,\n        ),\n        # Deprecated input retained for backward-compatibility.\n        BoolInput(\n            name=\"use_multithreading\",\n            display_name=\"[Deprecated] Use Multithreading\",\n            advanced=True,\n            value=True,\n            info=\"Set 'Processing Concurrency' greater than 1 to enable multithreading.\",\n        ),\n        IntInput(\n            name=\"concurrency_multithreading\",\n            display_name=\"Processing Concurrency\",\n            advanced=True,\n            info=\"When multiple files are being processed, the number of files to process concurrently.\",\n            value=1,\n        ),\n        BoolInput(\n            name=\"markdown\",\n            display_name=\"Markdown Export\",\n            info=\"Export processed documents to Markdown format. Only available when advanced mode is enabled.\",\n            value=False,\n            show=False,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Raw Content\", name=\"message\", method=\"load_files_message\"),\n    ]\n\n    # ------------------------------ UI helpers --------------------------------------\n\n    def _path_value(self, template: dict) -> list[str]:\n        \"\"\"Return the list of currently selected file paths from the template.\"\"\"\n        return template.get(\"path\", {}).get(\"file_path\", [])\n\n    def update_build_config(\n        self,\n        build_config: dict[str, Any],\n        field_value: Any,\n        field_name: str | None = None,\n    ) -> dict[str, Any]:\n        \"\"\"Show/hide Advanced Parser and related fields based on selection context.\"\"\"\n        if field_name == \"path\":\n            paths = self._path_value(build_config)\n\n            # If all files can be processed by docling, do so\n            allow_advanced = all(not file_path.endswith((\".csv\", \".xlsx\", \".parquet\")) for file_path in paths)\n            build_config[\"advanced_mode\"][\"show\"] = allow_advanced\n            if not allow_advanced:\n                build_config[\"advanced_mode\"][\"value\"] = False\n                for f in (\"pipeline\", \"ocr_engine\", \"doc_key\", \"md_image_placeholder\", \"md_page_break_placeholder\"):\n                    if f in build_config:\n                        build_config[f][\"show\"] = False\n\n        # Docling Processing\n        elif field_name == \"advanced_mode\":\n            for f in (\"pipeline\", \"ocr_engine\", \"doc_key\", \"md_image_placeholder\", \"md_page_break_placeholder\"):\n                if f in build_config:\n                    build_config[f][\"show\"] = bool(field_value)\n                    if f == \"pipeline\":\n                        build_config[f][\"advanced\"] = not bool(field_value)\n\n        elif field_name == \"pipeline\":\n            if field_value == \"standard\":\n                build_config[\"ocr_engine\"][\"show\"] = True\n                build_config[\"ocr_engine\"][\"value\"] = \"easyocr\"\n            else:\n                build_config[\"ocr_engine\"][\"show\"] = False\n                build_config[\"ocr_engine\"][\"value\"] = \"None\"\n\n        return build_config\n\n    def update_outputs(self, frontend_node: dict[str, Any], field_name: str, field_value: Any) -> dict[str, Any]:  # noqa: ARG002\n        \"\"\"Dynamically show outputs based on file count/type and advanced mode.\"\"\"\n        if field_name not in [\"path\", \"advanced_mode\", \"pipeline\"]:\n            return frontend_node\n\n        template = frontend_node.get(\"template\", {})\n        paths = self._path_value(template)\n        if not paths:\n            return frontend_node\n\n        frontend_node[\"outputs\"] = []\n        if len(paths) == 1:\n            file_path = paths[0] if field_name == \"path\" else frontend_node[\"template\"][\"path\"][\"file_path\"][0]\n            if file_path.endswith((\".csv\", \".xlsx\", \".parquet\")):\n                frontend_node[\"outputs\"].append(\n                    Output(display_name=\"Structured Content\", name=\"dataframe\", method=\"load_files_structured\"),\n                )\n            elif file_path.endswith(\".json\"):\n                frontend_node[\"outputs\"].append(\n                    Output(display_name=\"Structured Content\", name=\"json\", method=\"load_files_json\"),\n                )\n\n            advanced_mode = frontend_node.get(\"template\", {}).get(\"advanced_mode\", {}).get(\"value\", False)\n            if advanced_mode:\n                frontend_node[\"outputs\"].append(\n                    Output(display_name=\"Structured Output\", name=\"advanced_dataframe\", method=\"load_files_dataframe\"),\n                )\n                frontend_node[\"outputs\"].append(\n                    Output(display_name=\"Markdown\", name=\"advanced_markdown\", method=\"load_files_markdown\"),\n                )\n                frontend_node[\"outputs\"].append(\n                    Output(display_name=\"File Path\", name=\"path\", method=\"load_files_path\"),\n                )\n            else:\n                frontend_node[\"outputs\"].append(\n                    Output(display_name=\"Raw Content\", name=\"message\", method=\"load_files_message\"),\n                )\n                frontend_node[\"outputs\"].append(\n                    Output(display_name=\"File Path\", name=\"path\", method=\"load_files_path\"),\n                )\n        else:\n            # Multiple files => DataFrame output; advanced parser disabled\n            frontend_node[\"outputs\"].append(Output(display_name=\"Files\", name=\"dataframe\", method=\"load_files\"))\n\n        return frontend_node\n\n    # ------------------------------ Core processing ----------------------------------\n\n    def _is_docling_compatible(self, file_path: str) -> bool:\n        \"\"\"Lightweight extension gate for Docling-compatible types.\"\"\"\n        docling_exts = (\n            \".adoc\",\n            \".asciidoc\",\n            \".asc\",\n            \".bmp\",\n            \".csv\",\n            \".dotx\",\n            \".dotm\",\n            \".docm\",\n            \".docx\",\n            \".htm\",\n            \".html\",\n            \".jpg\",\n            \".jpeg\",\n            \".json\",\n            \".md\",\n            \".pdf\",\n            \".png\",\n            \".potx\",\n            \".ppsx\",\n            \".pptm\",\n            \".potm\",\n            \".ppsm\",\n            \".pptx\",\n            \".tiff\",\n            \".txt\",\n            \".xls\",\n            \".xlsx\",\n            \".xhtml\",\n            \".xml\",\n            \".webp\",\n        )\n        return file_path.lower().endswith(docling_exts)\n\n    def _process_docling_in_subprocess(self, file_path: str) -> Data | None:\n        \"\"\"Run Docling in a separate OS process and map the result to a Data object.\n\n        We avoid multiprocessing pickling by launching `python -c \"<script>\"` and\n        passing JSON config via stdin. The child prints a JSON result to stdout.\n        \"\"\"\n        if not file_path:\n            return None\n\n        args: dict[str, Any] = {\n            \"file_path\": file_path,\n            \"markdown\": bool(self.markdown),\n            \"image_mode\": str(self.IMAGE_MODE),\n            \"md_image_placeholder\": str(self.md_image_placeholder),\n            \"md_page_break_placeholder\": str(self.md_page_break_placeholder),\n            \"pipeline\": str(self.pipeline),\n            \"ocr_engine\": (\n                self.ocr_engine if self.ocr_engine and self.ocr_engine != \"None\" and self.pipeline != \"vlm\" else None\n            ),\n        }\n\n        self.log(f\"Starting Docling subprocess for file: {file_path}\")\n        self.log(args)\n\n        # Child script for isolating the docling processing\n        child_script = textwrap.dedent(\n            r\"\"\"\n            import json, sys\n\n            def try_imports():\n                try:\n                    from docling.datamodel.base_models import ConversionStatus, InputFormat  # type: ignore\n                    from docling.document_converter import DocumentConverter  # type: ignore\n                    from docling_core.types.doc import ImageRefMode  # type: ignore\n                    return ConversionStatus, InputFormat, DocumentConverter, ImageRefMode, \"latest\"\n                except Exception as e:\n                    raise e\n\n            def create_converter(strategy, input_format, DocumentConverter, pipeline, ocr_engine):\n                # --- Standard PDF/IMAGE pipeline (your existing behavior), with optional OCR ---\n                if pipeline == \"standard\":\n                    try:\n                        from docling.datamodel.pipeline_options import PdfPipelineOptions  # type: ignore\n                        from docling.document_converter import PdfFormatOption  # type: ignore\n\n                        pipe = PdfPipelineOptions()\n                        pipe.do_ocr = False\n\n                        if ocr_engine:\n                            try:\n                                from docling.models.factories import get_ocr_factory  # type: ignore\n                                pipe.do_ocr = True\n                                fac = get_ocr_factory(allow_external_plugins=False)\n                                pipe.ocr_options = fac.create_options(kind=ocr_engine)\n                            except Exception:\n                                # If OCR setup fails, disable it\n                                pipe.do_ocr = False\n\n                        fmt = {}\n                        if hasattr(input_format, \"PDF\"):\n                            fmt[getattr(input_format, \"PDF\")] = PdfFormatOption(pipeline_options=pipe)\n                        if hasattr(input_format, \"IMAGE\"):\n                            fmt[getattr(input_format, \"IMAGE\")] = PdfFormatOption(pipeline_options=pipe)\n\n                        return DocumentConverter(format_options=fmt)\n                    except Exception:\n                        return DocumentConverter()\n\n                # --- Vision-Language Model (VLM) pipeline ---\n                if pipeline == \"vlm\":\n                    try:\n                        from docling.datamodel.pipeline_options import VlmPipelineOptions\n                        from docling.datamodel.vlm_model_specs import GRANITEDOCLING_MLX, GRANITEDOCLING_TRANSFORMERS\n                        from docling.document_converter import PdfFormatOption\n                        from docling.pipeline.vlm_pipeline import VlmPipeline\n\n                        vl_pipe = VlmPipelineOptions(\n                            vlm_options=GRANITEDOCLING_TRANSFORMERS,\n                        )\n\n                        if sys.platform == \"darwin\":\n                            try:\n                                import mlx_vlm\n                                vl_pipe.vlm_options = GRANITEDOCLING_MLX\n                            except ImportError as e:\n                                raise e\n\n                        # VLM paths generally don't need OCR; keep OCR off by default here.\n                        fmt = {}\n                        if hasattr(input_format, \"PDF\"):\n                            fmt[getattr(input_format, \"PDF\")] = PdfFormatOption(\n                            pipeline_cls=VlmPipeline,\n                            pipeline_options=vl_pipe\n                        )\n                        if hasattr(input_format, \"IMAGE\"):\n                            fmt[getattr(input_format, \"IMAGE\")] = PdfFormatOption(\n                            pipeline_cls=VlmPipeline,\n                            pipeline_options=vl_pipe\n                        )\n\n                        return DocumentConverter(format_options=fmt)\n                    except Exception as e:\n                        raise e\n\n                # --- Fallback: default converter with no special options ---\n                return DocumentConverter()\n\n            def export_markdown(document, ImageRefMode, image_mode, img_ph, pg_ph):\n                try:\n                    mode = getattr(ImageRefMode, image_mode.upper(), image_mode)\n                    return document.export_to_markdown(\n                        image_mode=mode,\n                        image_placeholder=img_ph,\n                        page_break_placeholder=pg_ph,\n                    )\n                except Exception:\n                    try:\n                        return document.export_to_text()\n                    except Exception:\n                        return str(document)\n\n            def to_rows(doc_dict):\n                rows = []\n                for t in doc_dict.get(\"texts\", []):\n                    prov = t.get(\"prov\") or []\n                    page_no = None\n                    if prov and isinstance(prov, list) and isinstance(prov[0], dict):\n                        page_no = prov[0].get(\"page_no\")\n                    rows.append({\n                        \"page_no\": page_no,\n                        \"label\": t.get(\"label\"),\n                        \"text\": t.get(\"text\"),\n                        \"level\": t.get(\"level\"),\n                    })\n                return rows\n\n            def main():\n                cfg = json.loads(sys.stdin.read())\n                file_path = cfg[\"file_path\"]\n                markdown = cfg[\"markdown\"]\n                image_mode = cfg[\"image_mode\"]\n                img_ph = cfg[\"md_image_placeholder\"]\n                pg_ph = cfg[\"md_page_break_placeholder\"]\n                pipeline = cfg[\"pipeline\"]\n                ocr_engine = cfg.get(\"ocr_engine\")\n                meta = {\"file_path\": file_path}\n\n                try:\n                    ConversionStatus, InputFormat, DocumentConverter, ImageRefMode, strategy = try_imports()\n                    converter = create_converter(strategy, InputFormat, DocumentConverter, pipeline, ocr_engine)\n                    try:\n                        res = converter.convert(file_path)\n                    except Exception as e:\n                        print(json.dumps({\"ok\": False, \"error\": f\"Docling conversion error: {e}\", \"meta\": meta}))\n                        return\n\n                    ok = False\n                    if hasattr(res, \"status\"):\n                        try:\n                            ok = (res.status == ConversionStatus.SUCCESS) or (str(res.status).lower() == \"success\")\n                        except Exception:\n                            ok = (str(res.status).lower() == \"success\")\n                    if not ok and hasattr(res, \"document\"):\n                        ok = getattr(res, \"document\", None) is not None\n                    if not ok:\n                        print(json.dumps({\"ok\": False, \"error\": \"Docling conversion failed\", \"meta\": meta}))\n                        return\n\n                    doc = getattr(res, \"document\", None)\n                    if doc is None:\n                        print(json.dumps({\"ok\": False, \"error\": \"Docling produced no document\", \"meta\": meta}))\n                        return\n\n                    if markdown:\n                        text = export_markdown(doc, ImageRefMode, image_mode, img_ph, pg_ph)\n                        print(json.dumps({\"ok\": True, \"mode\": \"markdown\", \"text\": text, \"meta\": meta}))\n                        return\n\n                    # structured\n                    try:\n                        doc_dict = doc.export_to_dict()\n                    except Exception as e:\n                        print(json.dumps({\"ok\": False, \"error\": f\"Docling export_to_dict failed: {e}\", \"meta\": meta}))\n                        return\n\n                    rows = to_rows(doc_dict)\n                    print(json.dumps({\"ok\": True, \"mode\": \"structured\", \"doc\": rows, \"meta\": meta}))\n                except Exception as e:\n                    print(\n                        json.dumps({\n                            \"ok\": False,\n                            \"error\": f\"Docling processing error: {e}\",\n                            \"meta\": {\"file_path\": file_path},\n                        })\n                    )\n\n            if __name__ == \"__main__\":\n                main()\n            \"\"\"\n        )\n\n        # Validate file_path to avoid command injection or unsafe input\n        if not isinstance(args[\"file_path\"], str) or any(c in args[\"file_path\"] for c in [\";\", \"|\", \"&\", \"$\", \"`\"]):\n            return Data(data={\"error\": \"Unsafe file path detected.\", \"file_path\": args[\"file_path\"]})\n\n        proc = subprocess.run(  # noqa: S603\n            [sys.executable, \"-u\", \"-c\", child_script],\n            input=json.dumps(args).encode(\"utf-8\"),\n            capture_output=True,\n            check=False,\n        )\n\n        if not proc.stdout:\n            err_msg = proc.stderr.decode(\"utf-8\", errors=\"replace\") or \"no output from child process\"\n            return Data(data={\"error\": f\"Docling subprocess error: {err_msg}\", \"file_path\": file_path})\n\n        try:\n            result = json.loads(proc.stdout.decode(\"utf-8\"))\n        except Exception as e:  # noqa: BLE001\n            err_msg = proc.stderr.decode(\"utf-8\", errors=\"replace\")\n            return Data(\n                data={\"error\": f\"Invalid JSON from Docling subprocess: {e}. stderr={err_msg}\", \"file_path\": file_path},\n            )\n\n        if not result.get(\"ok\"):\n            return Data(data={\"error\": result.get(\"error\", \"Unknown Docling error\"), **result.get(\"meta\", {})})\n\n        meta = result.get(\"meta\", {})\n        if result.get(\"mode\") == \"markdown\":\n            exported_content = str(result.get(\"text\", \"\"))\n            return Data(\n                text=exported_content,\n                data={\"exported_content\": exported_content, \"export_format\": self.EXPORT_FORMAT, **meta},\n            )\n\n        rows = list(result.get(\"doc\", []))\n        return Data(data={\"doc\": rows, \"export_format\": self.EXPORT_FORMAT, **meta})\n\n    def process_files(\n        self,\n        file_list: list[BaseFileComponent.BaseFile],\n    ) -> list[BaseFileComponent.BaseFile]:\n        \"\"\"Process input files.\n\n        - advanced_mode => Docling in a separate process.\n        - Otherwise => standard parsing in current process (optionally threaded).\n        \"\"\"\n        if not file_list:\n            msg = \"No files to process.\"\n            raise ValueError(msg)\n\n        def process_file_standard(file_path: str, *, silent_errors: bool = False) -> Data | None:\n            try:\n                return parse_text_file_to_data(file_path, silent_errors=silent_errors)\n            except FileNotFoundError as e:\n                self.log(f\"File not found: {file_path}. Error: {e}\")\n                if not silent_errors:\n                    raise\n                return None\n            except Exception as e:\n                self.log(f\"Unexpected error processing {file_path}: {e}\")\n                if not silent_errors:\n                    raise\n                return None\n\n        docling_compatible = all(self._is_docling_compatible(str(f.path)) for f in file_list)\n\n        # Advanced path: Check if ALL files are compatible with Docling\n        if self.advanced_mode and docling_compatible:\n            final_return: list[BaseFileComponent.BaseFile] = []\n            for file in file_list:\n                file_path = str(file.path)\n                advanced_data: Data | None = self._process_docling_in_subprocess(file_path)\n\n                # --- UNNEST: expand each element in `doc` to its own Data row\n                payload = getattr(advanced_data, \"data\", {}) or {}\n                doc_rows = payload.get(\"doc\")\n                if isinstance(doc_rows, list):\n                    rows: list[Data | None] = [\n                        Data(\n                            data={\n                                \"file_path\": file_path,\n                                **(item if isinstance(item, dict) else {\"value\": item}),\n                            },\n                        )\n                        for item in doc_rows\n                    ]\n                    final_return.extend(self.rollup_data(file_list, rows))\n                else:\n                    # If not structured, keep as-is (e.g., markdown export or error dict)\n                    final_return.extend(self.rollup_data(file_list, [advanced_data]))\n            return final_return\n\n        # Standard multi-file (or single non-advanced) path\n        concurrency = 1 if not self.use_multithreading else max(1, self.concurrency_multithreading)\n        file_paths = [str(f.path) for f in file_list]\n        self.log(f\"Starting parallel processing of {len(file_paths)} files with concurrency: {concurrency}.\")\n        my_data = parallel_load_data(\n            file_paths,\n            silent_errors=self.silent_errors,\n            load_function=process_file_standard,\n            max_concurrency=concurrency,\n        )\n        return self.rollup_data(file_list, my_data)\n\n    # ------------------------------ Output helpers -----------------------------------\n\n    def load_files_helper(self) -> DataFrame:\n        result = self.load_files()\n\n        # Error condition - raise error if no text and an error is present\n        if not hasattr(result, \"text\"):\n            if hasattr(result, \"error\"):\n                raise ValueError(result.error[0])\n            msg = \"Could not extract content from the provided file(s).\"\n            raise ValueError(msg)\n\n        return result\n\n    def load_files_dataframe(self) -> DataFrame:\n        \"\"\"Load files using advanced Docling processing and export to DataFrame format.\"\"\"\n        self.markdown = False\n        return self.load_files_helper()\n\n    def load_files_markdown(self) -> Message:\n        \"\"\"Load files using advanced Docling processing and export to Markdown format.\"\"\"\n        self.markdown = True\n        result = self.load_files_helper()\n        return Message(text=str(result.text[0]))\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "concurrency_multithreading": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "concurrency_multithreading",
+                "value": 1,
+                "display_name": "Processing Concurrency",
+                "advanced": true,
+                "dynamic": false,
+                "info": "When multiple files are being processed, the number of files to process concurrently.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "delete_server_file_after_processing": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "delete_server_file_after_processing",
+                "value": true,
+                "display_name": "Delete Server File After Processing",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If true, the Server File Path will be deleted after processing.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "doc_key": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "doc_key",
+                "value": "doc",
+                "display_name": "Doc Key",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The key to use for the DoclingDocument column.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "ignore_unspecified_files": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "ignore_unspecified_files",
+                "value": false,
+                "display_name": "Ignore Unspecified Files",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If true, Data with no 'file_path' property will be ignored.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "ignore_unsupported_extensions": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "ignore_unsupported_extensions",
+                "value": true,
+                "display_name": "Ignore Unsupported Extensions",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If true, files with unsupported extensions will not be processed.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "markdown": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "markdown",
+                "value": false,
+                "display_name": "Markdown Export",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Export processed documents to Markdown format. Only available when advanced mode is enabled.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "md_image_placeholder": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "md_image_placeholder",
+                "value": "<!-- image -->",
+                "display_name": "Image placeholder",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Specify the image placeholder for markdown exports.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "md_page_break_placeholder": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "md_page_break_placeholder",
+                "value": "",
+                "display_name": "Page break placeholder",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Add this placeholder between pages in the markdown output.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "ocr_engine": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "None",
+                  "easyocr"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "ocr_engine",
+                "value": "easyocr",
+                "display_name": "OCR Engine",
+                "advanced": true,
+                "dynamic": false,
+                "info": "OCR engine to use. Only available when pipeline is set to 'standard'.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "pipeline": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "standard",
+                  "vlm"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "pipeline",
+                "value": "standard",
+                "display_name": "Pipeline",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Docling pipeline to use",
+                "real_time_refresh": true,
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "separator": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "separator",
+                "value": "\n\n",
+                "display_name": "Separator",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Specify the separator to use between multiple outputs in Message format.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "silent_errors": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "silent_errors",
+                "value": false,
+                "display_name": "Silent Errors",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If true, errors will not raise an exception.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "use_multithreading": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "use_multithreading",
+                "value": true,
+                "display_name": "[Deprecated] Use Multithreading",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Set 'Processing Concurrency' greater than 1 to enable multithreading.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              }
+            }
+          },
+          "selected_output": "message",
+          "type": "File"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "File-iFzNE",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 380
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 380
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Get user text inputs.",
+          "display_name": "API Key Input",
+          "id": "TextInput-GetEnv",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get user text inputs.",
+            "display_name": "API Key Input",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value"
+            ],
+            "frozen": false,
+            "icon": "type",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Text",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.base.io.text import TextComponent\nfrom lfx.io import MultilineInput, Output\nfrom lfx.schema.message import Message\n\n\nclass TextInputComponent(TextComponent):\n    display_name = \"Text Input\"\n    description = \"Get user text inputs.\"\n    documentation: str = \"https://docs.langflow.org/components-io#text-input\"\n    icon = \"type\"\n    name = \"TextInput\"\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Text\",\n            info=\"Text to be passed as input.\",\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Output Text\", name=\"text\", method=\"text_response\"),\n    ]\n\n    def text_response(self) -> Message:\n        return Message(\n            text=self.input_value,\n        )\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "input_value": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "{ASSEMBLYAI_API_KEY}",
+                "display_name": "Text",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Text to be passed as input.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              }
+            }
+          },
+          "selected_output": "text",
+          "type": "TextInput"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "TextInput-GetEnv",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 680
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 680
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Create a transcription job for an audio file using AssemblyAI with advanced options",
+          "display_name": "Transcription Job Creator",
+          "id": "AssemblyAITranscriptionJobCreator-jmd6q",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Create a transcription job for an audio file using AssemblyAI with advanced options",
+            "display_name": "Transcription Job Creator",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "format_text",
+              "language_detection",
+              "punctuate",
+              "speaker_labels",
+              "speech_model",
+              "assemblyai_api_key",
+              "api_key",
+              "audio_file"
+            ],
+            "frozen": false,
+            "icon": "component",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Data"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Transcript ID",
+                "group_outputs": false,
+                "method": "create_transcription_job",
+                "name": "transcript_id",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "audio_file": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "file_path": "",
+                "fileTypes": [
+                  "3ga",
+                  "8svx",
+                  "aac",
+                  "ac3",
+                  "aif",
+                  "aiff",
+                  "alac",
+                  "amr",
+                  "ape",
+                  "au",
+                  "dss",
+                  "flac",
+                  "flv",
+                  "m4a",
+                  "m4b",
+                  "m4p",
+                  "m4r",
+                  "mp3",
+                  "mpga",
+                  "ogg",
+                  "oga",
+                  "mogg",
+                  "opus",
+                  "qcp",
+                  "tta",
+                  "voc",
+                  "wav",
+                  "wma",
+                  "wv",
+                  "webm",
+                  "mts",
+                  "m2ts",
+                  "ts",
+                  "mov",
+                  "mp2",
+                  "mp4",
+                  "m4p",
+                  "m4v",
+                  "mxf"
+                ],
+                "temp_file": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "audio_file",
+                "value": "/path/to/meeting_recording.mp3",
+                "display_name": "Audio File",
+                "advanced": false,
+                "dynamic": false,
+                "info": "The audio file to transcribe",
+                "title_case": false,
+                "type": "file",
+                "_input_type": "FileInput"
+              },
+              "api_key": {
+                "load_from_db": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "api_key",
+                "value": "{ASSEMBLYAI_API_KEY}",
+                "display_name": "Assembly API Key",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Your AssemblyAI API key. You can get one from https://www.assemblyai.com/",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "audio_file_url": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "audio_file_url",
+                "value": "",
+                "display_name": "Audio File URL",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The URL of the audio file to transcribe (Can be used instead of a File)",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from pathlib import Path\n\nimport assemblyai as aai\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import BoolInput, DropdownInput, FileInput, MessageTextInput, Output, SecretStrInput\nfrom lfx.log.logger import logger\nfrom lfx.schema.data import Data\n\n\nclass AssemblyAITranscriptionJobCreator(Component):\n    display_name = \"AssemblyAI Start Transcript\"\n    description = \"Create a transcription job for an audio file using AssemblyAI with advanced options\"\n    documentation = \"https://www.assemblyai.com/docs\"\n    icon = \"AssemblyAI\"\n\n    inputs = [\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"Assembly API Key\",\n            info=\"Your AssemblyAI API key. You can get one from https://www.assemblyai.com/\",\n            required=True,\n        ),\n        FileInput(\n            name=\"audio_file\",\n            display_name=\"Audio File\",\n            file_types=[\n                \"3ga\",\n                \"8svx\",\n                \"aac\",\n                \"ac3\",\n                \"aif\",\n                \"aiff\",\n                \"alac\",\n                \"amr\",\n                \"ape\",\n                \"au\",\n                \"dss\",\n                \"flac\",\n                \"flv\",\n                \"m4a\",\n                \"m4b\",\n                \"m4p\",\n                \"m4r\",\n                \"mp3\",\n                \"mpga\",\n                \"ogg\",\n                \"oga\",\n                \"mogg\",\n                \"opus\",\n                \"qcp\",\n                \"tta\",\n                \"voc\",\n                \"wav\",\n                \"wma\",\n                \"wv\",\n                \"webm\",\n                \"mts\",\n                \"m2ts\",\n                \"ts\",\n                \"mov\",\n                \"mp2\",\n                \"mp4\",\n                \"m4p\",\n                \"m4v\",\n                \"mxf\",\n            ],\n            info=\"The audio file to transcribe\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"audio_file_url\",\n            display_name=\"Audio File URL\",\n            info=\"The URL of the audio file to transcribe (Can be used instead of a File)\",\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"speech_model\",\n            display_name=\"Speech Model\",\n            options=[\n                \"best\",\n                \"nano\",\n            ],\n            value=\"best\",\n            info=\"The speech model to use for the transcription\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"language_detection\",\n            display_name=\"Automatic Language Detection\",\n            info=\"Enable automatic language detection\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"language_code\",\n            display_name=\"Language\",\n            info=(\n                \"\"\"\n            The language of the audio file. Can be set manually if automatic language detection is disabled.\n            See https://www.assemblyai.com/docs/getting-started/supported-languages \"\"\"\n                \"for a list of supported language codes.\"\n            ),\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"speaker_labels\",\n            display_name=\"Enable Speaker Labels\",\n            info=\"Enable speaker diarization\",\n        ),\n        MessageTextInput(\n            name=\"speakers_expected\",\n            display_name=\"Expected Number of Speakers\",\n            info=\"Set the expected number of speakers (optional, enter a number)\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"punctuate\",\n            display_name=\"Punctuate\",\n            info=\"Enable automatic punctuation\",\n            advanced=True,\n            value=True,\n        ),\n        BoolInput(\n            name=\"format_text\",\n            display_name=\"Format Text\",\n            info=\"Enable text formatting\",\n            advanced=True,\n            value=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Transcript ID\", name=\"transcript_id\", method=\"create_transcription_job\"),\n    ]\n\n    def create_transcription_job(self) -> Data:\n        aai.settings.api_key = self.api_key\n\n        # Convert speakers_expected to int if it's not empty\n        speakers_expected = None\n        if self.speakers_expected and self.speakers_expected.strip():\n            try:\n                speakers_expected = int(self.speakers_expected)\n            except ValueError:\n                self.status = \"Error: Expected Number of Speakers must be a valid integer\"\n                return Data(data={\"error\": \"Error: Expected Number of Speakers must be a valid integer\"})\n\n        language_code = self.language_code or None\n\n        config = aai.TranscriptionConfig(\n            speech_model=self.speech_model,\n            language_detection=self.language_detection,\n            language_code=language_code,\n            speaker_labels=self.speaker_labels,\n            speakers_expected=speakers_expected,\n            punctuate=self.punctuate,\n            format_text=self.format_text,\n        )\n\n        audio = None\n        if self.audio_file:\n            if self.audio_file_url:\n                logger.warning(\"Both an audio file an audio URL were specified. The audio URL was ignored.\")\n\n            # Check if the file exists\n            if not Path(self.audio_file).exists():\n                self.status = \"Error: Audio file not found\"\n                return Data(data={\"error\": \"Error: Audio file not found\"})\n            audio = self.audio_file\n        elif self.audio_file_url:\n            audio = self.audio_file_url\n        else:\n            self.status = \"Error: Either an audio file or an audio URL must be specified\"\n            return Data(data={\"error\": \"Error: Either an audio file or an audio URL must be specified\"})\n\n        try:\n            transcript = aai.Transcriber().submit(audio, config=config)\n        except Exception as e:  # noqa: BLE001\n            logger.debug(\"Error submitting transcription job\", exc_info=True)\n            self.status = f\"An error occurred: {e}\"\n            return Data(data={\"error\": f\"An error occurred: {e}\"})\n\n        if transcript.error:\n            self.status = transcript.error\n            return Data(data={\"error\": transcript.error})\n        result = Data(data={\"transcript_id\": transcript.id})\n        self.status = result\n        return result\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "format_text": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "format_text",
+                "value": true,
+                "display_name": "Format Text",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Enable text formatting",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "language_code": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "language_code",
+                "value": "",
+                "display_name": "Language",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "\n            The language of the audio file. Can be set manually if automatic language detection is disabled.\n            See https://www.assemblyai.com/docs/getting-started/supported-languages for a list of supported language codes.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "language_detection": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "language_detection",
+                "value": false,
+                "display_name": "Automatic Language Detection",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Enable automatic language detection",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "punctuate": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "punctuate",
+                "value": true,
+                "display_name": "Punctuate",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Enable automatic punctuation",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "speaker_labels": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "speaker_labels",
+                "value": false,
+                "display_name": "Enable Speaker Labels",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Enable speaker diarization",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "speakers_expected": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "speakers_expected",
+                "value": "",
+                "display_name": "Expected Number of Speakers",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Set the expected number of speakers (optional, enter a number)",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "speech_model": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "best",
+                  "nano"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "speech_model",
+                "value": "best",
+                "display_name": "Speech Model",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The speech model to use for the transcription",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "assemblyai_api_key": {
+                "name": "assemblyai_api_key",
+                "type": "str",
+                "value": "{ASSEMBLYAI_API_KEY}",
+                "display_name": "assemblyai_api_key",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "transcript_id",
+          "type": "AssemblyAITranscriptionJobCreator"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "AssemblyAITranscriptionJobCreator-jmd6q",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 980
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 980
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Make HTTP requests using URL or cURL commands.",
+          "display_name": "AssemblyAI API Request",
+          "id": "APIRequest-9muDf",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Make HTTP requests using URL or cURL commands.",
+            "display_name": "AssemblyAI API Request",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "follow_redirects",
+              "headers",
+              "include_httpx_metadata",
+              "method",
+              "mode",
+              "save_to_file",
+              "timeout",
+              "endpoint",
+              "description",
+              "url"
+            ],
+            "frozen": false,
+            "icon": "component",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Data"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "API Response",
+                "group_outputs": false,
+                "method": "make_api_request",
+                "name": "data",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "query_params": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "trace_as_input": true,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "query_params",
+                "value": "",
+                "display_name": "Query Parameters",
+                "advanced": true,
+                "input_types": [
+                  "Data"
+                ],
+                "dynamic": false,
+                "info": "The query parameters to append to the URL.",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "DataInput"
+              },
+              "body": {
+                "tool_mode": false,
+                "is_list": true,
+                "list_add_label": "Add More",
+                "table_schema": [
+                  {
+                    "name": "key",
+                    "display_name": "Key",
+                    "type": "str",
+                    "description": "Parameter name"
+                  },
+                  {
+                    "name": "value",
+                    "display_name": "Value",
+                    "description": "Parameter value"
+                  }
+                ],
+                "trigger_text": "Open table",
+                "trigger_icon": "Table",
+                "table_icon": "Table",
+                "trace_as_metadata": true,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "body",
+                "value": [],
+                "display_name": "Body",
+                "advanced": true,
+                "input_types": [
+                  "Data"
+                ],
+                "dynamic": false,
+                "info": "The body to send with the request as a dictionary (for POST, PATCH, PUT).",
+                "real_time_refresh": true,
+                "title_case": false,
+                "type": "table",
+                "_input_type": "TableInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "import json\nimport re\nimport tempfile\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\nfrom urllib.parse import parse_qsl, urlencode, urlparse, urlunparse\n\nimport aiofiles\nimport aiofiles.os as aiofiles_os\nimport httpx\nimport validators\n\nfrom lfx.base.curl.parse import parse_context\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.inputs.inputs import TabInput\nfrom lfx.io import (\n    BoolInput,\n    DataInput,\n    DropdownInput,\n    IntInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    TableInput,\n)\nfrom lfx.schema.data import Data\nfrom lfx.schema.dotdict import dotdict\nfrom lfx.utils.component_utils import set_current_fields, set_field_advanced, set_field_display\n\n# Define fields for each mode\nMODE_FIELDS = {\n    \"URL\": [\n        \"url_input\",\n        \"method\",\n    ],\n    \"cURL\": [\"curl_input\"],\n}\n\n# Fields that should always be visible\nDEFAULT_FIELDS = [\"mode\"]\n\n\nclass APIRequestComponent(Component):\n    display_name = \"API Request\"\n    description = \"Make HTTP requests using URL or cURL commands.\"\n    documentation: str = \"https://docs.langflow.org/components-data#api-request\"\n    icon = \"Globe\"\n    name = \"APIRequest\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"url_input\",\n            display_name=\"URL\",\n            info=\"Enter the URL for the request.\",\n            advanced=False,\n            tool_mode=True,\n        ),\n        MultilineInput(\n            name=\"curl_input\",\n            display_name=\"cURL\",\n            info=(\n                \"Paste a curl command to populate the fields. \"\n                \"This will fill in the dictionary fields for headers and body.\"\n            ),\n            real_time_refresh=True,\n            tool_mode=True,\n            advanced=True,\n            show=False,\n        ),\n        DropdownInput(\n            name=\"method\",\n            display_name=\"Method\",\n            options=[\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"],\n            value=\"GET\",\n            info=\"The HTTP method to use.\",\n            real_time_refresh=True,\n        ),\n        TabInput(\n            name=\"mode\",\n            display_name=\"Mode\",\n            options=[\"URL\", \"cURL\"],\n            value=\"URL\",\n            info=\"Enable cURL mode to populate fields from a cURL command.\",\n            real_time_refresh=True,\n        ),\n        DataInput(\n            name=\"query_params\",\n            display_name=\"Query Parameters\",\n            info=\"The query parameters to append to the URL.\",\n            advanced=True,\n        ),\n        TableInput(\n            name=\"body\",\n            display_name=\"Body\",\n            info=\"The body to send with the request as a dictionary (for POST, PATCH, PUT).\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Key\",\n                    \"type\": \"str\",\n                    \"description\": \"Parameter name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"description\": \"Parameter value\",\n                },\n            ],\n            value=[],\n            input_types=[\"Data\"],\n            advanced=True,\n            real_time_refresh=True,\n        ),\n        TableInput(\n            name=\"headers\",\n            display_name=\"Headers\",\n            info=\"The headers to send with the request\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Header\",\n                    \"type\": \"str\",\n                    \"description\": \"Header name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"type\": \"str\",\n                    \"description\": \"Header value\",\n                },\n            ],\n            value=[{\"key\": \"User-Agent\", \"value\": \"Langflow/1.0\"}],\n            advanced=True,\n            input_types=[\"Data\"],\n            real_time_refresh=True,\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            value=30,\n            info=\"The timeout to use for the request.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"follow_redirects\",\n            display_name=\"Follow Redirects\",\n            value=True,\n            info=\"Whether to follow http redirects.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"save_to_file\",\n            display_name=\"Save to File\",\n            value=False,\n            info=\"Save the API response to a temporary file\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"include_httpx_metadata\",\n            display_name=\"Include HTTPx Metadata\",\n            value=False,\n            info=(\n                \"Include properties such as headers, status_code, response_headers, \"\n                \"and redirection_history in the output.\"\n            ),\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"API Response\", name=\"data\", method=\"make_api_request\"),\n    ]\n\n    def _parse_json_value(self, value: Any) -> Any:\n        \"\"\"Parse a value that might be a JSON string.\"\"\"\n        if not isinstance(value, str):\n            return value\n\n        try:\n            parsed = json.loads(value)\n        except json.JSONDecodeError:\n            return value\n        else:\n            return parsed\n\n    def _process_body(self, body: Any) -> dict:\n        \"\"\"Process the body input into a valid dictionary.\"\"\"\n        if body is None:\n            return {}\n        if hasattr(body, \"data\"):\n            body = body.data\n        if isinstance(body, dict):\n            return self._process_dict_body(body)\n        if isinstance(body, str):\n            return self._process_string_body(body)\n        if isinstance(body, list):\n            return self._process_list_body(body)\n        return {}\n\n    def _process_dict_body(self, body: dict) -> dict:\n        \"\"\"Process dictionary body by parsing JSON values.\"\"\"\n        return {k: self._parse_json_value(v) for k, v in body.items()}\n\n    def _process_string_body(self, body: str) -> dict:\n        \"\"\"Process string body by attempting JSON parse.\"\"\"\n        try:\n            return self._process_body(json.loads(body))\n        except json.JSONDecodeError:\n            return {\"data\": body}\n\n    def _process_list_body(self, body: list) -> dict:\n        \"\"\"Process list body by converting to key-value dictionary.\"\"\"\n        processed_dict = {}\n        try:\n            for item in body:\n                # Unwrap Data objects\n                current_item = item\n                if hasattr(item, \"data\"):\n                    unwrapped_data = item.data\n                    # If the unwrapped data is a dict but not key-value format, use it directly\n                    if isinstance(unwrapped_data, dict) and not self._is_valid_key_value_item(unwrapped_data):\n                        return unwrapped_data\n                    current_item = unwrapped_data\n                if not self._is_valid_key_value_item(current_item):\n                    continue\n                key = current_item[\"key\"]\n                value = self._parse_json_value(current_item[\"value\"])\n                processed_dict[key] = value\n        except (KeyError, TypeError, ValueError) as e:\n            self.log(f\"Failed to process body list: {e}\")\n            return {}\n        return processed_dict\n\n    def _is_valid_key_value_item(self, item: Any) -> bool:\n        \"\"\"Check if an item is a valid key-value dictionary.\"\"\"\n        return isinstance(item, dict) and \"key\" in item and \"value\" in item\n\n    def parse_curl(self, curl: str, build_config: dotdict) -> dotdict:\n        \"\"\"Parse a cURL command and update build configuration.\"\"\"\n        try:\n            parsed = parse_context(curl)\n\n            # Update basic configuration\n            url = parsed.url\n            # Normalize URL before setting it\n            url = self._normalize_url(url)\n\n            build_config[\"url_input\"][\"value\"] = url\n            build_config[\"method\"][\"value\"] = parsed.method.upper()\n\n            # Process headers\n            headers_list = [{\"key\": k, \"value\": v} for k, v in parsed.headers.items()]\n            build_config[\"headers\"][\"value\"] = headers_list\n\n            # Process body data\n            if not parsed.data:\n                build_config[\"body\"][\"value\"] = []\n            elif parsed.data:\n                try:\n                    json_data = json.loads(parsed.data)\n                    if isinstance(json_data, dict):\n                        body_list = [\n                            {\"key\": k, \"value\": json.dumps(v) if isinstance(v, dict | list) else str(v)}\n                            for k, v in json_data.items()\n                        ]\n                        build_config[\"body\"][\"value\"] = body_list\n                    else:\n                        build_config[\"body\"][\"value\"] = [{\"key\": \"data\", \"value\": json.dumps(json_data)}]\n                except json.JSONDecodeError:\n                    build_config[\"body\"][\"value\"] = [{\"key\": \"data\", \"value\": parsed.data}]\n\n        except Exception as exc:\n            msg = f\"Error parsing curl: {exc}\"\n            self.log(msg)\n            raise ValueError(msg) from exc\n\n        return build_config\n\n    def _normalize_url(self, url: str) -> str:\n        \"\"\"Normalize URL by adding https:// if no protocol is specified.\"\"\"\n        if not url or not isinstance(url, str):\n            msg = \"URL cannot be empty\"\n            raise ValueError(msg)\n\n        url = url.strip()\n        if url.startswith((\"http://\", \"https://\")):\n            return url\n        return f\"https://{url}\"\n\n    async def make_request(\n        self,\n        client: httpx.AsyncClient,\n        method: str,\n        url: str,\n        headers: dict | None = None,\n        body: Any = None,\n        timeout: int = 5,\n        *,\n        follow_redirects: bool = True,\n        save_to_file: bool = False,\n        include_httpx_metadata: bool = False,\n    ) -> Data:\n        method = method.upper()\n        if method not in {\"GET\", \"POST\", \"PATCH\", \"PUT\", \"DELETE\"}:\n            msg = f\"Unsupported method: {method}\"\n            raise ValueError(msg)\n\n        processed_body = self._process_body(body)\n        redirection_history = []\n\n        try:\n            # Prepare request parameters\n            request_params = {\n                \"method\": method,\n                \"url\": url,\n                \"headers\": headers,\n                \"json\": processed_body,\n                \"timeout\": timeout,\n                \"follow_redirects\": follow_redirects,\n            }\n            response = await client.request(**request_params)\n\n            redirection_history = [\n                {\n                    \"url\": redirect.headers.get(\"Location\", str(redirect.url)),\n                    \"status_code\": redirect.status_code,\n                }\n                for redirect in response.history\n            ]\n\n            is_binary, file_path = await self._response_info(response, with_file_path=save_to_file)\n            response_headers = self._headers_to_dict(response.headers)\n\n            # Base metadata\n            metadata = {\n                \"source\": url,\n                \"status_code\": response.status_code,\n                \"response_headers\": response_headers,\n            }\n\n            if redirection_history:\n                metadata[\"redirection_history\"] = redirection_history\n\n            if save_to_file:\n                mode = \"wb\" if is_binary else \"w\"\n                encoding = response.encoding if mode == \"w\" else None\n                if file_path:\n                    await aiofiles_os.makedirs(file_path.parent, exist_ok=True)\n                    if is_binary:\n                        async with aiofiles.open(file_path, \"wb\") as f:\n                            await f.write(response.content)\n                            await f.flush()\n                    else:\n                        async with aiofiles.open(file_path, \"w\", encoding=encoding) as f:\n                            await f.write(response.text)\n                            await f.flush()\n                    metadata[\"file_path\"] = str(file_path)\n\n                if include_httpx_metadata:\n                    metadata.update({\"headers\": headers})\n                return Data(data=metadata)\n\n            # Handle response content\n            if is_binary:\n                result = response.content\n            else:\n                try:\n                    result = response.json()\n                except json.JSONDecodeError:\n                    self.log(\"Failed to decode JSON response\")\n                    result = response.text.encode(\"utf-8\")\n\n            metadata[\"result\"] = result\n\n            if include_httpx_metadata:\n                metadata.update({\"headers\": headers})\n\n            return Data(data=metadata)\n        except (httpx.HTTPError, httpx.RequestError, httpx.TimeoutException) as exc:\n            self.log(f\"Error making request to {url}\")\n            return Data(\n                data={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": 500,\n                    \"error\": str(exc),\n                    **({\"redirection_history\": redirection_history} if redirection_history else {}),\n                },\n            )\n\n    def add_query_params(self, url: str, params: dict) -> str:\n        \"\"\"Add query parameters to URL efficiently.\"\"\"\n        if not params:\n            return url\n        url_parts = list(urlparse(url))\n        query = dict(parse_qsl(url_parts[4]))\n        query.update(params)\n        url_parts[4] = urlencode(query)\n        return urlunparse(url_parts)\n\n    def _headers_to_dict(self, headers: httpx.Headers) -> dict[str, str]:\n        \"\"\"Convert HTTP headers to a dictionary with lowercased keys.\"\"\"\n        return {k.lower(): v for k, v in headers.items()}\n\n    def _process_headers(self, headers: Any) -> dict:\n        \"\"\"Process the headers input into a valid dictionary.\"\"\"\n        if headers is None:\n            return {}\n        if isinstance(headers, dict):\n            return headers\n        if isinstance(headers, list):\n            return {item[\"key\"]: item[\"value\"] for item in headers if self._is_valid_key_value_item(item)}\n        return {}\n\n    async def make_api_request(self) -> Data:\n        \"\"\"Make HTTP request with optimized parameter handling.\"\"\"\n        method = self.method\n        url = self.url_input.strip() if isinstance(self.url_input, str) else \"\"\n        headers = self.headers or {}\n        body = self.body or {}\n        timeout = self.timeout\n        follow_redirects = self.follow_redirects\n        save_to_file = self.save_to_file\n        include_httpx_metadata = self.include_httpx_metadata\n\n        # if self.mode == \"cURL\" and self.curl_input:\n        #     self._build_config = self.parse_curl(self.curl_input, dotdict())\n        #     # After parsing curl, get the normalized URL\n        #     url = self._build_config[\"url_input\"][\"value\"]\n\n        # Normalize URL before validation\n        url = self._normalize_url(url)\n\n        # Validate URL\n        if not validators.url(url):\n            msg = f\"Invalid URL provided: {url}\"\n            raise ValueError(msg)\n\n        # Process query parameters\n        if isinstance(self.query_params, str):\n            query_params = dict(parse_qsl(self.query_params))\n        else:\n            query_params = self.query_params.data if self.query_params else {}\n\n        # Process headers and body\n        headers = self._process_headers(headers)\n        body = self._process_body(body)\n        url = self.add_query_params(url, query_params)\n\n        async with httpx.AsyncClient() as client:\n            result = await self.make_request(\n                client,\n                method,\n                url,\n                headers,\n                body,\n                timeout,\n                follow_redirects=follow_redirects,\n                save_to_file=save_to_file,\n                include_httpx_metadata=include_httpx_metadata,\n            )\n        self.status = result\n        return result\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:\n        \"\"\"Update the build config based on the selected mode.\"\"\"\n        if field_name != \"mode\":\n            if field_name == \"curl_input\" and self.mode == \"cURL\" and self.curl_input:\n                return self.parse_curl(self.curl_input, build_config)\n            return build_config\n\n        # print(f\"Current mode: {field_value}\")\n        if field_value == \"cURL\":\n            set_field_display(build_config, \"curl_input\", value=True)\n            if build_config[\"curl_input\"][\"value\"]:\n                build_config = self.parse_curl(build_config[\"curl_input\"][\"value\"], build_config)\n        else:\n            set_field_display(build_config, \"curl_input\", value=False)\n\n        return set_current_fields(\n            build_config=build_config,\n            action_fields=MODE_FIELDS,\n            selected_action=field_value,\n            default_fields=DEFAULT_FIELDS,\n            func=set_field_advanced,\n            default_value=True,\n        )\n\n    async def _response_info(\n        self, response: httpx.Response, *, with_file_path: bool = False\n    ) -> tuple[bool, Path | None]:\n        \"\"\"Determine the file path and whether the response content is binary.\n\n        Args:\n            response (Response): The HTTP response object.\n            with_file_path (bool): Whether to save the response content to a file.\n\n        Returns:\n            Tuple[bool, Path | None]:\n                A tuple containing a boolean indicating if the content is binary and the full file path (if applicable).\n        \"\"\"\n        content_type = response.headers.get(\"Content-Type\", \"\")\n        is_binary = \"application/octet-stream\" in content_type or \"application/binary\" in content_type\n\n        if not with_file_path:\n            return is_binary, None\n\n        component_temp_dir = Path(tempfile.gettempdir()) / self.__class__.__name__\n\n        # Create directory asynchronously\n        await aiofiles_os.makedirs(component_temp_dir, exist_ok=True)\n\n        filename = None\n        if \"Content-Disposition\" in response.headers:\n            content_disposition = response.headers[\"Content-Disposition\"]\n            filename_match = re.search(r'filename=\"(.+?)\"', content_disposition)\n            if filename_match:\n                extracted_filename = filename_match.group(1)\n                filename = extracted_filename\n\n        # Step 3: Infer file extension or use part of the request URL if no filename\n        if not filename:\n            # Extract the last segment of the URL path\n            url_path = urlparse(str(response.request.url) if response.request else \"\").path\n            base_name = Path(url_path).name  # Get the last segment of the path\n            if not base_name:  # If the path ends with a slash or is empty\n                base_name = \"response\"\n\n            # Infer file extension\n            content_type_to_extension = {\n                \"text/plain\": \".txt\",\n                \"application/json\": \".json\",\n                \"image/jpeg\": \".jpg\",\n                \"image/png\": \".png\",\n                \"application/octet-stream\": \".bin\",\n            }\n            extension = content_type_to_extension.get(content_type, \".bin\" if is_binary else \".txt\")\n            filename = f\"{base_name}{extension}\"\n\n        # Step 4: Define the full file path\n        file_path = component_temp_dir / filename\n\n        # Step 5: Check if file exists asynchronously and handle accordingly\n        try:\n            # Try to create the file exclusively (x mode) to check existence\n            async with aiofiles.open(file_path, \"x\") as _:\n                pass  # File created successfully, we can use this path\n        except FileExistsError:\n            # If file exists, append a timestamp to the filename\n            timestamp = datetime.now(timezone.utc).strftime(\"%Y%m%d%H%M%S%f\")\n            file_path = component_temp_dir / f\"{timestamp}-{filename}\"\n\n        return is_binary, file_path\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "curl_input": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "curl_input",
+                "value": "",
+                "display_name": "cURL",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Paste a curl command to populate the fields. This will fill in the dictionary fields for headers and body.",
+                "real_time_refresh": true,
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "follow_redirects": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "follow_redirects",
+                "value": true,
+                "display_name": "Follow Redirects",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Whether to follow http redirects.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "headers": {
+                "tool_mode": false,
+                "is_list": true,
+                "list_add_label": "Add More",
+                "table_schema": [
+                  {
+                    "name": "key",
+                    "display_name": "Header",
+                    "type": "str",
+                    "description": "Header name"
+                  },
+                  {
+                    "name": "value",
+                    "display_name": "Value",
+                    "type": "str",
+                    "description": "Header value"
+                  }
+                ],
+                "trigger_text": "Open table",
+                "trigger_icon": "Table",
+                "table_icon": "Table",
+                "trace_as_metadata": true,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "headers",
+                "value": {
+                  "Content-Type": "multipart/form-data"
+                },
+                "display_name": "Headers",
+                "advanced": true,
+                "input_types": [
+                  "Data"
+                ],
+                "dynamic": false,
+                "info": "The headers to send with the request",
+                "real_time_refresh": true,
+                "title_case": false,
+                "type": "table",
+                "_input_type": "TableInput"
+              },
+              "include_httpx_metadata": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "include_httpx_metadata",
+                "value": false,
+                "display_name": "Include HTTPx Metadata",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Include properties such as headers, status_code, response_headers, and redirection_history in the output.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "method": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "GET",
+                  "POST",
+                  "PATCH",
+                  "PUT",
+                  "DELETE"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "method",
+                "value": "POST",
+                "display_name": "Method",
+                "advanced": false,
+                "dynamic": false,
+                "info": "The HTTP method to use.",
+                "real_time_refresh": true,
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "mode": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "URL",
+                  "cURL"
+                ],
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "mode",
+                "value": "URL",
+                "display_name": "Mode",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Enable cURL mode to populate fields from a cURL command.",
+                "real_time_refresh": true,
+                "title_case": false,
+                "type": "tab",
+                "_input_type": "TabInput"
+              },
+              "save_to_file": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "save_to_file",
+                "value": false,
+                "display_name": "Save to File",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Save the API response to a temporary file",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "timeout": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "timeout",
+                "value": 30,
+                "display_name": "Timeout",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The timeout to use for the request.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "url_input": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "url_input",
+                "value": "",
+                "display_name": "URL",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Enter the URL for the request.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "endpoint": {
+                "name": "endpoint",
+                "type": "str",
+                "value": "/upload",
+                "display_name": "endpoint",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              },
+              "description": {
+                "name": "description",
+                "type": "str",
+                "value": "Converts local audio files to uploadable URLs for AssemblyAI",
+                "display_name": "description",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              },
+              "url": {
+                "name": "url",
+                "type": "str",
+                "value": "https://api.assemblyai.com/v2/transcript",
+                "display_name": "url",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "data",
+          "type": "APIRequest"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "APIRequest-9muDf",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 1280
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 1280
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Poll for the status of a transcription job using AssemblyAI",
+          "display_name": "Transcription Poller",
+          "id": "AssemblyAITranscriptionJobPoller-AtD0i",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Poll for the status of a transcription job using AssemblyAI",
+            "display_name": "Transcription Poller",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "polling_interval",
+              "poll_interval",
+              "api_key"
+            ],
+            "frozen": false,
+            "icon": "component",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Data"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Transcription Result",
+                "group_outputs": false,
+                "method": "poll_transcription_job",
+                "name": "transcription_result",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "transcript_id": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "trace_as_input": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "transcript_id",
+                "value": "",
+                "display_name": "Transcript ID",
+                "advanced": false,
+                "input_types": [
+                  "Data"
+                ],
+                "dynamic": false,
+                "info": "The ID of the transcription job to poll",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "DataInput"
+              },
+              "api_key": {
+                "load_from_db": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "api_key",
+                "value": "{ASSEMBLYAI_API_KEY}",
+                "display_name": "Assembly API Key",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Your AssemblyAI API key. You can get one from https://www.assemblyai.com/",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "import assemblyai as aai\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.field_typing.range_spec import RangeSpec\nfrom lfx.io import DataInput, FloatInput, Output, SecretStrInput\nfrom lfx.log.logger import logger\nfrom lfx.schema.data import Data\n\n\nclass AssemblyAITranscriptionJobPoller(Component):\n    display_name = \"AssemblyAI Poll Transcript\"\n    description = \"Poll for the status of a transcription job using AssemblyAI\"\n    documentation = \"https://www.assemblyai.com/docs\"\n    icon = \"AssemblyAI\"\n\n    inputs = [\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"Assembly API Key\",\n            info=\"Your AssemblyAI API key. You can get one from https://www.assemblyai.com/\",\n            required=True,\n        ),\n        DataInput(\n            name=\"transcript_id\",\n            display_name=\"Transcript ID\",\n            info=\"The ID of the transcription job to poll\",\n            required=True,\n        ),\n        FloatInput(\n            name=\"polling_interval\",\n            display_name=\"Polling Interval\",\n            value=3.0,\n            info=\"The polling interval in seconds\",\n            advanced=True,\n            range_spec=RangeSpec(min=3, max=30),\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Transcription Result\", name=\"transcription_result\", method=\"poll_transcription_job\"),\n    ]\n\n    def poll_transcription_job(self) -> Data:\n        \"\"\"Polls the transcription status until completion and returns the Data.\"\"\"\n        aai.settings.api_key = self.api_key\n        aai.settings.polling_interval = self.polling_interval\n\n        # check if it's an error message from the previous step\n        if self.transcript_id.data.get(\"error\"):\n            self.status = self.transcript_id.data[\"error\"]\n            return self.transcript_id\n\n        try:\n            transcript = aai.Transcript.get_by_id(self.transcript_id.data[\"transcript_id\"])\n        except Exception as e:  # noqa: BLE001\n            error = f\"Getting transcription failed: {e}\"\n            logger.debug(error, exc_info=True)\n            self.status = error\n            return Data(data={\"error\": error})\n\n        if transcript.status == aai.TranscriptStatus.completed:\n            json_response = transcript.json_response\n            text = json_response.pop(\"text\", None)\n            utterances = json_response.pop(\"utterances\", None)\n            transcript_id = json_response.pop(\"id\", None)\n            sorted_data = {\"text\": text, \"utterances\": utterances, \"id\": transcript_id}\n            sorted_data.update(json_response)\n            data = Data(data=sorted_data)\n            self.status = data\n            return data\n        self.status = transcript.error\n        return Data(data={\"error\": transcript.error})\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "polling_interval": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "range_spec": {
+                  "step_type": "float",
+                  "min": 3.0,
+                  "max": 30.0,
+                  "step": 0.1
+                },
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "polling_interval",
+                "value": 3.0,
+                "display_name": "Polling Interval",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The polling interval in seconds",
+                "title_case": false,
+                "type": "float",
+                "_input_type": "FloatInput"
+              },
+              "poll_interval": {
+                "name": "poll_interval",
+                "type": "str",
+                "value": 5,
+                "display_name": "poll_interval",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "transcription_result",
+          "type": "AssemblyAITranscriptionJobPoller"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "AssemblyAITranscriptionJobPoller-AtD0i",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 530,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 530,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Generates text using OpenAI LLMs.",
+          "display_name": "OpenAI Transcription Model",
+          "id": "OpenAIModel-2eFgH",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generates text using OpenAI LLMs.",
+            "display_name": "OpenAI Transcription Model",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "api_key",
+              "json_mode",
+              "max_retries",
+              "model_name",
+              "seed",
+              "stream",
+              "temperature",
+              "timeout",
+              "provider",
+              "system_message"
+            ],
+            "frozen": false,
+            "icon": "openai",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message",
+              "LanguageModel"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "load_from_db": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "api_key",
+                "value": "{OPENAI_API_KEY}",
+                "display_name": "OpenAI API Key",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "The OpenAI API Key to use for the OpenAI model.",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from typing import Any\n\nfrom langchain_openai import ChatOpenAI\nfrom pydantic.v1 import SecretStr\n\nfrom lfx.base.models.model import LCModelComponent\nfrom lfx.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES\nfrom lfx.field_typing import LanguageModel\nfrom lfx.field_typing.range_spec import RangeSpec\nfrom lfx.inputs.inputs import BoolInput, DictInput, DropdownInput, IntInput, SecretStrInput, SliderInput, StrInput\nfrom lfx.log.logger import logger\n\n\nclass OpenAIModelComponent(LCModelComponent):\n    display_name = \"OpenAI\"\n    description = \"Generates text using OpenAI LLMs.\"\n    icon = \"OpenAI\"\n    name = \"OpenAIModel\"\n\n    inputs = [\n        *LCModelComponent.get_base_inputs(),\n        IntInput(\n            name=\"max_tokens\",\n            display_name=\"Max Tokens\",\n            advanced=True,\n            info=\"The maximum number of tokens to generate. Set to 0 for unlimited tokens.\",\n            range_spec=RangeSpec(min=0, max=128000),\n        ),\n        DictInput(\n            name=\"model_kwargs\",\n            display_name=\"Model Kwargs\",\n            advanced=True,\n            info=\"Additional keyword arguments to pass to the model.\",\n        ),\n        BoolInput(\n            name=\"json_mode\",\n            display_name=\"JSON Mode\",\n            advanced=True,\n            info=\"If True, it will output JSON regardless of passing a schema.\",\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            advanced=False,\n            options=OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES,\n            value=OPENAI_CHAT_MODEL_NAMES[0],\n            combobox=True,\n            real_time_refresh=True,\n        ),\n        StrInput(\n            name=\"openai_api_base\",\n            display_name=\"OpenAI API Base\",\n            advanced=True,\n            info=\"The base URL of the OpenAI API. \"\n            \"Defaults to https://api.openai.com/v1. \"\n            \"You can change this to use other APIs like JinaChat, LocalAI and Prem.\",\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"OpenAI API Key\",\n            info=\"The OpenAI API Key to use for the OpenAI model.\",\n            advanced=False,\n            value=\"OPENAI_API_KEY\",\n            required=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.1,\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            show=True,\n        ),\n        IntInput(\n            name=\"seed\",\n            display_name=\"Seed\",\n            info=\"The seed controls the reproducibility of the job.\",\n            advanced=True,\n            value=1,\n        ),\n        IntInput(\n            name=\"max_retries\",\n            display_name=\"Max Retries\",\n            info=\"The maximum number of retries to make when generating.\",\n            advanced=True,\n            value=5,\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            info=\"The timeout for requests to OpenAI completion API.\",\n            advanced=True,\n            value=700,\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:  # type: ignore[type-var]\n        logger.debug(f\"Executing request with model: {self.model_name}\")\n        # Handle api_key - it can be string or SecretStr\n        api_key_value = None\n        if self.api_key:\n            logger.debug(f\"API key type: {type(self.api_key)}, value: {self.api_key!r}\")\n            if isinstance(self.api_key, SecretStr):\n                api_key_value = self.api_key.get_secret_value()\n            else:\n                api_key_value = str(self.api_key)\n        logger.debug(f\"Final api_key_value type: {type(api_key_value)}, value: {'***' if api_key_value else None}\")\n\n        # Handle model_kwargs and ensure api_key doesn't conflict\n        model_kwargs = self.model_kwargs or {}\n        # Remove api_key from model_kwargs if it exists to prevent conflicts\n        if \"api_key\" in model_kwargs:\n            logger.warning(\"api_key found in model_kwargs, removing to prevent conflicts\")\n            model_kwargs = dict(model_kwargs)  # Make a copy\n            del model_kwargs[\"api_key\"]\n\n        parameters = {\n            \"api_key\": api_key_value,\n            \"model_name\": self.model_name,\n            \"max_tokens\": self.max_tokens or None,\n            \"model_kwargs\": model_kwargs,\n            \"base_url\": self.openai_api_base or \"https://api.openai.com/v1\",\n            \"max_retries\": self.max_retries,\n            \"timeout\": self.timeout,\n        }\n\n        # TODO: Revisit if/once parameters are supported for reasoning models\n        unsupported_params_for_reasoning_models = [\"temperature\", \"seed\"]\n\n        if self.model_name not in OPENAI_REASONING_MODEL_NAMES:\n            parameters[\"temperature\"] = self.temperature if self.temperature is not None else 0.1\n            parameters[\"seed\"] = self.seed\n        else:\n            params_str = \", \".join(unsupported_params_for_reasoning_models)\n            logger.debug(f\"{self.model_name} is a reasoning model, {params_str} are not configurable. Ignoring.\")\n\n        # Ensure all parameter values are the correct types\n        if isinstance(parameters.get(\"api_key\"), SecretStr):\n            parameters[\"api_key\"] = parameters[\"api_key\"].get_secret_value()\n        output = ChatOpenAI(**parameters)\n        if self.json_mode:\n            output = output.bind(response_format={\"type\": \"json_object\"})\n\n        return output\n\n    def _get_exception_message(self, e: Exception):\n        \"\"\"Get a message from an OpenAI exception.\n\n        Args:\n            e (Exception): The exception to get the message from.\n\n        Returns:\n            str: The message from the exception.\n        \"\"\"\n        try:\n            from openai import BadRequestError\n        except ImportError:\n            return None\n        if isinstance(e, BadRequestError):\n            message = e.body.get(\"message\")\n            if message:\n                return message\n        return None\n\n    def update_build_config(self, build_config: dict, field_value: Any, field_name: str | None = None) -> dict:\n        if field_name in {\"base_url\", \"model_name\", \"api_key\"} and field_value in OPENAI_REASONING_MODEL_NAMES:\n            build_config[\"temperature\"][\"show\"] = False\n            build_config[\"seed\"][\"show\"] = False\n            # Hide system_message for o1 models - currently unsupported\n            if field_value.startswith(\"o1\") and \"system_message\" in build_config:\n                build_config[\"system_message\"][\"show\"] = False\n        if field_name in {\"base_url\", \"model_name\", \"api_key\"} and field_value in OPENAI_CHAT_MODEL_NAMES:\n            build_config[\"temperature\"][\"show\"] = True\n            build_config[\"seed\"][\"show\"] = True\n            if \"system_message\" in build_config:\n                build_config[\"system_message\"][\"show\"] = True\n        return build_config\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "input_value": {
+                "trace_as_input": true,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "",
+                "display_name": "Input",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageInput"
+              },
+              "json_mode": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "json_mode",
+                "value": false,
+                "display_name": "JSON Mode",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If True, it will output JSON regardless of passing a schema.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "max_retries": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "max_retries",
+                "value": 5,
+                "display_name": "Max Retries",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The maximum number of retries to make when generating.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "max_tokens": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "range_spec": {
+                  "step_type": "float",
+                  "min": 0.0,
+                  "max": 128000.0,
+                  "step": 0.1
+                },
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "max_tokens",
+                "value": "",
+                "display_name": "Max Tokens",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The maximum number of tokens to generate. Set to 0 for unlimited tokens.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "model_kwargs": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "model_kwargs",
+                "value": {},
+                "display_name": "Model Kwargs",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Additional keyword arguments to pass to the model.",
+                "title_case": false,
+                "type": "dict",
+                "_input_type": "DictInput"
+              },
+              "model_name": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "gpt-4o-mini",
+                  "gpt-4o",
+                  "gpt-4.1",
+                  "gpt-4.1-mini",
+                  "gpt-4.1-nano",
+                  "gpt-4-turbo",
+                  "gpt-4-turbo-preview",
+                  "gpt-4",
+                  "gpt-3.5-turbo",
+                  "gpt-5",
+                  "gpt-5-mini",
+                  "gpt-5-nano",
+                  "gpt-5-chat-latest",
+                  "o1",
+                  "o3-mini",
+                  "o3",
+                  "o3-pro",
+                  "o4-mini",
+                  "o4-mini-high"
+                ],
+                "options_metadata": [],
+                "combobox": true,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "model_name",
+                "value": "whisper-1",
+                "display_name": "Model Name",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "real_time_refresh": true,
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "openai_api_base": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_base",
+                "value": "",
+                "display_name": "OpenAI API Base",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The base URL of the OpenAI API. Defaults to https://api.openai.com/v1. You can change this to use other APIs like JinaChat, LocalAI and Prem.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "seed": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "seed",
+                "value": 1,
+                "display_name": "Seed",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The seed controls the reproducibility of the job.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "stream": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "stream",
+                "value": false,
+                "display_name": "Stream",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "system_message": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "system_message",
+                "value": "You are a professional meeting summary assistant. Analyze the conversation and provide a concise, well-structured summary with key points, action items, and decisions made.",
+                "display_name": "System Message",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "temperature": {
+                "tool_mode": false,
+                "min_label": "",
+                "max_label": "",
+                "min_label_icon": "",
+                "max_label_icon": "",
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "range_spec": {
+                  "step_type": "float",
+                  "min": 0.0,
+                  "max": 1.0,
+                  "step": 0.01
+                },
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "temperature",
+                "value": 0.7,
+                "display_name": "Temperature",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "slider",
+                "_input_type": "SliderInput"
+              },
+              "timeout": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "timeout",
+                "value": 700,
+                "display_name": "Timeout",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The timeout for requests to OpenAI completion API.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "provider": {
+                "name": "provider",
+                "type": "str",
+                "value": "OpenAI",
+                "display_name": "provider",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "text_output",
+          "type": "OpenAIModel"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "OpenAIModel-2eFgH",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 1580
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 1580
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Create a prompt template with dynamic variables.",
+          "display_name": "Transcription Prompt",
+          "id": "PromptTemplate-new1",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Transcription Prompt",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "template"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "method": "build_prompt",
+                "name": "prompt",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.base.prompts.api_utils import process_prompt_template\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.inputs.inputs import DefaultPromptField\nfrom lfx.io import MessageTextInput, Output, PromptInput\nfrom lfx.schema.message import Message\nfrom lfx.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt Template\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    documentation: str = \"https://docs.langflow.org/components-prompts\"\n    icon = \"braces\"\n    trace_type = \"prompt\"\n    name = \"Prompt Template\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "template": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "template",
+                "value": "Generate a concise summary of the meeting transcript. Include key decisions, action items, and main discussion points.",
+                "display_name": "Template",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "prompt",
+                "_input_type": "PromptInput"
+              },
+              "tool_placeholder": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "tool_placeholder",
+                "value": "",
+                "display_name": "Tool Placeholder",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              }
+            }
+          },
+          "selected_output": "prompt",
+          "type": "Prompt Template"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "PromptTemplate-new1",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 1880
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 1880
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Display a chat message in the Playground.",
+          "display_name": "Meeting Summary Output",
+          "id": "ChatOutput-3gHiJ",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Display a chat message in the Playground.",
+            "display_name": "Meeting Summary Output",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "clean_data",
+              "data_template",
+              "sender",
+              "sender_name",
+              "should_store_message"
+            ],
+            "frozen": false,
+            "icon": "message-square",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "input_value": {
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "",
+                "display_name": "Inputs",
+                "advanced": false,
+                "input_types": [
+                  "Data",
+                  "DataFrame",
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Message to be passed as output.",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "clean_data": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "clean_data",
+                "value": true,
+                "display_name": "Basic Clean Data",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Whether to clean data before converting to string.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from collections.abc import Generator\nfrom typing import Any\n\nimport orjson\nfrom fastapi.encoders import jsonable_encoder\n\nfrom lfx.base.io.chat import ChatComponent\nfrom lfx.helpers.data import safe_convert\nfrom lfx.inputs.inputs import BoolInput, DropdownInput, HandleInput, MessageTextInput\nfrom lfx.schema.data import Data\nfrom lfx.schema.dataframe import DataFrame\nfrom lfx.schema.message import Message\nfrom lfx.schema.properties import Source\nfrom lfx.template.field.base import Output\nfrom lfx.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_AI,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatOutput(ChatComponent):\n    display_name = \"Chat Output\"\n    description = \"Display a chat message in the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatOutput\"\n    minimized = True\n\n    inputs = [\n        HandleInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Message to be passed as output.\",\n            input_types=[\"Data\", \"DataFrame\", \"Message\"],\n            required=True,\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_AI,\n            advanced=True,\n            info=\"Type of sender.\",\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_AI,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"data_template\",\n            display_name=\"Data Template\",\n            value=\"{text}\",\n            advanced=True,\n            info=\"Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.\",\n        ),\n        BoolInput(\n            name=\"clean_data\",\n            display_name=\"Basic Clean Data\",\n            value=True,\n            advanced=True,\n            info=\"Whether to clean data before converting to string.\",\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"Output Message\",\n            name=\"message\",\n            method=\"message_response\",\n        ),\n    ]\n\n    def _build_source(self, id_: str | None, display_name: str | None, source: str | None) -> Source:\n        source_dict = {}\n        if id_:\n            source_dict[\"id\"] = id_\n        if display_name:\n            source_dict[\"display_name\"] = display_name\n        if source:\n            # Handle case where source is a ChatOpenAI object\n            if hasattr(source, \"model_name\"):\n                source_dict[\"source\"] = source.model_name\n            elif hasattr(source, \"model\"):\n                source_dict[\"source\"] = str(source.model)\n            else:\n                source_dict[\"source\"] = str(source)\n        return Source(**source_dict)\n\n    async def message_response(self) -> Message:\n        # First convert the input to string if needed\n        text = self.convert_to_string()\n\n        # Get source properties\n        source, _, display_name, source_id = self.get_properties_from_source_component()\n\n        # Create or use existing Message object\n        if isinstance(self.input_value, Message):\n            message = self.input_value\n            # Update message properties\n            message.text = text\n        else:\n            message = Message(text=text)\n\n        # Set message properties\n        message.sender = self.sender\n        message.sender_name = self.sender_name\n        message.session_id = self.session_id\n        message.flow_id = self.graph.flow_id if hasattr(self, \"graph\") else None\n        message.properties.source = self._build_source(source_id, display_name, source)\n\n        # Store message if needed\n        if self.session_id and self.should_store_message:\n            stored_message = await self.send_message(message)\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n\n    def _serialize_data(self, data: Data) -> str:\n        \"\"\"Serialize Data object to JSON string.\"\"\"\n        # Convert data.data to JSON-serializable format\n        serializable_data = jsonable_encoder(data.data)\n        # Serialize with orjson, enabling pretty printing with indentation\n        json_bytes = orjson.dumps(serializable_data, option=orjson.OPT_INDENT_2)\n        # Convert bytes to string and wrap in Markdown code blocks\n        return \"```json\\n\" + json_bytes.decode(\"utf-8\") + \"\\n```\"\n\n    def _validate_input(self) -> None:\n        \"\"\"Validate the input data and raise ValueError if invalid.\"\"\"\n        if self.input_value is None:\n            msg = \"Input data cannot be None\"\n            raise ValueError(msg)\n        if isinstance(self.input_value, list) and not all(\n            isinstance(item, Message | Data | DataFrame | str) for item in self.input_value\n        ):\n            invalid_types = [\n                type(item).__name__\n                for item in self.input_value\n                if not isinstance(item, Message | Data | DataFrame | str)\n            ]\n            msg = f\"Expected Data or DataFrame or Message or str, got {invalid_types}\"\n            raise TypeError(msg)\n        if not isinstance(\n            self.input_value,\n            Message | Data | DataFrame | str | list | Generator | type(None),\n        ):\n            type_name = type(self.input_value).__name__\n            msg = f\"Expected Data or DataFrame or Message or str, Generator or None, got {type_name}\"\n            raise TypeError(msg)\n\n    def convert_to_string(self) -> str | Generator[Any, None, None]:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        self._validate_input()\n        if isinstance(self.input_value, list):\n            clean_data: bool = getattr(self, \"clean_data\", False)\n            return \"\\n\".join([safe_convert(item, clean_data=clean_data) for item in self.input_value])\n        if isinstance(self.input_value, Generator):\n            return self.input_value\n        return safe_convert(self.input_value)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "data_template": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "data_template",
+                "value": "{text}",
+                "display_name": "Data Template",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "sender": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender",
+                "value": "Machine",
+                "display_name": "Sender Type",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Type of sender.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "sender_name": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender_name",
+                "value": "AI",
+                "display_name": "Sender Name",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "session_id": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "session_id",
+                "value": "",
+                "display_name": "Session ID",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "should_store_message": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "should_store_message",
+                "value": true,
+                "display_name": "Store Messages",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              }
+            }
+          },
+          "selected_output": "message",
+          "type": "ChatOutput"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "ChatOutput-3gHiJ",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 530,
+          "y": 380
+        },
+        "positionAbsolute": {
+          "x": 530,
+          "y": 380
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Store any file seamlessly on JigsawStack File Storage and use it in your AI applications.         Supports various file types including images, documents, and more.",
+          "display_name": "Audio File Uploader",
+          "id": "JigsawStackFileUpload-HdKH7",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Store any file seamlessly on JigsawStack File Storage and use it in your AI applications.         Supports various file types including images, documents, and more.",
+            "display_name": "Audio File Uploader",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "overwrite",
+              "temp_public_url",
+              "description"
+            ],
+            "frozen": false,
+            "icon": "file-text",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Data"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "File Store Result",
+                "group_outputs": false,
+                "method": "upload_file",
+                "name": "file_upload_result",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "file": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "file_path": "",
+                "fileTypes": [
+                  "pdf",
+                  "png",
+                  "jpg",
+                  "jpeg",
+                  "mp4",
+                  "mp3",
+                  "txt",
+                  "docx",
+                  "xlsx"
+                ],
+                "temp_file": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "file",
+                "value": "",
+                "display_name": "File",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Upload file to be stored on JigsawStack File Storage.",
+                "title_case": false,
+                "type": "file",
+                "_input_type": "FileInput"
+              },
+              "api_key": {
+                "load_from_db": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "api_key",
+                "value": "",
+                "display_name": "JigsawStack API Key",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Your JigsawStack API key for authentication",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from pathlib import Path\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import BoolInput, FileInput, Output, SecretStrInput, StrInput\nfrom lfx.schema.data import Data\n\n\nclass JigsawStackFileUploadComponent(Component):\n    display_name = \"File Upload\"\n    description = \"Store any file seamlessly on JigsawStack File Storage and use it in your AI applications. \\\n        Supports various file types including images, documents, and more.\"\n    documentation = \"https://jigsawstack.com/docs/api-reference/store/file/add\"\n    icon = \"JigsawStack\"\n    name = \"JigsawStackFileUpload\"\n\n    inputs = [\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"JigsawStack API Key\",\n            info=\"Your JigsawStack API key for authentication\",\n            required=True,\n        ),\n        FileInput(\n            name=\"file\",\n            display_name=\"File\",\n            info=\"Upload file to be stored on JigsawStack File Storage.\",\n            required=True,\n            file_types=[\"pdf\", \"png\", \"jpg\", \"jpeg\", \"mp4\", \"mp3\", \"txt\", \"docx\", \"xlsx\"],\n        ),\n        StrInput(\n            name=\"key\",\n            display_name=\"Key\",\n            info=\"The key used to store the file on JigsawStack File Storage. \\\n                If not provided, a unique key will be generated.\",\n            required=False,\n            tool_mode=True,\n        ),\n        BoolInput(\n            name=\"overwrite\",\n            display_name=\"Overwrite Existing File\",\n            info=\"If true, will overwrite the existing file with the same key. \\\n                If false, will return an error if the file already exists.\",\n            required=False,\n            value=True,\n        ),\n        BoolInput(\n            name=\"temp_public_url\",\n            display_name=\"Return Temporary Public URL\",\n            info=\"If true, will return a temporary public URL which lasts for a limited time. \\\n                If false, will return the file store key which can only be accessed by the owner.\",\n            required=False,\n            value=False,\n            tool_mode=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"File Store Result\", name=\"file_upload_result\", method=\"upload_file\"),\n    ]\n\n    def upload_file(self) -> Data:\n        try:\n            from jigsawstack import JigsawStack, JigsawStackError\n        except ImportError as e:\n            jigsawstack_import_error = (\n                \"JigsawStack package not found. Please install it using: pip install jigsawstack>=0.2.7\"\n            )\n            raise ImportError(jigsawstack_import_error) from e\n\n        try:\n            client = JigsawStack(api_key=self.api_key)\n\n            file_path = Path(self.file)\n            with Path.open(file_path, \"rb\") as f:\n                file_content = f.read()\n            params = {}\n\n            if self.key:\n                # if key is provided, use it as the file store key\n                params[\"key\"] = self.key\n            if self.overwrite is not None:\n                # if overwrite is provided, use it to determine if the file should be overwritten\n                params[\"overwrite\"] = self.overwrite\n            if self.temp_public_url is not None:\n                # if temp_public_url is provided, use it to determine if a temporary public URL should\n                params[\"temp_public_url\"] = self.temp_public_url\n\n            response = client.store.upload(file_content, params)\n            return Data(data=response)\n\n        except JigsawStackError as e:\n            error_data = {\"error\": str(e), \"success\": False}\n            self.status = f\"Error: {e!s}\"\n            return Data(data=error_data)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "key": {
+                "tool_mode": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "key",
+                "value": "",
+                "display_name": "Key",
+                "advanced": false,
+                "dynamic": false,
+                "info": "The key used to store the file on JigsawStack File Storage.                 If not provided, a unique key will be generated.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "overwrite": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "overwrite",
+                "value": true,
+                "display_name": "Overwrite Existing File",
+                "advanced": false,
+                "dynamic": false,
+                "info": "If true, will overwrite the existing file with the same key.                 If false, will return an error if the file already exists.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "temp_public_url": {
+                "tool_mode": true,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "temp_public_url",
+                "value": false,
+                "display_name": "Return Temporary Public URL",
+                "advanced": false,
+                "dynamic": false,
+                "info": "If true, will return a temporary public URL which lasts for a limited time.                 If false, will return the file store key which can only be accessed by the owner.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "description": {
+                "name": "description",
+                "type": "str",
+                "value": "Converts local audio files to URLs for AssemblyAI processing",
+                "display_name": "description",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "file_upload_result",
+          "type": "JigsawStackFileUpload"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "JigsawStackFileUpload-HdKH7",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 2180
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 2180
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 0.75
+    }
+  },
+  "description": "An AI-powered meeting summary generator that transcribes and summarizes meetings using  AssemblyAI and OpenAI for quick insights.",
+  "endpoint_name": null,
+  "id": "56d48708-2322-4fde-9673-aaa5e7d922f0",
+  "is_component": false,
+  "last_tested_version": "1.0.0",
+  "name": "Workflow",
+  "tags": [],
+  "webhook": false
+}

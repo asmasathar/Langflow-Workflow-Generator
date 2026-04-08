@@ -1,0 +1,2749 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-jFwUm",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "search_query",
+            "id": "OpenSearchVectorStore-kP9xL",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "query"
+          }
+        },
+        "id": "reactflow__edge-ChatInput-jFwUm{œdataTypeœ:œChatInputœ,œidœ:œChatInput-jFwUmœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-OpenSearchVectorStore-kP9xL{œfieldNameœ:œsearch_queryœ,œidœ:œOpenSearchVectorStore-kP9xLœ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}",
+        "selected": false,
+        "source": "ChatInput-jFwUm",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-jFwUmœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "OpenSearchVectorStore-kP9xL",
+        "targetHandle": "{œfieldNameœ:œsearch_queryœ,œidœ:œOpenSearchVectorStore-kP9xLœ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-jFwUm",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "LanguageModelComponent-llm01",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-ChatInput-jFwUm{œdataTypeœ:œChatInputœ,œidœ:œChatInput-jFwUmœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-LanguageModelComponent-llm01{œfieldNameœ:œinput_valueœ,œidœ:œLanguageModelComponent-llm01œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-jFwUm",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-jFwUmœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "LanguageModelComponent-llm01",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œLanguageModelComponent-llm01œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenAIEmbeddings",
+            "id": "OpenAIEmbeddings-embed01",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "OpenSearchVectorStore-kP9xL",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-OpenAIEmbeddings-embed01{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-embed01œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-OpenSearchVectorStore-kP9xL{œfieldNameœ:œembeddingœ,œidœ:œOpenSearchVectorStore-kP9xLœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "OpenAIEmbeddings-embed01",
+        "sourceHandle": "{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-embed01œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "OpenSearchVectorStore-kP9xL",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œOpenSearchVectorStore-kP9xLœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenSearchVectorStoreComponent",
+            "id": "OpenSearchVectorStore-kP9xL",
+            "name": "dataframe",
+            "output_types": [
+              "DataFrame"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "context",
+            "id": "PromptComponent-vT8wY",
+            "inputTypes": [
+              "Message",
+              "Text",
+              "Data"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-OpenSearchVectorStore-kP9xL{œdataTypeœ:œOpenSearchVectorStoreComponentœ,œidœ:œOpenSearchVectorStore-kP9xLœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}-PromptComponent-vT8wY{œfieldNameœ:œcontextœ,œidœ:œPromptComponent-vT8wYœ,œinputTypesœ:[œMessageœ,œTextœ,œDataœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "OpenSearchVectorStore-kP9xL",
+        "sourceHandle": "{œdataTypeœ:œOpenSearchVectorStoreComponentœ,œidœ:œOpenSearchVectorStore-kP9xLœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}",
+        "target": "PromptComponent-vT8wY",
+        "targetHandle": "{œfieldNameœ:œcontextœ,œidœ:œPromptComponent-vT8wYœ,œinputTypesœ:[œMessageœ,œTextœ,œDataœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt Template",
+            "id": "PromptComponent-vT8wY",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "system_message",
+            "id": "LanguageModelComponent-llm01",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-PromptComponent-vT8wY{œdataTypeœ:œPrompt Templateœ,œidœ:œPromptComponent-vT8wYœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-LanguageModelComponent-llm01{œfieldNameœ:œsystem_messageœ,œidœ:œLanguageModelComponent-llm01œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "PromptComponent-vT8wY",
+        "sourceHandle": "{œdataTypeœ:œPrompt Templateœ,œidœ:œPromptComponent-vT8wYœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "LanguageModelComponent-llm01",
+        "targetHandle": "{œfieldNameœ:œsystem_messageœ,œidœ:œLanguageModelComponent-llm01œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenAIModel",
+            "id": "LanguageModelComponent-llm01",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-pL7mK",
+            "inputTypes": [
+              "Data",
+              "DataFrame",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-LanguageModelComponent-llm01{œdataTypeœ:œOpenAIModelœ,œidœ:œLanguageModelComponent-llm01œ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-pL7mK{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-pL7mKœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "LanguageModelComponent-llm01",
+        "sourceHandle": "{œdataTypeœ:œOpenAIModelœ,œidœ:œLanguageModelComponent-llm01œ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-pL7mK",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-pL7mKœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenAIModel",
+            "id": "LanguageModelComponent-llm01",
+            "name": "model_output",
+            "output_types": [
+              "LanguageModel"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "llm",
+            "id": "RetrievalQA-Tdlcn",
+            "inputTypes": [
+              "LanguageModel"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-LanguageModelComponent-llm01{œdataTypeœ:œOpenAIModelœ,œidœ:œLanguageModelComponent-llm01œ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}-RetrievalQA-Tdlcn{œfieldNameœ:œllmœ,œidœ:œRetrievalQA-Tdlcnœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "LanguageModelComponent-llm01",
+        "sourceHandle": "{œdataTypeœ:œOpenAIModelœ,œidœ:œLanguageModelComponent-llm01œ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}",
+        "target": "RetrievalQA-Tdlcn",
+        "targetHandle": "{œfieldNameœ:œllmœ,œidœ:œRetrievalQA-Tdlcnœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenSearchVectorStoreComponent",
+            "id": "OpenSearchVectorStore-kP9xL",
+            "name": "dataframe",
+            "output_types": [
+              "DataFrame"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "retriever",
+            "id": "RetrievalQA-Tdlcn",
+            "inputTypes": [
+              "Retriever"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-OpenSearchVectorStore-kP9xL{œdataTypeœ:œOpenSearchVectorStoreComponentœ,œidœ:œOpenSearchVectorStore-kP9xLœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}-RetrievalQA-Tdlcn{œfieldNameœ:œretrieverœ,œidœ:œRetrievalQA-Tdlcnœ,œinputTypesœ:[œRetrieverœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "OpenSearchVectorStore-kP9xL",
+        "sourceHandle": "{œdataTypeœ:œOpenSearchVectorStoreComponentœ,œidœ:œOpenSearchVectorStore-kP9xLœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}",
+        "target": "RetrievalQA-Tdlcn",
+        "targetHandle": "{œfieldNameœ:œretrieverœ,œidœ:œRetrievalQA-Tdlcnœ,œinputTypesœ:[œRetrieverœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-jFwUm",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "OpenAIEmbeddings-embed01",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-ChatInput-jFwUm{œdataTypeœ:œChatInputœ,œidœ:œChatInput-jFwUmœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-OpenAIEmbeddings-embed01{œfieldNameœ:œinput_valueœ,œidœ:œOpenAIEmbeddings-embed01œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-jFwUm",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-jFwUmœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "OpenAIEmbeddings-embed01",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œOpenAIEmbeddings-embed01œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-jFwUm",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input",
+            "id": "PromptComponent-vT8wY",
+            "inputTypes": [
+              "Message",
+              "Text",
+              "Data"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-ChatInput-jFwUm{œdataTypeœ:œChatInputœ,œidœ:œChatInput-jFwUmœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-PromptComponent-vT8wY{œfieldNameœ:œinputœ,œidœ:œPromptComponent-vT8wYœ,œinputTypesœ:[œMessageœ,œTextœ,œDataœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-jFwUm",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-jFwUmœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "PromptComponent-vT8wY",
+        "targetHandle": "{œfieldNameœ:œinputœ,œidœ:œPromptComponent-vT8wYœ,œinputTypesœ:[œMessageœ,œTextœ,œDataœ],œtypeœ:œstrœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "description": "Get chat inputs from the Playground.",
+          "display_name": "User Query Input",
+          "id": "ChatInput-jFwUm",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "User Query Input",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "sender",
+              "sender_name",
+              "should_store_message"
+            ],
+            "frozen": false,
+            "icon": "message-circle",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "files": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "file_path": "",
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "temp_file": true,
+                "list": true,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "files",
+                "value": "",
+                "display_name": "Files",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Files to be sent with the message.",
+                "title_case": false,
+                "type": "file",
+                "_input_type": "FileInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom lfx.base.io.chat import ChatComponent\nfrom lfx.inputs.inputs import BoolInput\nfrom lfx.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom lfx.schema.message import Message\nfrom lfx.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        # Ensure files is a list and filter out empty/None values\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        # Filter out None/empty values\n        files = [f for f in files if f is not None and f != \"\"]\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=files,\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "input_value": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "",
+                "display_name": "Input Text",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "sender": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender",
+                "value": "User",
+                "display_name": "Sender Type",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Type of sender.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "sender_name": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender_name",
+                "value": "User",
+                "display_name": "Sender Name",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "session_id": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "session_id",
+                "value": "",
+                "display_name": "Session ID",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "should_store_message": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "should_store_message",
+                "value": true,
+                "display_name": "Store Messages",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              }
+            }
+          },
+          "selected_output": "message",
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "ChatInput-jFwUm",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Generate embeddings using OpenAI models.",
+          "display_name": "Semantic Embeddings Model",
+          "id": "OpenAIEmbeddings-embed01",
+          "node": {
+            "base_classes": [
+              "Embeddings"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate embeddings using OpenAI models.",
+            "display_name": "Semantic Embeddings Model",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "chunk_size",
+              "embedding_ctx_length",
+              "max_retries",
+              "model",
+              "openai_api_key",
+              "show_progress_bar",
+              "skip_empty",
+              "tiktoken_enable",
+              "api_key"
+            ],
+            "frozen": false,
+            "icon": "layers",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Embeddings"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Embedding Model",
+                "group_outputs": false,
+                "method": "build_embeddings",
+                "name": "embeddings",
+                "selected": "Embeddings",
+                "tool_mode": true,
+                "types": [
+                  "Embeddings"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "chunk_size": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chunk_size",
+                "value": 1000,
+                "display_name": "Chunk Size",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "client": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "client",
+                "value": "",
+                "display_name": "Client",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from langchain_openai import OpenAIEmbeddings\n\nfrom lfx.base.embeddings.model import LCEmbeddingsModel\nfrom lfx.base.models.openai_constants import OPENAI_EMBEDDING_MODEL_NAMES\nfrom lfx.field_typing import Embeddings\nfrom lfx.io import BoolInput, DictInput, DropdownInput, FloatInput, IntInput, MessageTextInput, SecretStrInput\n\n\nclass OpenAIEmbeddingsComponent(LCEmbeddingsModel):\n    display_name = \"OpenAI Embeddings\"\n    description = \"Generate embeddings using OpenAI models.\"\n    icon = \"OpenAI\"\n    name = \"OpenAIEmbeddings\"\n\n    inputs = [\n        DictInput(\n            name=\"default_headers\",\n            display_name=\"Default Headers\",\n            advanced=True,\n            info=\"Default headers to use for the API request.\",\n        ),\n        DictInput(\n            name=\"default_query\",\n            display_name=\"Default Query\",\n            advanced=True,\n            info=\"Default query parameters to use for the API request.\",\n        ),\n        IntInput(name=\"chunk_size\", display_name=\"Chunk Size\", advanced=True, value=1000),\n        MessageTextInput(name=\"client\", display_name=\"Client\", advanced=True),\n        MessageTextInput(name=\"deployment\", display_name=\"Deployment\", advanced=True),\n        IntInput(name=\"embedding_ctx_length\", display_name=\"Embedding Context Length\", advanced=True, value=1536),\n        IntInput(name=\"max_retries\", display_name=\"Max Retries\", value=3, advanced=True),\n        DropdownInput(\n            name=\"model\",\n            display_name=\"Model\",\n            advanced=False,\n            options=OPENAI_EMBEDDING_MODEL_NAMES,\n            value=\"text-embedding-3-small\",\n        ),\n        DictInput(name=\"model_kwargs\", display_name=\"Model Kwargs\", advanced=True),\n        SecretStrInput(name=\"openai_api_key\", display_name=\"OpenAI API Key\", value=\"OPENAI_API_KEY\", required=True),\n        MessageTextInput(name=\"openai_api_base\", display_name=\"OpenAI API Base\", advanced=True),\n        MessageTextInput(name=\"openai_api_type\", display_name=\"OpenAI API Type\", advanced=True),\n        MessageTextInput(name=\"openai_api_version\", display_name=\"OpenAI API Version\", advanced=True),\n        MessageTextInput(\n            name=\"openai_organization\",\n            display_name=\"OpenAI Organization\",\n            advanced=True,\n        ),\n        MessageTextInput(name=\"openai_proxy\", display_name=\"OpenAI Proxy\", advanced=True),\n        FloatInput(name=\"request_timeout\", display_name=\"Request Timeout\", advanced=True),\n        BoolInput(name=\"show_progress_bar\", display_name=\"Show Progress Bar\", advanced=True),\n        BoolInput(name=\"skip_empty\", display_name=\"Skip Empty\", advanced=True),\n        MessageTextInput(\n            name=\"tiktoken_model_name\",\n            display_name=\"TikToken Model Name\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"tiktoken_enable\",\n            display_name=\"TikToken Enable\",\n            advanced=True,\n            value=True,\n            info=\"If False, you must have transformers installed.\",\n        ),\n        IntInput(\n            name=\"dimensions\",\n            display_name=\"Dimensions\",\n            info=\"The number of dimensions the resulting output embeddings should have. \"\n            \"Only supported by certain models.\",\n            advanced=True,\n        ),\n    ]\n\n    def build_embeddings(self) -> Embeddings:\n        return OpenAIEmbeddings(\n            client=self.client or None,\n            model=self.model,\n            dimensions=self.dimensions or None,\n            deployment=self.deployment or None,\n            api_version=self.openai_api_version or None,\n            base_url=self.openai_api_base or None,\n            openai_api_type=self.openai_api_type or None,\n            openai_proxy=self.openai_proxy or None,\n            embedding_ctx_length=self.embedding_ctx_length,\n            api_key=self.openai_api_key or None,\n            organization=self.openai_organization or None,\n            allowed_special=\"all\",\n            disallowed_special=\"all\",\n            chunk_size=self.chunk_size,\n            max_retries=self.max_retries,\n            timeout=self.request_timeout or None,\n            tiktoken_enabled=self.tiktoken_enable,\n            tiktoken_model_name=self.tiktoken_model_name or None,\n            show_progress_bar=self.show_progress_bar,\n            model_kwargs=self.model_kwargs,\n            skip_empty=self.skip_empty,\n            default_headers=self.default_headers or None,\n            default_query=self.default_query or None,\n        )\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "default_headers": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "default_headers",
+                "value": {},
+                "display_name": "Default Headers",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Default headers to use for the API request.",
+                "title_case": false,
+                "type": "dict",
+                "_input_type": "DictInput"
+              },
+              "default_query": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "default_query",
+                "value": {},
+                "display_name": "Default Query",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Default query parameters to use for the API request.",
+                "title_case": false,
+                "type": "dict",
+                "_input_type": "DictInput"
+              },
+              "deployment": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "deployment",
+                "value": "",
+                "display_name": "Deployment",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "dimensions": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "dimensions",
+                "value": "",
+                "display_name": "Dimensions",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The number of dimensions the resulting output embeddings should have. Only supported by certain models.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "embedding_ctx_length": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "embedding_ctx_length",
+                "value": 1536,
+                "display_name": "Embedding Context Length",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "max_retries": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "max_retries",
+                "value": 3,
+                "display_name": "Max Retries",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "model": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "text-embedding-3-small",
+                  "text-embedding-3-large",
+                  "text-embedding-ada-002"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "model",
+                "value": "text-embedding-ada-002",
+                "display_name": "Model",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "model_kwargs": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "model_kwargs",
+                "value": {},
+                "display_name": "Model Kwargs",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "dict",
+                "_input_type": "DictInput"
+              },
+              "openai_api_base": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_base",
+                "value": "",
+                "display_name": "OpenAI API Base",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "openai_api_key": {
+                "load_from_db": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_key",
+                "value": "OPENAI_API_KEY",
+                "display_name": "OpenAI API Key",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "openai_api_type": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_type",
+                "value": "",
+                "display_name": "OpenAI API Type",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "openai_api_version": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_version",
+                "value": "",
+                "display_name": "OpenAI API Version",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "openai_organization": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_organization",
+                "value": "",
+                "display_name": "OpenAI Organization",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "openai_proxy": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_proxy",
+                "value": "",
+                "display_name": "OpenAI Proxy",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "request_timeout": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "request_timeout",
+                "value": "",
+                "display_name": "Request Timeout",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "float",
+                "_input_type": "FloatInput"
+              },
+              "show_progress_bar": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "show_progress_bar",
+                "value": false,
+                "display_name": "Show Progress Bar",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "skip_empty": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "skip_empty",
+                "value": false,
+                "display_name": "Skip Empty",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "tiktoken_enable": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "tiktoken_enable",
+                "value": true,
+                "display_name": "TikToken Enable",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If False, you must have transformers installed.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "tiktoken_model_name": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "tiktoken_model_name",
+                "value": "",
+                "display_name": "TikToken Model Name",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "api_key": {
+                "name": "api_key",
+                "type": "str",
+                "value": "{OPENAI_API_KEY}",
+                "display_name": "api_key",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "embeddings",
+          "type": "OpenAIEmbeddings"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "OpenAIEmbeddings-embed01",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 530,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 530,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Store and search documents using OpenSearch with hybrid semantic and keyword search capabilities.",
+          "display_name": "Hybrid Search Vector Store",
+          "id": "OpenSearchVectorStore-kP9xL",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame",
+              "VectorStore"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Store and search documents using OpenSearch with hybrid semantic and keyword search capabilities.",
+            "display_name": "Hybrid Search Vector Store",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "auth_mode",
+              "bearer_prefix",
+              "ef_construction",
+              "engine",
+              "index_name",
+              "jwt_header",
+              "jwt_token",
+              "m",
+              "number_of_results",
+              "opensearch_url",
+              "password",
+              "should_cache_vector_store",
+              "space_type",
+              "use_ssl",
+              "username",
+              "vector_field",
+              "verify_certs",
+              "embedding"
+            ],
+            "frozen": false,
+            "icon": "database",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Data",
+              "DataFrame",
+              "VectorStore"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Search Results",
+                "group_outputs": false,
+                "method": "search_documents",
+                "name": "search_results",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "group_outputs": false,
+                "method": "as_dataframe",
+                "name": "dataframe",
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Vector Store Connection",
+                "group_outputs": false,
+                "method": "as_vector_store",
+                "name": "vectorstoreconnection",
+                "selected": "VectorStore",
+                "tool_mode": true,
+                "types": [
+                  "VectorStore"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "embedding": {
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "embedding",
+                "value": "OpenAIEmbeddings-embed01",
+                "display_name": "Embedding",
+                "advanced": false,
+                "input_types": [
+                  "Embeddings"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "ingest_data": {
+                "trace_as_metadata": true,
+                "list": true,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "ingest_data",
+                "value": "",
+                "display_name": "Ingest Data",
+                "advanced": false,
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "auth_mode": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "basic",
+                  "jwt"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "auth_mode",
+                "value": "basic",
+                "display_name": "Authentication Mode",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Authentication method: 'basic' for username/password authentication, or 'jwt' for JSON Web Token (Bearer) authentication.",
+                "real_time_refresh": true,
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "bearer_prefix": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "bearer_prefix",
+                "value": true,
+                "display_name": "Prefix 'Bearer '",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from __future__ import annotations\n\nimport json\nimport uuid\nfrom typing import Any\n\nfrom opensearchpy import OpenSearch, helpers\n\nfrom lfx.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom lfx.base.vectorstores.vector_store_connection_decorator import vector_store_connection\nfrom lfx.io import BoolInput, DropdownInput, HandleInput, IntInput, MultilineInput, SecretStrInput, StrInput, TableInput\nfrom lfx.log import logger\nfrom lfx.schema.data import Data\n\n\n@vector_store_connection\nclass OpenSearchVectorStoreComponent(LCVectorStoreComponent):\n    \"\"\"OpenSearch Vector Store Component with Hybrid Search Capabilities.\n\n    This component provides vector storage and retrieval using OpenSearch, combining semantic\n    similarity search (KNN) with keyword-based search for optimal results. It supports document\n    ingestion, vector embeddings, and advanced filtering with authentication options.\n\n    Features:\n    - Vector storage with configurable engines (jvector, nmslib, faiss, lucene)\n    - Hybrid search combining KNN vector similarity and keyword matching\n    - Flexible authentication (Basic auth, JWT tokens)\n    - Advanced filtering and aggregations\n    - Metadata injection during document ingestion\n    \"\"\"\n\n    display_name: str = \"OpenSearch\"\n    icon: str = \"OpenSearch\"\n    description: str = (\n        \"Store and search documents using OpenSearch with hybrid semantic and keyword search capabilities.\"\n    )\n\n    # Keys we consider baseline\n    default_keys: list[str] = [\n        \"opensearch_url\",\n        \"index_name\",\n        *[i.name for i in LCVectorStoreComponent.inputs],  # search_query, add_documents, etc.\n        \"embedding\",\n        \"vector_field\",\n        \"number_of_results\",\n        \"auth_mode\",\n        \"username\",\n        \"password\",\n        \"jwt_token\",\n        \"jwt_header\",\n        \"bearer_prefix\",\n        \"use_ssl\",\n        \"verify_certs\",\n        \"filter_expression\",\n        \"engine\",\n        \"space_type\",\n        \"ef_construction\",\n        \"m\",\n        \"docs_metadata\",\n    ]\n\n    inputs = [\n        TableInput(\n            name=\"docs_metadata\",\n            display_name=\"Document Metadata\",\n            info=(\n                \"Additional metadata key-value pairs to be added to all ingested documents. \"\n                \"Useful for tagging documents with source information, categories, or other custom attributes.\"\n            ),\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Key\",\n                    \"type\": \"str\",\n                    \"description\": \"Key name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"type\": \"str\",\n                    \"description\": \"Value of the metadata\",\n                },\n            ],\n            value=[],\n            input_types=[\"Data\"],\n        ),\n        StrInput(\n            name=\"opensearch_url\",\n            display_name=\"OpenSearch URL\",\n            value=\"http://localhost:9200\",\n            info=(\n                \"The connection URL for your OpenSearch cluster \"\n                \"(e.g., http://localhost:9200 for local development or your cloud endpoint).\"\n            ),\n        ),\n        StrInput(\n            name=\"index_name\",\n            display_name=\"Index Name\",\n            value=\"langflow\",\n            info=(\n                \"The OpenSearch index name where documents will be stored and searched. \"\n                \"Will be created automatically if it doesn't exist.\"\n            ),\n        ),\n        DropdownInput(\n            name=\"engine\",\n            display_name=\"Vector Engine\",\n            options=[\"jvector\", \"nmslib\", \"faiss\", \"lucene\"],\n            value=\"jvector\",\n            info=(\n                \"Vector search engine for similarity calculations. 'jvector' is recommended for most use cases. \"\n                \"Note: Amazon OpenSearch Serverless only supports 'nmslib' or 'faiss'.\"\n            ),\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"space_type\",\n            display_name=\"Distance Metric\",\n            options=[\"l2\", \"l1\", \"cosinesimil\", \"linf\", \"innerproduct\"],\n            value=\"l2\",\n            info=(\n                \"Distance metric for calculating vector similarity. 'l2' (Euclidean) is most common, \"\n                \"'cosinesimil' for cosine similarity, 'innerproduct' for dot product.\"\n            ),\n            advanced=True,\n        ),\n        IntInput(\n            name=\"ef_construction\",\n            display_name=\"EF Construction\",\n            value=512,\n            info=(\n                \"Size of the dynamic candidate list during index construction. \"\n                \"Higher values improve recall but increase indexing time and memory usage.\"\n            ),\n            advanced=True,\n        ),\n        IntInput(\n            name=\"m\",\n            display_name=\"M Parameter\",\n            value=16,\n            info=(\n                \"Number of bidirectional connections for each vector in the HNSW graph. \"\n                \"Higher values improve search quality but increase memory usage and indexing time.\"\n            ),\n            advanced=True,\n        ),\n        *LCVectorStoreComponent.inputs,  # includes search_query, add_documents, etc.\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n        StrInput(\n            name=\"vector_field\",\n            display_name=\"Vector Field Name\",\n            value=\"chunk_embedding\",\n            advanced=True,\n            info=\"Name of the field in OpenSearch documents that stores the vector embeddings for similarity search.\",\n        ),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Default Result Limit\",\n            value=10,\n            advanced=True,\n            info=(\n                \"Default maximum number of search results to return when no limit is \"\n                \"specified in the filter expression.\"\n            ),\n        ),\n        MultilineInput(\n            name=\"filter_expression\",\n            display_name=\"Search Filters (JSON)\",\n            value=\"\",\n            info=(\n                \"Optional JSON configuration for search filtering, result limits, and score thresholds.\\n\\n\"\n                \"Format 1 - Explicit filters:\\n\"\n                '{\"filter\": [{\"term\": {\"filename\":\"doc.pdf\"}}, '\n                '{\"terms\":{\"owner\":[\"user1\",\"user2\"]}}], \"limit\": 10, \"score_threshold\": 1.6}\\n\\n'\n                \"Format 2 - Context-style mapping:\\n\"\n                '{\"data_sources\":[\"file.pdf\"], \"document_types\":[\"application/pdf\"], \"owners\":[\"user123\"]}\\n\\n'\n                \"Use __IMPOSSIBLE_VALUE__ as placeholder to ignore specific filters.\"\n            ),\n        ),\n        # ----- Auth controls (dynamic) -----\n        DropdownInput(\n            name=\"auth_mode\",\n            display_name=\"Authentication Mode\",\n            value=\"basic\",\n            options=[\"basic\", \"jwt\"],\n            info=(\n                \"Authentication method: 'basic' for username/password authentication, \"\n                \"or 'jwt' for JSON Web Token (Bearer) authentication.\"\n            ),\n            real_time_refresh=True,\n            advanced=False,\n        ),\n        StrInput(\n            name=\"username\",\n            display_name=\"Username\",\n            value=\"admin\",\n            show=False,\n        ),\n        SecretStrInput(\n            name=\"password\",\n            display_name=\"OpenSearch Password\",\n            value=\"admin\",\n            show=False,\n        ),\n        SecretStrInput(\n            name=\"jwt_token\",\n            display_name=\"JWT Token\",\n            value=\"JWT\",\n            load_from_db=False,\n            show=True,\n            info=(\n                \"Valid JSON Web Token for authentication. \"\n                \"Will be sent in the Authorization header (with optional 'Bearer ' prefix).\"\n            ),\n        ),\n        StrInput(\n            name=\"jwt_header\",\n            display_name=\"JWT Header Name\",\n            value=\"Authorization\",\n            show=False,\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"bearer_prefix\",\n            display_name=\"Prefix 'Bearer '\",\n            value=True,\n            show=False,\n            advanced=True,\n        ),\n        # ----- TLS -----\n        BoolInput(\n            name=\"use_ssl\",\n            display_name=\"Use SSL/TLS\",\n            value=True,\n            advanced=True,\n            info=\"Enable SSL/TLS encryption for secure connections to OpenSearch.\",\n        ),\n        BoolInput(\n            name=\"verify_certs\",\n            display_name=\"Verify SSL Certificates\",\n            value=False,\n            advanced=True,\n            info=(\n                \"Verify SSL certificates when connecting. \"\n                \"Disable for self-signed certificates in development environments.\"\n            ),\n        ),\n    ]\n\n    # ---------- helper functions for index management ----------\n    def _default_text_mapping(\n        self,\n        dim: int,\n        engine: str = \"jvector\",\n        space_type: str = \"l2\",\n        ef_search: int = 512,\n        ef_construction: int = 100,\n        m: int = 16,\n        vector_field: str = \"vector_field\",\n    ) -> dict[str, Any]:\n        \"\"\"Create the default OpenSearch index mapping for vector search.\n\n        This method generates the index configuration with k-NN settings optimized\n        for approximate nearest neighbor search using the specified vector engine.\n\n        Args:\n            dim: Dimensionality of the vector embeddings\n            engine: Vector search engine (jvector, nmslib, faiss, lucene)\n            space_type: Distance metric for similarity calculation\n            ef_search: Size of dynamic list used during search\n            ef_construction: Size of dynamic list used during index construction\n            m: Number of bidirectional links for each vector\n            vector_field: Name of the field storing vector embeddings\n\n        Returns:\n            Dictionary containing OpenSearch index mapping configuration\n        \"\"\"\n        return {\n            \"settings\": {\"index\": {\"knn\": True, \"knn.algo_param.ef_search\": ef_search}},\n            \"mappings\": {\n                \"properties\": {\n                    vector_field: {\n                        \"type\": \"knn_vector\",\n                        \"dimension\": dim,\n                        \"method\": {\n                            \"name\": \"disk_ann\",\n                            \"space_type\": space_type,\n                            \"engine\": engine,\n                            \"parameters\": {\"ef_construction\": ef_construction, \"m\": m},\n                        },\n                    }\n                }\n            },\n        }\n\n    def _validate_aoss_with_engines(self, *, is_aoss: bool, engine: str) -> None:\n        \"\"\"Validate engine compatibility with Amazon OpenSearch Serverless (AOSS).\n\n        Amazon OpenSearch Serverless has restrictions on which vector engines\n        can be used. This method ensures the selected engine is compatible.\n\n        Args:\n            is_aoss: Whether the connection is to Amazon OpenSearch Serverless\n            engine: The selected vector search engine\n\n        Raises:\n            ValueError: If AOSS is used with an incompatible engine\n        \"\"\"\n        if is_aoss and engine not in {\"nmslib\", \"faiss\"}:\n            msg = \"Amazon OpenSearch Service Serverless only supports `nmslib` or `faiss` engines\"\n            raise ValueError(msg)\n\n    def _is_aoss_enabled(self, http_auth: Any) -> bool:\n        \"\"\"Determine if Amazon OpenSearch Serverless (AOSS) is being used.\n\n        Args:\n            http_auth: The HTTP authentication object\n\n        Returns:\n            True if AOSS is enabled, False otherwise\n        \"\"\"\n        return http_auth is not None and hasattr(http_auth, \"service\") and http_auth.service == \"aoss\"\n\n    def _bulk_ingest_embeddings(\n        self,\n        client: OpenSearch,\n        index_name: str,\n        embeddings: list[list[float]],\n        texts: list[str],\n        metadatas: list[dict] | None = None,\n        ids: list[str] | None = None,\n        vector_field: str = \"vector_field\",\n        text_field: str = \"text\",\n        mapping: dict | None = None,\n        max_chunk_bytes: int | None = 1 * 1024 * 1024,\n        *,\n        is_aoss: bool = False,\n    ) -> list[str]:\n        \"\"\"Efficiently ingest multiple documents with embeddings into OpenSearch.\n\n        This method uses bulk operations to insert documents with their vector\n        embeddings and metadata into the specified OpenSearch index.\n\n        Args:\n            client: OpenSearch client instance\n            index_name: Target index for document storage\n            embeddings: List of vector embeddings for each document\n            texts: List of document texts\n            metadatas: Optional metadata dictionaries for each document\n            ids: Optional document IDs (UUIDs generated if not provided)\n            vector_field: Field name for storing vector embeddings\n            text_field: Field name for storing document text\n            mapping: Optional index mapping configuration\n            max_chunk_bytes: Maximum size per bulk request chunk\n            is_aoss: Whether using Amazon OpenSearch Serverless\n\n        Returns:\n            List of document IDs that were successfully ingested\n        \"\"\"\n        if not mapping:\n            mapping = {}\n\n        requests = []\n        return_ids = []\n\n        for i, text in enumerate(texts):\n            metadata = metadatas[i] if metadatas else {}\n            _id = ids[i] if ids else str(uuid.uuid4())\n            request = {\n                \"_op_type\": \"index\",\n                \"_index\": index_name,\n                vector_field: embeddings[i],\n                text_field: text,\n                **metadata,\n            }\n            if is_aoss:\n                request[\"id\"] = _id\n            else:\n                request[\"_id\"] = _id\n            requests.append(request)\n            return_ids.append(_id)\n        if metadatas:\n            self.log(f\"Sample metadata: {metadatas[0] if metadatas else {}}\")\n        helpers.bulk(client, requests, max_chunk_bytes=max_chunk_bytes)\n        return return_ids\n\n    # ---------- auth / client ----------\n    def _build_auth_kwargs(self) -> dict[str, Any]:\n        \"\"\"Build authentication configuration for OpenSearch client.\n\n        Constructs the appropriate authentication parameters based on the\n        selected auth mode (basic username/password or JWT token).\n\n        Returns:\n            Dictionary containing authentication configuration\n\n        Raises:\n            ValueError: If required authentication parameters are missing\n        \"\"\"\n        mode = (self.auth_mode or \"basic\").strip().lower()\n        if mode == \"jwt\":\n            token = (self.jwt_token or \"\").strip()\n            if not token:\n                msg = \"Auth Mode is 'jwt' but no jwt_token was provided.\"\n                raise ValueError(msg)\n            header_name = (self.jwt_header or \"Authorization\").strip()\n            header_value = f\"Bearer {token}\" if self.bearer_prefix else token\n            return {\"headers\": {header_name: header_value}}\n        user = (self.username or \"\").strip()\n        pwd = (self.password or \"\").strip()\n        if not user or not pwd:\n            msg = \"Auth Mode is 'basic' but username/password are missing.\"\n            raise ValueError(msg)\n        return {\"http_auth\": (user, pwd)}\n\n    def build_client(self) -> OpenSearch:\n        \"\"\"Create and configure an OpenSearch client instance.\n\n        Returns:\n            Configured OpenSearch client ready for operations\n        \"\"\"\n        auth_kwargs = self._build_auth_kwargs()\n        return OpenSearch(\n            hosts=[self.opensearch_url],\n            use_ssl=self.use_ssl,\n            verify_certs=self.verify_certs,\n            ssl_assert_hostname=False,\n            ssl_show_warn=False,\n            **auth_kwargs,\n        )\n\n    @check_cached_vector_store\n    def build_vector_store(self) -> OpenSearch:\n        # Return raw OpenSearch client as our “vector store.”\n        self.log(self.ingest_data)\n        client = self.build_client()\n        self._add_documents_to_vector_store(client=client)\n        return client\n\n    # ---------- ingest ----------\n    def _add_documents_to_vector_store(self, client: OpenSearch) -> None:\n        \"\"\"Process and ingest documents into the OpenSearch vector store.\n\n        This method handles the complete document ingestion pipeline:\n        - Prepares document data and metadata\n        - Generates vector embeddings\n        - Creates appropriate index mappings\n        - Bulk inserts documents with vectors\n\n        Args:\n            client: OpenSearch client for performing operations\n        \"\"\"\n        # Convert DataFrame to Data if needed using parent's method\n        self.ingest_data = self._prepare_ingest_data()\n\n        docs = self.ingest_data or []\n        if not docs:\n            self.log(\"No documents to ingest.\")\n            return\n\n        # Extract texts and metadata from documents\n        texts = []\n        metadatas = []\n        # Process docs_metadata table input into a dict\n        additional_metadata = {}\n        if hasattr(self, \"docs_metadata\") and self.docs_metadata:\n            logger.debug(f\"[LF] Docs metadata {self.docs_metadata}\")\n            if isinstance(self.docs_metadata[-1], Data):\n                logger.debug(f\"[LF] Docs metadata is a Data object {self.docs_metadata}\")\n                self.docs_metadata = self.docs_metadata[-1].data\n                logger.debug(f\"[LF] Docs metadata is a Data object {self.docs_metadata}\")\n                additional_metadata.update(self.docs_metadata)\n            else:\n                for item in self.docs_metadata:\n                    if isinstance(item, dict) and \"key\" in item and \"value\" in item:\n                        additional_metadata[item[\"key\"]] = item[\"value\"]\n        # Replace string \"None\" values with actual None\n        for key, value in additional_metadata.items():\n            if value == \"None\":\n                additional_metadata[key] = None\n        logger.debug(f\"[LF] Additional metadata {additional_metadata}\")\n        for doc_obj in docs:\n            data_copy = json.loads(doc_obj.model_dump_json())\n            text = data_copy.pop(doc_obj.text_key, doc_obj.default_value)\n            texts.append(text)\n\n            # Merge additional metadata from table input\n            data_copy.update(additional_metadata)\n\n            metadatas.append(data_copy)\n        self.log(metadatas)\n        if not self.embedding:\n            msg = \"Embedding handle is required to embed documents.\"\n            raise ValueError(msg)\n\n        # Generate embeddings\n        vectors = self.embedding.embed_documents(texts)\n\n        if not vectors:\n            self.log(\"No vectors generated from documents.\")\n            return\n\n        # Get vector dimension for mapping\n        dim = len(vectors[0]) if vectors else 768  # default fallback\n\n        # Check for AOSS\n        auth_kwargs = self._build_auth_kwargs()\n        is_aoss = self._is_aoss_enabled(auth_kwargs.get(\"http_auth\"))\n\n        # Validate engine with AOSS\n        engine = getattr(self, \"engine\", \"jvector\")\n        self._validate_aoss_with_engines(is_aoss=is_aoss, engine=engine)\n\n        # Create mapping with proper KNN settings\n        space_type = getattr(self, \"space_type\", \"l2\")\n        ef_construction = getattr(self, \"ef_construction\", 512)\n        m = getattr(self, \"m\", 16)\n\n        mapping = self._default_text_mapping(\n            dim=dim,\n            engine=engine,\n            space_type=space_type,\n            ef_construction=ef_construction,\n            m=m,\n            vector_field=self.vector_field,\n        )\n\n        self.log(f\"Indexing {len(texts)} documents into '{self.index_name}' with proper KNN mapping...\")\n\n        # Use the LangChain-style bulk ingestion\n        return_ids = self._bulk_ingest_embeddings(\n            client=client,\n            index_name=self.index_name,\n            embeddings=vectors,\n            texts=texts,\n            metadatas=metadatas,\n            vector_field=self.vector_field,\n            text_field=\"text\",\n            mapping=mapping,\n            is_aoss=is_aoss,\n        )\n        self.log(metadatas)\n\n        self.log(f\"Successfully indexed {len(return_ids)} documents.\")\n\n    # ---------- helpers for filters ----------\n    def _is_placeholder_term(self, term_obj: dict) -> bool:\n        # term_obj like {\"filename\": \"__IMPOSSIBLE_VALUE__\"}\n        return any(v == \"__IMPOSSIBLE_VALUE__\" for v in term_obj.values())\n\n    def _coerce_filter_clauses(self, filter_obj: dict | None) -> list[dict]:\n        \"\"\"Convert filter expressions into OpenSearch-compatible filter clauses.\n\n        This method accepts two filter formats and converts them to standardized\n        OpenSearch query clauses:\n\n        Format A - Explicit filters:\n        {\"filter\": [{\"term\": {\"field\": \"value\"}}, {\"terms\": {\"field\": [\"val1\", \"val2\"]}}],\n         \"limit\": 10, \"score_threshold\": 1.5}\n\n        Format B - Context-style mapping:\n        {\"data_sources\": [\"file1.pdf\"], \"document_types\": [\"pdf\"], \"owners\": [\"user1\"]}\n\n        Args:\n            filter_obj: Filter configuration dictionary or None\n\n        Returns:\n            List of OpenSearch filter clauses (term/terms objects)\n            Placeholder values with \"__IMPOSSIBLE_VALUE__\" are ignored\n        \"\"\"\n        if not filter_obj:\n            return []\n\n        # If it is a string, try to parse it once\n        if isinstance(filter_obj, str):\n            try:\n                filter_obj = json.loads(filter_obj)\n            except json.JSONDecodeError:\n                # Not valid JSON - treat as no filters\n                return []\n\n        # Case A: already an explicit list/dict under \"filter\"\n        if \"filter\" in filter_obj:\n            raw = filter_obj[\"filter\"]\n            if isinstance(raw, dict):\n                raw = [raw]\n            explicit_clauses: list[dict] = []\n            for f in raw or []:\n                if \"term\" in f and isinstance(f[\"term\"], dict) and not self._is_placeholder_term(f[\"term\"]):\n                    explicit_clauses.append(f)\n                elif \"terms\" in f and isinstance(f[\"terms\"], dict):\n                    field, vals = next(iter(f[\"terms\"].items()))\n                    if isinstance(vals, list) and len(vals) > 0:\n                        explicit_clauses.append(f)\n            return explicit_clauses\n\n        # Case B: convert context-style maps into clauses\n        field_mapping = {\n            \"data_sources\": \"filename\",\n            \"document_types\": \"mimetype\",\n            \"owners\": \"owner\",\n        }\n        context_clauses: list[dict] = []\n        for k, values in filter_obj.items():\n            if not isinstance(values, list):\n                continue\n            field = field_mapping.get(k, k)\n            if len(values) == 0:\n                # Match-nothing placeholder (kept to mirror your tool semantics)\n                context_clauses.append({\"term\": {field: \"__IMPOSSIBLE_VALUE__\"}})\n            elif len(values) == 1:\n                if values[0] != \"__IMPOSSIBLE_VALUE__\":\n                    context_clauses.append({\"term\": {field: values[0]}})\n            else:\n                context_clauses.append({\"terms\": {field: values}})\n        return context_clauses\n\n    # ---------- search (single hybrid path matching your tool) ----------\n    def search(self, query: str | None = None) -> list[dict[str, Any]]:\n        \"\"\"Perform hybrid search combining vector similarity and keyword matching.\n\n        This method executes a sophisticated search that combines:\n        - K-nearest neighbor (KNN) vector similarity search (70% weight)\n        - Multi-field keyword search with fuzzy matching (30% weight)\n        - Optional filtering and score thresholds\n        - Aggregations for faceted search results\n\n        Args:\n            query: Search query string (used for both vector embedding and keyword search)\n\n        Returns:\n            List of search results with page_content, metadata, and relevance scores\n\n        Raises:\n            ValueError: If embedding component is not provided or filter JSON is invalid\n        \"\"\"\n        logger.info(self.ingest_data)\n        client = self.build_client()\n        q = (query or \"\").strip()\n\n        # Parse optional filter expression (can be either A or B shape; see _coerce_filter_clauses)\n        filter_obj = None\n        if getattr(self, \"filter_expression\", \"\") and self.filter_expression.strip():\n            try:\n                filter_obj = json.loads(self.filter_expression)\n            except json.JSONDecodeError as e:\n                msg = f\"Invalid filter_expression JSON: {e}\"\n                raise ValueError(msg) from e\n\n        if not self.embedding:\n            msg = \"Embedding is required to run hybrid search (KNN + keyword).\"\n            raise ValueError(msg)\n\n        # Embed the query\n        vec = self.embedding.embed_query(q)\n\n        # Build filter clauses (accept both shapes)\n        filter_clauses = self._coerce_filter_clauses(filter_obj)\n\n        # Respect the tool's limit/threshold defaults\n        limit = (filter_obj or {}).get(\"limit\", self.number_of_results)\n        score_threshold = (filter_obj or {}).get(\"score_threshold\", 0)\n\n        # Build the same hybrid body as your SearchService\n        body = {\n            \"query\": {\n                \"bool\": {\n                    \"should\": [\n                        {\n                            \"knn\": {\n                                self.vector_field: {\n                                    \"vector\": vec,\n                                    \"k\": 10,  # fixed to match the tool\n                                    \"boost\": 0.7,\n                                }\n                            }\n                        },\n                        {\n                            \"multi_match\": {\n                                \"query\": q,\n                                \"fields\": [\"text^2\", \"filename^1.5\"],\n                                \"type\": \"best_fields\",\n                                \"fuzziness\": \"AUTO\",\n                                \"boost\": 0.3,\n                            }\n                        },\n                    ],\n                    \"minimum_should_match\": 1,\n                }\n            },\n            \"aggs\": {\n                \"data_sources\": {\"terms\": {\"field\": \"filename\", \"size\": 20}},\n                \"document_types\": {\"terms\": {\"field\": \"mimetype\", \"size\": 10}},\n                \"owners\": {\"terms\": {\"field\": \"owner\", \"size\": 10}},\n            },\n            \"_source\": [\n                \"filename\",\n                \"mimetype\",\n                \"page\",\n                \"text\",\n                \"source_url\",\n                \"owner\",\n                \"allowed_users\",\n                \"allowed_groups\",\n            ],\n            \"size\": limit,\n        }\n        if filter_clauses:\n            body[\"query\"][\"bool\"][\"filter\"] = filter_clauses\n\n        if isinstance(score_threshold, (int, float)) and score_threshold > 0:\n            # top-level min_score (matches your tool)\n            body[\"min_score\"] = score_threshold\n\n        resp = client.search(index=self.index_name, body=body)\n        hits = resp.get(\"hits\", {}).get(\"hits\", [])\n        return [\n            {\n                \"page_content\": hit[\"_source\"].get(\"text\", \"\"),\n                \"metadata\": {k: v for k, v in hit[\"_source\"].items() if k != \"text\"},\n                \"score\": hit.get(\"_score\"),\n            }\n            for hit in hits\n        ]\n\n    def search_documents(self) -> list[Data]:\n        \"\"\"Search documents and return results as Data objects.\n\n        This is the main interface method that performs the search using the\n        configured search_query and returns results in Langflow's Data format.\n\n        Returns:\n            List of Data objects containing search results with text and metadata\n\n        Raises:\n            Exception: If search operation fails\n        \"\"\"\n        try:\n            raw = self.search(self.search_query or \"\")\n            return [Data(text=hit[\"page_content\"], **hit[\"metadata\"]) for hit in raw]\n            self.log(self.ingest_data)\n        except Exception as e:\n            self.log(f\"search_documents error: {e}\")\n            raise\n\n    # -------- dynamic UI handling (auth switch) --------\n    async def update_build_config(self, build_config: dict, field_value: str, field_name: str | None = None) -> dict:\n        \"\"\"Dynamically update component configuration based on field changes.\n\n        This method handles real-time UI updates, particularly for authentication\n        mode changes that show/hide relevant input fields.\n\n        Args:\n            build_config: Current component configuration\n            field_value: New value for the changed field\n            field_name: Name of the field that changed\n\n        Returns:\n            Updated build configuration with appropriate field visibility\n        \"\"\"\n        try:\n            if field_name == \"auth_mode\":\n                mode = (field_value or \"basic\").strip().lower()\n                is_basic = mode == \"basic\"\n                is_jwt = mode == \"jwt\"\n\n                build_config[\"username\"][\"show\"] = is_basic\n                build_config[\"password\"][\"show\"] = is_basic\n\n                build_config[\"jwt_token\"][\"show\"] = is_jwt\n                build_config[\"jwt_header\"][\"show\"] = is_jwt\n                build_config[\"bearer_prefix\"][\"show\"] = is_jwt\n\n                build_config[\"username\"][\"required\"] = is_basic\n                build_config[\"password\"][\"required\"] = is_basic\n\n                build_config[\"jwt_token\"][\"required\"] = is_jwt\n                build_config[\"jwt_header\"][\"required\"] = is_jwt\n                build_config[\"bearer_prefix\"][\"required\"] = False\n\n                if is_basic:\n                    build_config[\"jwt_token\"][\"value\"] = \"\"\n\n                return build_config\n\n        except (KeyError, ValueError) as e:\n            self.log(f\"update_build_config error: {e}\")\n\n        return build_config\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "docs_metadata": {
+                "tool_mode": false,
+                "is_list": true,
+                "list_add_label": "Add More",
+                "table_schema": [
+                  {
+                    "name": "key",
+                    "display_name": "Key",
+                    "type": "str",
+                    "description": "Key name"
+                  },
+                  {
+                    "name": "value",
+                    "display_name": "Value",
+                    "type": "str",
+                    "description": "Value of the metadata"
+                  }
+                ],
+                "trigger_text": "Open table",
+                "trigger_icon": "Table",
+                "table_icon": "Table",
+                "trace_as_metadata": true,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "docs_metadata",
+                "value": [],
+                "display_name": "Document Metadata",
+                "advanced": false,
+                "input_types": [
+                  "Data"
+                ],
+                "dynamic": false,
+                "info": "Additional metadata key-value pairs to be added to all ingested documents. Useful for tagging documents with source information, categories, or other custom attributes.",
+                "title_case": false,
+                "type": "table",
+                "_input_type": "TableInput"
+              },
+              "ef_construction": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "ef_construction",
+                "value": 512,
+                "display_name": "EF Construction",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Size of the dynamic candidate list during index construction. Higher values improve recall but increase indexing time and memory usage.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "engine": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "jvector",
+                  "nmslib",
+                  "faiss",
+                  "lucene"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "engine",
+                "value": "jvector",
+                "display_name": "Vector Engine",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Vector search engine for similarity calculations. 'jvector' is recommended for most use cases. Note: Amazon OpenSearch Serverless only supports 'nmslib' or 'faiss'.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "filter_expression": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "filter_expression",
+                "value": "",
+                "display_name": "Search Filters (JSON)",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Optional JSON configuration for search filtering, result limits, and score thresholds.\n\nFormat 1 - Explicit filters:\n{\"filter\": [{\"term\": {\"filename\":\"doc.pdf\"}}, {\"terms\":{\"owner\":[\"user1\",\"user2\"]}}], \"limit\": 10, \"score_threshold\": 1.6}\n\nFormat 2 - Context-style mapping:\n{\"data_sources\":[\"file.pdf\"], \"document_types\":[\"application/pdf\"], \"owners\":[\"user123\"]}\n\nUse __IMPOSSIBLE_VALUE__ as placeholder to ignore specific filters.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "index_name": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "index_name",
+                "value": "hybrid_search_index",
+                "display_name": "Index Name",
+                "advanced": false,
+                "dynamic": false,
+                "info": "The OpenSearch index name where documents will be stored and searched. Will be created automatically if it doesn't exist.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "jwt_header": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "jwt_header",
+                "value": "Authorization",
+                "display_name": "JWT Header Name",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "jwt_token": {
+                "load_from_db": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "jwt_token",
+                "value": "JWT",
+                "display_name": "JWT Token",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Valid JSON Web Token for authentication. Will be sent in the Authorization header (with optional 'Bearer ' prefix).",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "m": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "m",
+                "value": 16,
+                "display_name": "M Parameter",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Number of bidirectional connections for each vector in the HNSW graph. Higher values improve search quality but increase memory usage and indexing time.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "number_of_results": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "number_of_results",
+                "value": 10,
+                "display_name": "Default Result Limit",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Default maximum number of search results to return when no limit is specified in the filter expression.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "opensearch_url": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "opensearch_url",
+                "value": "{OPENSEARCH_URL}",
+                "display_name": "OpenSearch URL",
+                "advanced": false,
+                "dynamic": false,
+                "info": "The connection URL for your OpenSearch cluster (e.g., http://localhost:9200 for local development or your cloud endpoint).",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "password": {
+                "load_from_db": true,
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "password",
+                "value": "admin",
+                "display_name": "OpenSearch Password",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "search_query": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "Enter a query...",
+                "show": true,
+                "name": "search_query",
+                "value": "",
+                "display_name": "Search Query",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Enter a query to run a similarity search.",
+                "title_case": false,
+                "type": "query",
+                "_input_type": "QueryInput"
+              },
+              "should_cache_vector_store": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "should_cache_vector_store",
+                "value": true,
+                "display_name": "Cache Vector Store",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "space_type": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "l2",
+                  "l1",
+                  "cosinesimil",
+                  "linf",
+                  "innerproduct"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "space_type",
+                "value": "l2",
+                "display_name": "Distance Metric",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Distance metric for calculating vector similarity. 'l2' (Euclidean) is most common, 'cosinesimil' for cosine similarity, 'innerproduct' for dot product.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "use_ssl": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "use_ssl",
+                "value": true,
+                "display_name": "Use SSL/TLS",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Enable SSL/TLS encryption for secure connections to OpenSearch.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "username": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": false,
+                "name": "username",
+                "value": "admin",
+                "display_name": "Username",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "vector_field": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "vector_field",
+                "value": "chunk_embedding",
+                "display_name": "Vector Field Name",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Name of the field in OpenSearch documents that stores the vector embeddings for similarity search.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "verify_certs": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "verify_certs",
+                "value": false,
+                "display_name": "Verify SSL Certificates",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Verify SSL certificates when connecting. Disable for self-signed certificates in development environments.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              }
+            }
+          },
+          "selected_output": "search_results",
+          "type": "OpenSearchVectorStoreComponent"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "OpenSearchVectorStore-kP9xL",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 910,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 910,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Generates text using OpenAI LLMs.",
+          "display_name": "Response Generator LLM",
+          "id": "LanguageModelComponent-llm01",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generates text using OpenAI LLMs.",
+            "display_name": "Response Generator LLM",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "api_key",
+              "json_mode",
+              "max_retries",
+              "model_name",
+              "seed",
+              "stream",
+              "temperature",
+              "timeout",
+              "max_tokens"
+            ],
+            "frozen": false,
+            "icon": "openai",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message",
+              "LanguageModel"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "load_from_db": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "api_key",
+                "value": "{OPENAI_API_KEY}",
+                "display_name": "OpenAI API Key",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "The OpenAI API Key to use for the OpenAI model.",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from typing import Any\n\nfrom langchain_openai import ChatOpenAI\nfrom pydantic.v1 import SecretStr\n\nfrom lfx.base.models.model import LCModelComponent\nfrom lfx.base.models.openai_constants import OPENAI_CHAT_MODEL_NAMES, OPENAI_REASONING_MODEL_NAMES\nfrom lfx.field_typing import LanguageModel\nfrom lfx.field_typing.range_spec import RangeSpec\nfrom lfx.inputs.inputs import BoolInput, DictInput, DropdownInput, IntInput, SecretStrInput, SliderInput, StrInput\nfrom lfx.log.logger import logger\n\n\nclass OpenAIModelComponent(LCModelComponent):\n    display_name = \"OpenAI\"\n    description = \"Generates text using OpenAI LLMs.\"\n    icon = \"OpenAI\"\n    name = \"OpenAIModel\"\n\n    inputs = [\n        *LCModelComponent.get_base_inputs(),\n        IntInput(\n            name=\"max_tokens\",\n            display_name=\"Max Tokens\",\n            advanced=True,\n            info=\"The maximum number of tokens to generate. Set to 0 for unlimited tokens.\",\n            range_spec=RangeSpec(min=0, max=128000),\n        ),\n        DictInput(\n            name=\"model_kwargs\",\n            display_name=\"Model Kwargs\",\n            advanced=True,\n            info=\"Additional keyword arguments to pass to the model.\",\n        ),\n        BoolInput(\n            name=\"json_mode\",\n            display_name=\"JSON Mode\",\n            advanced=True,\n            info=\"If True, it will output JSON regardless of passing a schema.\",\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            advanced=False,\n            options=OPENAI_CHAT_MODEL_NAMES + OPENAI_REASONING_MODEL_NAMES,\n            value=OPENAI_CHAT_MODEL_NAMES[0],\n            combobox=True,\n            real_time_refresh=True,\n        ),\n        StrInput(\n            name=\"openai_api_base\",\n            display_name=\"OpenAI API Base\",\n            advanced=True,\n            info=\"The base URL of the OpenAI API. \"\n            \"Defaults to https://api.openai.com/v1. \"\n            \"You can change this to use other APIs like JinaChat, LocalAI and Prem.\",\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"OpenAI API Key\",\n            info=\"The OpenAI API Key to use for the OpenAI model.\",\n            advanced=False,\n            value=\"OPENAI_API_KEY\",\n            required=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.1,\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            show=True,\n        ),\n        IntInput(\n            name=\"seed\",\n            display_name=\"Seed\",\n            info=\"The seed controls the reproducibility of the job.\",\n            advanced=True,\n            value=1,\n        ),\n        IntInput(\n            name=\"max_retries\",\n            display_name=\"Max Retries\",\n            info=\"The maximum number of retries to make when generating.\",\n            advanced=True,\n            value=5,\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            info=\"The timeout for requests to OpenAI completion API.\",\n            advanced=True,\n            value=700,\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:  # type: ignore[type-var]\n        logger.debug(f\"Executing request with model: {self.model_name}\")\n        # Handle api_key - it can be string or SecretStr\n        api_key_value = None\n        if self.api_key:\n            logger.debug(f\"API key type: {type(self.api_key)}, value: {self.api_key!r}\")\n            if isinstance(self.api_key, SecretStr):\n                api_key_value = self.api_key.get_secret_value()\n            else:\n                api_key_value = str(self.api_key)\n        logger.debug(f\"Final api_key_value type: {type(api_key_value)}, value: {'***' if api_key_value else None}\")\n\n        # Handle model_kwargs and ensure api_key doesn't conflict\n        model_kwargs = self.model_kwargs or {}\n        # Remove api_key from model_kwargs if it exists to prevent conflicts\n        if \"api_key\" in model_kwargs:\n            logger.warning(\"api_key found in model_kwargs, removing to prevent conflicts\")\n            model_kwargs = dict(model_kwargs)  # Make a copy\n            del model_kwargs[\"api_key\"]\n\n        parameters = {\n            \"api_key\": api_key_value,\n            \"model_name\": self.model_name,\n            \"max_tokens\": self.max_tokens or None,\n            \"model_kwargs\": model_kwargs,\n            \"base_url\": self.openai_api_base or \"https://api.openai.com/v1\",\n            \"max_retries\": self.max_retries,\n            \"timeout\": self.timeout,\n        }\n\n        # TODO: Revisit if/once parameters are supported for reasoning models\n        unsupported_params_for_reasoning_models = [\"temperature\", \"seed\"]\n\n        if self.model_name not in OPENAI_REASONING_MODEL_NAMES:\n            parameters[\"temperature\"] = self.temperature if self.temperature is not None else 0.1\n            parameters[\"seed\"] = self.seed\n        else:\n            params_str = \", \".join(unsupported_params_for_reasoning_models)\n            logger.debug(f\"{self.model_name} is a reasoning model, {params_str} are not configurable. Ignoring.\")\n\n        # Ensure all parameter values are the correct types\n        if isinstance(parameters.get(\"api_key\"), SecretStr):\n            parameters[\"api_key\"] = parameters[\"api_key\"].get_secret_value()\n        output = ChatOpenAI(**parameters)\n        if self.json_mode:\n            output = output.bind(response_format={\"type\": \"json_object\"})\n\n        return output\n\n    def _get_exception_message(self, e: Exception):\n        \"\"\"Get a message from an OpenAI exception.\n\n        Args:\n            e (Exception): The exception to get the message from.\n\n        Returns:\n            str: The message from the exception.\n        \"\"\"\n        try:\n            from openai import BadRequestError\n        except ImportError:\n            return None\n        if isinstance(e, BadRequestError):\n            message = e.body.get(\"message\")\n            if message:\n                return message\n        return None\n\n    def update_build_config(self, build_config: dict, field_value: Any, field_name: str | None = None) -> dict:\n        if field_name in {\"base_url\", \"model_name\", \"api_key\"} and field_value in OPENAI_REASONING_MODEL_NAMES:\n            build_config[\"temperature\"][\"show\"] = False\n            build_config[\"seed\"][\"show\"] = False\n            # Hide system_message for o1 models - currently unsupported\n            if field_value.startswith(\"o1\") and \"system_message\" in build_config:\n                build_config[\"system_message\"][\"show\"] = False\n        if field_name in {\"base_url\", \"model_name\", \"api_key\"} and field_value in OPENAI_CHAT_MODEL_NAMES:\n            build_config[\"temperature\"][\"show\"] = True\n            build_config[\"seed\"][\"show\"] = True\n            if \"system_message\" in build_config:\n                build_config[\"system_message\"][\"show\"] = True\n        return build_config\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "input_value": {
+                "trace_as_input": true,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "",
+                "display_name": "Input",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageInput"
+              },
+              "json_mode": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "json_mode",
+                "value": false,
+                "display_name": "JSON Mode",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If True, it will output JSON regardless of passing a schema.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "max_retries": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "max_retries",
+                "value": 5,
+                "display_name": "Max Retries",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The maximum number of retries to make when generating.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "max_tokens": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "range_spec": {
+                  "step_type": "float",
+                  "min": 0.0,
+                  "max": 128000.0,
+                  "step": 0.1
+                },
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "max_tokens",
+                "value": 2048,
+                "display_name": "Max Tokens",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The maximum number of tokens to generate. Set to 0 for unlimited tokens.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "model_kwargs": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "model_kwargs",
+                "value": {},
+                "display_name": "Model Kwargs",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Additional keyword arguments to pass to the model.",
+                "title_case": false,
+                "type": "dict",
+                "_input_type": "DictInput"
+              },
+              "model_name": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "gpt-4o-mini",
+                  "gpt-4o",
+                  "gpt-4.1",
+                  "gpt-4.1-mini",
+                  "gpt-4.1-nano",
+                  "gpt-4-turbo",
+                  "gpt-4-turbo-preview",
+                  "gpt-4",
+                  "gpt-3.5-turbo",
+                  "gpt-5",
+                  "gpt-5-mini",
+                  "gpt-5-nano",
+                  "gpt-5-chat-latest",
+                  "o1",
+                  "o3-mini",
+                  "o3",
+                  "o3-pro",
+                  "o4-mini",
+                  "o4-mini-high"
+                ],
+                "options_metadata": [],
+                "combobox": true,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "model_name",
+                "value": "gpt-4o",
+                "display_name": "Model Name",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "real_time_refresh": true,
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "openai_api_base": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_base",
+                "value": "",
+                "display_name": "OpenAI API Base",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The base URL of the OpenAI API. Defaults to https://api.openai.com/v1. You can change this to use other APIs like JinaChat, LocalAI and Prem.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "seed": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "seed",
+                "value": 1,
+                "display_name": "Seed",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The seed controls the reproducibility of the job.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "stream": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "stream",
+                "value": false,
+                "display_name": "Stream",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "system_message": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "system_message",
+                "value": "",
+                "display_name": "System Message",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "temperature": {
+                "tool_mode": false,
+                "min_label": "",
+                "max_label": "",
+                "min_label_icon": "",
+                "max_label_icon": "",
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "range_spec": {
+                  "step_type": "float",
+                  "min": 0.0,
+                  "max": 1.0,
+                  "step": 0.01
+                },
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "temperature",
+                "value": 0.7,
+                "display_name": "Temperature",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "slider",
+                "_input_type": "SliderInput"
+              },
+              "timeout": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "timeout",
+                "value": 700,
+                "display_name": "Timeout",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The timeout for requests to OpenAI completion API.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              }
+            }
+          },
+          "selected_output": "text_output",
+          "type": "OpenAIModel"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "LanguageModelComponent-llm01",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 1670,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 1670,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Create a prompt template with dynamic variables.",
+          "display_name": "Hybrid Search Prompt",
+          "id": "PromptComponent-vT8wY",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Hybrid Search Prompt",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "template",
+              "variables"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "method": "build_prompt",
+                "name": "prompt",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.base.prompts.api_utils import process_prompt_template\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.inputs.inputs import DefaultPromptField\nfrom lfx.io import MessageTextInput, Output, PromptInput\nfrom lfx.schema.message import Message\nfrom lfx.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt Template\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    documentation: str = \"https://docs.langflow.org/components-prompts\"\n    icon = \"braces\"\n    trace_type = \"prompt\"\n    name = \"Prompt Template\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "template": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "template",
+                "value": "You are a hybrid search assistant. Use both semantic understanding and keyword matching to find relevant information.\n\nUser Query: {input}\n\nRetrieved Context:\n{context}\n\nProvide a comprehensive answer combining insights from the retrieved documents.",
+                "display_name": "Template",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "prompt",
+                "_input_type": "PromptInput"
+              },
+              "tool_placeholder": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "tool_placeholder",
+                "value": "",
+                "display_name": "Tool Placeholder",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "variables": {
+                "name": "variables",
+                "type": "str",
+                "value": [
+                  "context",
+                  "input"
+                ],
+                "display_name": "variables",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              },
+              "input": {
+                "name": "input",
+                "type": "str",
+                "value": "",
+                "display_name": "input",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "field_type": "str",
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              },
+              "context": {
+                "name": "context",
+                "type": "str",
+                "value": "",
+                "display_name": "context",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "field_type": "str",
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "prompt",
+          "type": "Prompt Template"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "PromptComponent-vT8wY",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 1290,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 1290,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Display a chat message in the Playground.",
+          "display_name": "Response Output",
+          "id": "ChatOutput-pL7mK",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Display a chat message in the Playground.",
+            "display_name": "Response Output",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "clean_data",
+              "data_template",
+              "sender",
+              "sender_name",
+              "should_store_message"
+            ],
+            "frozen": false,
+            "icon": "message-square",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "input_value": {
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "",
+                "display_name": "Inputs",
+                "advanced": false,
+                "input_types": [
+                  "Data",
+                  "DataFrame",
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Message to be passed as output.",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "clean_data": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "clean_data",
+                "value": true,
+                "display_name": "Basic Clean Data",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Whether to clean data before converting to string.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from collections.abc import Generator\nfrom typing import Any\n\nimport orjson\nfrom fastapi.encoders import jsonable_encoder\n\nfrom lfx.base.io.chat import ChatComponent\nfrom lfx.helpers.data import safe_convert\nfrom lfx.inputs.inputs import BoolInput, DropdownInput, HandleInput, MessageTextInput\nfrom lfx.schema.data import Data\nfrom lfx.schema.dataframe import DataFrame\nfrom lfx.schema.message import Message\nfrom lfx.schema.properties import Source\nfrom lfx.template.field.base import Output\nfrom lfx.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_AI,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatOutput(ChatComponent):\n    display_name = \"Chat Output\"\n    description = \"Display a chat message in the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatOutput\"\n    minimized = True\n\n    inputs = [\n        HandleInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Message to be passed as output.\",\n            input_types=[\"Data\", \"DataFrame\", \"Message\"],\n            required=True,\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_AI,\n            advanced=True,\n            info=\"Type of sender.\",\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_AI,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"data_template\",\n            display_name=\"Data Template\",\n            value=\"{text}\",\n            advanced=True,\n            info=\"Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.\",\n        ),\n        BoolInput(\n            name=\"clean_data\",\n            display_name=\"Basic Clean Data\",\n            value=True,\n            advanced=True,\n            info=\"Whether to clean data before converting to string.\",\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"Output Message\",\n            name=\"message\",\n            method=\"message_response\",\n        ),\n    ]\n\n    def _build_source(self, id_: str | None, display_name: str | None, source: str | None) -> Source:\n        source_dict = {}\n        if id_:\n            source_dict[\"id\"] = id_\n        if display_name:\n            source_dict[\"display_name\"] = display_name\n        if source:\n            # Handle case where source is a ChatOpenAI object\n            if hasattr(source, \"model_name\"):\n                source_dict[\"source\"] = source.model_name\n            elif hasattr(source, \"model\"):\n                source_dict[\"source\"] = str(source.model)\n            else:\n                source_dict[\"source\"] = str(source)\n        return Source(**source_dict)\n\n    async def message_response(self) -> Message:\n        # First convert the input to string if needed\n        text = self.convert_to_string()\n\n        # Get source properties\n        source, _, display_name, source_id = self.get_properties_from_source_component()\n\n        # Create or use existing Message object\n        if isinstance(self.input_value, Message):\n            message = self.input_value\n            # Update message properties\n            message.text = text\n        else:\n            message = Message(text=text)\n\n        # Set message properties\n        message.sender = self.sender\n        message.sender_name = self.sender_name\n        message.session_id = self.session_id\n        message.flow_id = self.graph.flow_id if hasattr(self, \"graph\") else None\n        message.properties.source = self._build_source(source_id, display_name, source)\n\n        # Store message if needed\n        if self.session_id and self.should_store_message:\n            stored_message = await self.send_message(message)\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n\n    def _serialize_data(self, data: Data) -> str:\n        \"\"\"Serialize Data object to JSON string.\"\"\"\n        # Convert data.data to JSON-serializable format\n        serializable_data = jsonable_encoder(data.data)\n        # Serialize with orjson, enabling pretty printing with indentation\n        json_bytes = orjson.dumps(serializable_data, option=orjson.OPT_INDENT_2)\n        # Convert bytes to string and wrap in Markdown code blocks\n        return \"```json\\n\" + json_bytes.decode(\"utf-8\") + \"\\n```\"\n\n    def _validate_input(self) -> None:\n        \"\"\"Validate the input data and raise ValueError if invalid.\"\"\"\n        if self.input_value is None:\n            msg = \"Input data cannot be None\"\n            raise ValueError(msg)\n        if isinstance(self.input_value, list) and not all(\n            isinstance(item, Message | Data | DataFrame | str) for item in self.input_value\n        ):\n            invalid_types = [\n                type(item).__name__\n                for item in self.input_value\n                if not isinstance(item, Message | Data | DataFrame | str)\n            ]\n            msg = f\"Expected Data or DataFrame or Message or str, got {invalid_types}\"\n            raise TypeError(msg)\n        if not isinstance(\n            self.input_value,\n            Message | Data | DataFrame | str | list | Generator | type(None),\n        ):\n            type_name = type(self.input_value).__name__\n            msg = f\"Expected Data or DataFrame or Message or str, Generator or None, got {type_name}\"\n            raise TypeError(msg)\n\n    def convert_to_string(self) -> str | Generator[Any, None, None]:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        self._validate_input()\n        if isinstance(self.input_value, list):\n            clean_data: bool = getattr(self, \"clean_data\", False)\n            return \"\\n\".join([safe_convert(item, clean_data=clean_data) for item in self.input_value])\n        if isinstance(self.input_value, Generator):\n            return self.input_value\n        return safe_convert(self.input_value)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "data_template": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "data_template",
+                "value": "{text}",
+                "display_name": "Data Template",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "sender": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender",
+                "value": "Machine",
+                "display_name": "Sender Type",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Type of sender.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "sender_name": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender_name",
+                "value": "AI",
+                "display_name": "Sender Name",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "session_id": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "session_id",
+                "value": "",
+                "display_name": "Session ID",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "should_store_message": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "should_store_message",
+                "value": true,
+                "display_name": "Store Messages",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              }
+            }
+          },
+          "selected_output": "message",
+          "type": "ChatOutput"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "ChatOutput-pL7mK",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 2050,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 2050,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Chain for question-answering querying sources from a retriever.",
+          "display_name": "Hybrid Search Retriever",
+          "id": "RetrievalQA-Tdlcn",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Chain for question-answering querying sources from a retriever.",
+            "display_name": "Hybrid Search Retriever",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "chain_type",
+              "return_source_documents",
+              "retriever",
+              "k"
+            ],
+            "frozen": false,
+            "icon": "component",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Text",
+                "group_outputs": false,
+                "method": "invoke_chain",
+                "name": "text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "llm": {
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "llm",
+                "value": "",
+                "display_name": "Language Model",
+                "advanced": false,
+                "input_types": [
+                  "LanguageModel"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "memory": {
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "memory",
+                "value": "",
+                "display_name": "Memory",
+                "advanced": false,
+                "input_types": [
+                  "BaseChatMemory"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "retriever": {
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "retriever",
+                "value": "OpenSearchVectorStoreComponent",
+                "display_name": "Retriever",
+                "advanced": false,
+                "input_types": [
+                  "Retriever"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "chain_type": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "Stuff",
+                  "Map Reduce",
+                  "Refine",
+                  "Map Rerank"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chain_type",
+                "value": "Stuff",
+                "display_name": "Chain Type",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Chain type to use.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from typing import cast\n\nfrom langchain.chains import RetrievalQA\n\nfrom lfx.base.chains.model import LCChainComponent\nfrom lfx.inputs.inputs import BoolInput, DropdownInput, HandleInput, MultilineInput\nfrom lfx.schema import Message\n\n\nclass RetrievalQAComponent(LCChainComponent):\n    display_name = \"Retrieval QA\"\n    description = \"Chain for question-answering querying sources from a retriever.\"\n    name = \"RetrievalQA\"\n    legacy: bool = True\n    icon = \"LangChain\"\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input\",\n            info=\"The input value to pass to the chain.\",\n            required=True,\n        ),\n        DropdownInput(\n            name=\"chain_type\",\n            display_name=\"Chain Type\",\n            info=\"Chain type to use.\",\n            options=[\"Stuff\", \"Map Reduce\", \"Refine\", \"Map Rerank\"],\n            value=\"Stuff\",\n            advanced=True,\n        ),\n        HandleInput(\n            name=\"llm\",\n            display_name=\"Language Model\",\n            input_types=[\"LanguageModel\"],\n            required=True,\n        ),\n        HandleInput(\n            name=\"retriever\",\n            display_name=\"Retriever\",\n            input_types=[\"Retriever\"],\n            required=True,\n        ),\n        HandleInput(\n            name=\"memory\",\n            display_name=\"Memory\",\n            input_types=[\"BaseChatMemory\"],\n        ),\n        BoolInput(\n            name=\"return_source_documents\",\n            display_name=\"Return Source Documents\",\n            value=False,\n        ),\n    ]\n\n    def invoke_chain(self) -> Message:\n        chain_type = self.chain_type.lower().replace(\" \", \"_\")\n        if self.memory:\n            self.memory.input_key = \"query\"\n            self.memory.output_key = \"result\"\n\n        runnable = RetrievalQA.from_chain_type(\n            llm=self.llm,\n            chain_type=chain_type,\n            retriever=self.retriever,\n            memory=self.memory,\n            # always include to help debugging\n            #\n            return_source_documents=True,\n        )\n\n        result = runnable.invoke(\n            {\"query\": self.input_value},\n            config={\"callbacks\": self.get_langchain_callbacks()},\n        )\n\n        source_docs = self.to_data(result.get(\"source_documents\", keys=[]))\n        result_str = str(result.get(\"result\", \"\"))\n        if self.return_source_documents and len(source_docs):\n            references_str = self.create_references_from_data(source_docs)\n            result_str = f\"{result_str}\\n{references_str}\"\n        # put the entire result to debug history, query and content\n        self.status = {**result, \"source_documents\": source_docs, \"output\": result_str}\n        return cast(\"Message\", result_str)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "input_value": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "",
+                "display_name": "Input",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The input value to pass to the chain.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "return_source_documents": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "return_source_documents",
+                "value": true,
+                "display_name": "Return Source Documents",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "k": {
+                "name": "k",
+                "type": "str",
+                "value": 5,
+                "display_name": "k",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "text",
+          "type": "RetrievalQA"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "RetrievalQA-Tdlcn",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 2050,
+          "y": 380
+        },
+        "positionAbsolute": {
+          "x": 2050,
+          "y": 380
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 0.75
+    }
+  },
+  "description": "Explore Hybrid Search with a vector database.",
+  "endpoint_name": null,
+  "id": "41cb4637-b421-42b3-8c87-f5ca7821a9d6",
+  "is_component": false,
+  "last_tested_version": "1.0.0",
+  "name": "Hybrid Search Rag",
+  "tags": [],
+  "webhook": false
+}

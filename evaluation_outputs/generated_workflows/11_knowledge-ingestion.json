@@ -1,0 +1,2615 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-1aBcD",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "url",
+            "id": "AgentQL-2eFgH",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-ChatInput-1aBcD{œdataTypeœ:œChatInputœ,œidœ:œChatInput-1aBcDœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-AgentQL-2eFgH{œfieldNameœ:œurlœ,œidœ:œAgentQL-2eFgHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-1aBcD",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-1aBcDœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "AgentQL-2eFgH",
+        "targetHandle": "{œfieldNameœ:œurlœ,œidœ:œAgentQL-2eFgHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "AgentQL",
+            "id": "AgentQL-2eFgH",
+            "name": "data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_text",
+            "id": "OpenAIEmbeddings-7uVwX",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-AgentQL-2eFgH{œdataTypeœ:œAgentQLœ,œidœ:œAgentQL-2eFgHœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-OpenAIEmbeddings-7uVwX{œfieldNameœ:œinput_textœ,œidœ:œOpenAIEmbeddings-7uVwXœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "AgentQL-2eFgH",
+        "sourceHandle": "{œdataTypeœ:œAgentQLœ,œidœ:œAgentQL-2eFgHœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "OpenAIEmbeddings-7uVwX",
+        "targetHandle": "{œfieldNameœ:œinput_textœ,œidœ:œOpenAIEmbeddings-7uVwXœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OpenAIEmbeddings",
+            "id": "OpenAIEmbeddings-7uVwX",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "Chroma-8yZaB",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-OpenAIEmbeddings-7uVwX{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-7uVwXœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-Chroma-8yZaB{œfieldNameœ:œembeddingœ,œidœ:œChroma-8yZaBœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "OpenAIEmbeddings-7uVwX",
+        "sourceHandle": "{œdataTypeœ:œOpenAIEmbeddingsœ,œidœ:œOpenAIEmbeddings-7uVwXœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "Chroma-8yZaB",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œChroma-8yZaBœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "AgentQL",
+            "id": "AgentQL-2eFgH",
+            "name": "data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_df",
+            "id": "KnowledgeIngestion-3iJkL",
+            "inputTypes": [
+              "Data",
+              "DataFrame"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "reactflow__edge-AgentQL-2eFgH{œdataTypeœ:œAgentQLœ,œidœ:œAgentQL-2eFgHœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}-KnowledgeIngestion-3iJkL{œfieldNameœ:œinput_dfœ,œidœ:œKnowledgeIngestion-3iJkLœ,œinputTypesœ:[œDataœ,œDataFrameœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "AgentQL-2eFgH",
+        "sourceHandle": "{œdataTypeœ:œAgentQLœ,œidœ:œAgentQL-2eFgHœ,œnameœ:œdataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "KnowledgeIngestion-3iJkL",
+        "targetHandle": "{œfieldNameœ:œinput_dfœ,œidœ:œKnowledgeIngestion-3iJkLœ,œinputTypesœ:[œDataœ,œDataFrameœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Chroma",
+            "id": "Chroma-8yZaB",
+            "name": "dataframe",
+            "output_types": [
+              "DataFrame"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "search_query",
+            "id": "KnowledgeRetrieval-9cDeF",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-Chroma-8yZaB{œdataTypeœ:œChromaœ,œidœ:œChroma-8yZaBœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}-KnowledgeRetrieval-9cDeF{œfieldNameœ:œsearch_queryœ,œidœ:œKnowledgeRetrieval-9cDeFœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Chroma-8yZaB",
+        "sourceHandle": "{œdataTypeœ:œChromaœ,œidœ:œChroma-8yZaBœ,œnameœ:œdataframeœ,œoutput_typesœ:[œDataFrameœ]}",
+        "target": "KnowledgeRetrieval-9cDeF",
+        "targetHandle": "{œfieldNameœ:œsearch_queryœ,œidœ:œKnowledgeRetrieval-9cDeFœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "URLComponent",
+            "id": "URLComponent-ntoL5",
+            "name": "page_results",
+            "output_types": [
+              "DataFrame"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "client",
+            "id": "OpenAIEmbeddings-7uVwX",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-URLComponent-ntoL5{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-ntoL5œ,œnameœ:œpage_resultsœ,œoutput_typesœ:[œDataFrameœ]}-OpenAIEmbeddings-7uVwX{œfieldNameœ:œclientœ,œidœ:œOpenAIEmbeddings-7uVwXœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "URLComponent-ntoL5",
+        "sourceHandle": "{œdataTypeœ:œURLComponentœ,œidœ:œURLComponent-ntoL5œ,œnameœ:œpage_resultsœ,œoutput_typesœ:[œDataFrameœ]}",
+        "target": "OpenAIEmbeddings-7uVwX",
+        "targetHandle": "{œfieldNameœ:œclientœ,œidœ:œOpenAIEmbeddings-7uVwXœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "description": "Get chat inputs from the Playground.",
+          "display_name": "URL Input Source",
+          "id": "ChatInput-1aBcD",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "URL Input Source",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "sender",
+              "sender_name",
+              "should_store_message",
+              "input_value"
+            ],
+            "frozen": false,
+            "icon": "message-circle",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Message"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "files": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "file_path": "",
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "temp_file": true,
+                "list": true,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "files",
+                "value": "",
+                "display_name": "Files",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Files to be sent with the message.",
+                "title_case": false,
+                "type": "file",
+                "_input_type": "FileInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom lfx.base.io.chat import ChatComponent\nfrom lfx.inputs.inputs import BoolInput\nfrom lfx.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom lfx.schema.message import Message\nfrom lfx.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        # Ensure files is a list and filter out empty/None values\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        # Filter out None/empty values\n        files = [f for f in files if f is not None and f != \"\"]\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=files,\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "input_value": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "input_value",
+                "value": "Enter a URL to extract content from:",
+                "display_name": "Input Text",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "sender": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender",
+                "value": "User",
+                "display_name": "Sender Type",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Type of sender.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "sender_name": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "sender_name",
+                "value": "User",
+                "display_name": "Sender Name",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "session_id": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "session_id",
+                "value": "",
+                "display_name": "Session ID",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "should_store_message": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "should_store_message",
+                "value": true,
+                "display_name": "Store Messages",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              }
+            }
+          },
+          "selected_output": "message",
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "ChatInput-1aBcD",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Extracts structured data from a web page using an AgentQL query or a Natural Language description.",
+          "display_name": "Web Content Extractor",
+          "id": "AgentQL-2eFgH",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Extracts structured data from a web page using an AgentQL query or a Natural Language description.",
+            "display_name": "Web Content Extractor",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "is_screenshot_enabled",
+              "is_scroll_to_bottom_enabled",
+              "is_stealth_mode_enabled",
+              "mode",
+              "timeout",
+              "wait_for",
+              "api_key",
+              "url",
+              "prompt"
+            ],
+            "frozen": false,
+            "icon": "bot",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Data"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Data",
+                "group_outputs": false,
+                "method": "build_output",
+                "name": "data",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "load_from_db": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "api_key",
+                "value": "{AGENTQL_API_KEY}",
+                "display_name": "AgentQL API Key",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Your AgentQL API key from dev.agentql.com",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "import httpx\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.field_typing.range_spec import RangeSpec\nfrom lfx.io import BoolInput, DropdownInput, IntInput, MessageTextInput, MultilineInput, Output, SecretStrInput\nfrom lfx.log.logger import logger\nfrom lfx.schema.data import Data\n\n\nclass AgentQL(Component):\n    display_name = \"Extract Web Data\"\n    description = \"Extracts structured data from a web page using an AgentQL query or a Natural Language description.\"\n    documentation: str = \"https://docs.agentql.com/rest-api/api-reference\"\n    icon = \"AgentQL\"\n    name = \"AgentQL\"\n\n    inputs = [\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"AgentQL API Key\",\n            required=True,\n            password=True,\n            info=\"Your AgentQL API key from dev.agentql.com\",\n        ),\n        MessageTextInput(\n            name=\"url\",\n            display_name=\"URL\",\n            required=True,\n            info=\"The URL of the public web page you want to extract data from.\",\n            tool_mode=True,\n        ),\n        MultilineInput(\n            name=\"query\",\n            display_name=\"AgentQL Query\",\n            required=False,\n            info=\"The AgentQL query to execute. Learn more at https://docs.agentql.com/agentql-query or use a prompt.\",\n            tool_mode=True,\n        ),\n        MultilineInput(\n            name=\"prompt\",\n            display_name=\"Prompt\",\n            required=False,\n            info=\"A Natural Language description of the data to extract from the page. Alternative to AgentQL query.\",\n            tool_mode=True,\n        ),\n        BoolInput(\n            name=\"is_stealth_mode_enabled\",\n            display_name=\"Enable Stealth Mode (Beta)\",\n            info=\"Enable experimental anti-bot evasion strategies. May not work for all websites at all times.\",\n            value=False,\n            advanced=True,\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            info=\"Seconds to wait for a request.\",\n            value=900,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"mode\",\n            display_name=\"Request Mode\",\n            info=\"'standard' uses deep data analysis, while 'fast' trades some depth of analysis for speed.\",\n            options=[\"fast\", \"standard\"],\n            value=\"fast\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"wait_for\",\n            display_name=\"Wait For\",\n            info=\"Seconds to wait for the page to load before extracting data.\",\n            value=0,\n            range_spec=RangeSpec(min=0, max=10, step_type=\"int\"),\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"is_scroll_to_bottom_enabled\",\n            display_name=\"Enable scroll to bottom\",\n            info=\"Scroll to bottom of the page before extracting data.\",\n            value=False,\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"is_screenshot_enabled\",\n            display_name=\"Enable screenshot\",\n            info=\"Take a screenshot before extracting data. Returned in 'metadata' as a Base64 string.\",\n            value=False,\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Data\", name=\"data\", method=\"build_output\"),\n    ]\n\n    def build_output(self) -> Data:\n        endpoint = \"https://api.agentql.com/v1/query-data\"\n        headers = {\n            \"X-API-Key\": self.api_key,\n            \"Content-Type\": \"application/json\",\n            \"X-TF-Request-Origin\": \"langflow\",\n        }\n\n        payload = {\n            \"url\": self.url,\n            \"query\": self.query,\n            \"prompt\": self.prompt,\n            \"params\": {\n                \"mode\": self.mode,\n                \"wait_for\": self.wait_for,\n                \"is_scroll_to_bottom_enabled\": self.is_scroll_to_bottom_enabled,\n                \"is_screenshot_enabled\": self.is_screenshot_enabled,\n            },\n            \"metadata\": {\n                \"experimental_stealth_mode_enabled\": self.is_stealth_mode_enabled,\n            },\n        }\n\n        if not self.prompt and not self.query:\n            self.status = \"Either Query or Prompt must be provided.\"\n            raise ValueError(self.status)\n        if self.prompt and self.query:\n            self.status = \"Both Query and Prompt can't be provided at the same time.\"\n            raise ValueError(self.status)\n\n        try:\n            response = httpx.post(endpoint, headers=headers, json=payload, timeout=self.timeout)\n            response.raise_for_status()\n\n            json = response.json()\n            data = Data(result=json[\"data\"], metadata=json[\"metadata\"])\n\n        except httpx.HTTPStatusError as e:\n            response = e.response\n            if response.status_code == httpx.codes.UNAUTHORIZED:\n                self.status = \"Please, provide a valid API Key. You can create one at https://dev.agentql.com.\"\n            else:\n                try:\n                    error_json = response.json()\n                    logger.error(\n                        f\"Failure response: '{response.status_code} {response.reason_phrase}' with body: {error_json}\"\n                    )\n                    msg = error_json[\"error_info\"] if \"error_info\" in error_json else error_json[\"detail\"]\n                except (ValueError, TypeError):\n                    msg = f\"HTTP {e}.\"\n                self.status = msg\n            raise ValueError(self.status) from e\n\n        else:\n            self.status = data\n            return data\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "is_screenshot_enabled": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "is_screenshot_enabled",
+                "value": false,
+                "display_name": "Enable screenshot",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Take a screenshot before extracting data. Returned in 'metadata' as a Base64 string.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "is_scroll_to_bottom_enabled": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "is_scroll_to_bottom_enabled",
+                "value": false,
+                "display_name": "Enable scroll to bottom",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Scroll to bottom of the page before extracting data.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "is_stealth_mode_enabled": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "is_stealth_mode_enabled",
+                "value": false,
+                "display_name": "Enable Stealth Mode (Beta)",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Enable experimental anti-bot evasion strategies. May not work for all websites at all times.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "mode": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "fast",
+                  "standard"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "mode",
+                "value": "standard",
+                "display_name": "Request Mode",
+                "advanced": true,
+                "dynamic": false,
+                "info": "'standard' uses deep data analysis, while 'fast' trades some depth of analysis for speed.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "prompt": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "prompt",
+                "value": "Extract the main article content, title, author information, publication date, and any relevant metadata from this webpage. Focus on getting clean, readable text content.",
+                "display_name": "Prompt",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "A Natural Language description of the data to extract from the page. Alternative to AgentQL query.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "query": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "multiline": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "query",
+                "value": "",
+                "display_name": "AgentQL Query",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The AgentQL query to execute. Learn more at https://docs.agentql.com/agentql-query or use a prompt.",
+                "title_case": false,
+                "copy_field": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "timeout": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "timeout",
+                "value": 900,
+                "display_name": "Timeout",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Seconds to wait for a request.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "url": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "url",
+                "value": "{{input}}",
+                "display_name": "URL",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "The URL of the public web page you want to extract data from.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "wait_for": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "range_spec": {
+                  "step_type": "int",
+                  "min": 0.0,
+                  "max": 10.0,
+                  "step": 0.1
+                },
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "wait_for",
+                "value": 0,
+                "display_name": "Wait For",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Seconds to wait for the page to load before extracting data.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              }
+            }
+          },
+          "selected_output": "data",
+          "type": "AgentQL"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "AgentQL-2eFgH",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 530,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 530,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Generate embeddings using OpenAI models.",
+          "display_name": "OpenAI Embeddings Model",
+          "id": "OpenAIEmbeddings-7uVwX",
+          "node": {
+            "base_classes": [
+              "Embeddings"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate embeddings using OpenAI models.",
+            "display_name": "OpenAI Embeddings Model",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "chunk_size",
+              "embedding_ctx_length",
+              "max_retries",
+              "model",
+              "openai_api_key",
+              "show_progress_bar",
+              "skip_empty",
+              "tiktoken_enable",
+              "api_key"
+            ],
+            "frozen": false,
+            "icon": "layers",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Embeddings"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Embedding Model",
+                "group_outputs": false,
+                "method": "build_embeddings",
+                "name": "embeddings",
+                "selected": "Embeddings",
+                "tool_mode": true,
+                "types": [
+                  "Embeddings"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "chunk_size": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chunk_size",
+                "value": 1000,
+                "display_name": "Chunk Size",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "client": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "client",
+                "value": "",
+                "display_name": "Client",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from langchain_openai import OpenAIEmbeddings\n\nfrom lfx.base.embeddings.model import LCEmbeddingsModel\nfrom lfx.base.models.openai_constants import OPENAI_EMBEDDING_MODEL_NAMES\nfrom lfx.field_typing import Embeddings\nfrom lfx.io import BoolInput, DictInput, DropdownInput, FloatInput, IntInput, MessageTextInput, SecretStrInput\n\n\nclass OpenAIEmbeddingsComponent(LCEmbeddingsModel):\n    display_name = \"OpenAI Embeddings\"\n    description = \"Generate embeddings using OpenAI models.\"\n    icon = \"OpenAI\"\n    name = \"OpenAIEmbeddings\"\n\n    inputs = [\n        DictInput(\n            name=\"default_headers\",\n            display_name=\"Default Headers\",\n            advanced=True,\n            info=\"Default headers to use for the API request.\",\n        ),\n        DictInput(\n            name=\"default_query\",\n            display_name=\"Default Query\",\n            advanced=True,\n            info=\"Default query parameters to use for the API request.\",\n        ),\n        IntInput(name=\"chunk_size\", display_name=\"Chunk Size\", advanced=True, value=1000),\n        MessageTextInput(name=\"client\", display_name=\"Client\", advanced=True),\n        MessageTextInput(name=\"deployment\", display_name=\"Deployment\", advanced=True),\n        IntInput(name=\"embedding_ctx_length\", display_name=\"Embedding Context Length\", advanced=True, value=1536),\n        IntInput(name=\"max_retries\", display_name=\"Max Retries\", value=3, advanced=True),\n        DropdownInput(\n            name=\"model\",\n            display_name=\"Model\",\n            advanced=False,\n            options=OPENAI_EMBEDDING_MODEL_NAMES,\n            value=\"text-embedding-3-small\",\n        ),\n        DictInput(name=\"model_kwargs\", display_name=\"Model Kwargs\", advanced=True),\n        SecretStrInput(name=\"openai_api_key\", display_name=\"OpenAI API Key\", value=\"OPENAI_API_KEY\", required=True),\n        MessageTextInput(name=\"openai_api_base\", display_name=\"OpenAI API Base\", advanced=True),\n        MessageTextInput(name=\"openai_api_type\", display_name=\"OpenAI API Type\", advanced=True),\n        MessageTextInput(name=\"openai_api_version\", display_name=\"OpenAI API Version\", advanced=True),\n        MessageTextInput(\n            name=\"openai_organization\",\n            display_name=\"OpenAI Organization\",\n            advanced=True,\n        ),\n        MessageTextInput(name=\"openai_proxy\", display_name=\"OpenAI Proxy\", advanced=True),\n        FloatInput(name=\"request_timeout\", display_name=\"Request Timeout\", advanced=True),\n        BoolInput(name=\"show_progress_bar\", display_name=\"Show Progress Bar\", advanced=True),\n        BoolInput(name=\"skip_empty\", display_name=\"Skip Empty\", advanced=True),\n        MessageTextInput(\n            name=\"tiktoken_model_name\",\n            display_name=\"TikToken Model Name\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"tiktoken_enable\",\n            display_name=\"TikToken Enable\",\n            advanced=True,\n            value=True,\n            info=\"If False, you must have transformers installed.\",\n        ),\n        IntInput(\n            name=\"dimensions\",\n            display_name=\"Dimensions\",\n            info=\"The number of dimensions the resulting output embeddings should have. \"\n            \"Only supported by certain models.\",\n            advanced=True,\n        ),\n    ]\n\n    def build_embeddings(self) -> Embeddings:\n        return OpenAIEmbeddings(\n            client=self.client or None,\n            model=self.model,\n            dimensions=self.dimensions or None,\n            deployment=self.deployment or None,\n            api_version=self.openai_api_version or None,\n            base_url=self.openai_api_base or None,\n            openai_api_type=self.openai_api_type or None,\n            openai_proxy=self.openai_proxy or None,\n            embedding_ctx_length=self.embedding_ctx_length,\n            api_key=self.openai_api_key or None,\n            organization=self.openai_organization or None,\n            allowed_special=\"all\",\n            disallowed_special=\"all\",\n            chunk_size=self.chunk_size,\n            max_retries=self.max_retries,\n            timeout=self.request_timeout or None,\n            tiktoken_enabled=self.tiktoken_enable,\n            tiktoken_model_name=self.tiktoken_model_name or None,\n            show_progress_bar=self.show_progress_bar,\n            model_kwargs=self.model_kwargs,\n            skip_empty=self.skip_empty,\n            default_headers=self.default_headers or None,\n            default_query=self.default_query or None,\n        )\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "default_headers": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "default_headers",
+                "value": {},
+                "display_name": "Default Headers",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Default headers to use for the API request.",
+                "title_case": false,
+                "type": "dict",
+                "_input_type": "DictInput"
+              },
+              "default_query": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "default_query",
+                "value": {},
+                "display_name": "Default Query",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Default query parameters to use for the API request.",
+                "title_case": false,
+                "type": "dict",
+                "_input_type": "DictInput"
+              },
+              "deployment": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "deployment",
+                "value": "",
+                "display_name": "Deployment",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "dimensions": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "dimensions",
+                "value": "",
+                "display_name": "Dimensions",
+                "advanced": true,
+                "dynamic": false,
+                "info": "The number of dimensions the resulting output embeddings should have. Only supported by certain models.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "embedding_ctx_length": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "embedding_ctx_length",
+                "value": 1536,
+                "display_name": "Embedding Context Length",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "max_retries": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "max_retries",
+                "value": 3,
+                "display_name": "Max Retries",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "model": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "text-embedding-3-small",
+                  "text-embedding-3-large",
+                  "text-embedding-ada-002"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "model",
+                "value": "text-embedding-ada-002",
+                "display_name": "Model",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "model_kwargs": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "model_kwargs",
+                "value": {},
+                "display_name": "Model Kwargs",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "dict",
+                "_input_type": "DictInput"
+              },
+              "openai_api_base": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_base",
+                "value": "",
+                "display_name": "OpenAI API Base",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "openai_api_key": {
+                "load_from_db": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_key",
+                "value": "OPENAI_API_KEY",
+                "display_name": "OpenAI API Key",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "openai_api_type": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_type",
+                "value": "",
+                "display_name": "OpenAI API Type",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "openai_api_version": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_api_version",
+                "value": "",
+                "display_name": "OpenAI API Version",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "openai_organization": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_organization",
+                "value": "",
+                "display_name": "OpenAI Organization",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "openai_proxy": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "openai_proxy",
+                "value": "",
+                "display_name": "OpenAI Proxy",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "request_timeout": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "request_timeout",
+                "value": "",
+                "display_name": "Request Timeout",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "float",
+                "_input_type": "FloatInput"
+              },
+              "show_progress_bar": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "show_progress_bar",
+                "value": false,
+                "display_name": "Show Progress Bar",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "skip_empty": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "skip_empty",
+                "value": false,
+                "display_name": "Skip Empty",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "tiktoken_enable": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "tiktoken_enable",
+                "value": true,
+                "display_name": "TikToken Enable",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If False, you must have transformers installed.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "tiktoken_model_name": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "tiktoken_model_name",
+                "value": "",
+                "display_name": "TikToken Model Name",
+                "advanced": true,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "api_key": {
+                "name": "api_key",
+                "type": "str",
+                "value": "{OPENAI_API_KEY}",
+                "display_name": "api_key",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "embeddings",
+          "type": "OpenAIEmbeddings"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "OpenAIEmbeddings-7uVwX",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 910,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 910,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Create or update knowledge in Langflow.",
+          "display_name": "Knowledge Base Ingestion",
+          "id": "KnowledgeIngestion-3iJkL",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Create or update knowledge in Langflow.",
+            "display_name": "Knowledge Base Ingestion",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "allow_duplicates",
+              "chunk_size",
+              "column_config",
+              "knowledge_base"
+            ],
+            "frozen": false,
+            "icon": "component",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Data"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Results",
+                "group_outputs": false,
+                "method": "build_kb_info",
+                "name": "dataframe_output",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "input_df": {
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "input_df",
+                "value": "",
+                "display_name": "Input",
+                "advanced": false,
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "dynamic": false,
+                "info": "Table with all original columns (already chunked / processed). Accepts Data or DataFrame. If Data is provided, it is converted to a DataFrame automatically.",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "allow_duplicates": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "allow_duplicates",
+                "value": false,
+                "display_name": "Allow Duplicates",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Allow duplicate rows in the knowledge base",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "api_key": {
+                "load_from_db": true,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "api_key",
+                "value": "",
+                "display_name": "Embedding Provider API Key",
+                "advanced": true,
+                "input_types": [],
+                "dynamic": false,
+                "info": "API key for the embedding provider to generate embeddings.",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "chunk_size": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chunk_size",
+                "value": 1000,
+                "display_name": "Chunk Size",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Batch size for processing embeddings",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from __future__ import annotations\n\nimport asyncio\nimport contextlib\nimport hashlib\nimport json\nimport re\nimport uuid\nfrom dataclasses import asdict, dataclass, field\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import TYPE_CHECKING, Any\n\nimport pandas as pd\nfrom cryptography.fernet import InvalidToken\nfrom langchain_chroma import Chroma\nfrom langflow.services.auth.utils import decrypt_api_key, encrypt_api_key\nfrom langflow.services.database.models.user.crud import get_user_by_id\n\nfrom lfx.base.knowledge_bases.knowledge_base_utils import get_knowledge_bases\nfrom lfx.base.models.openai_constants import OPENAI_EMBEDDING_MODEL_NAMES\nfrom lfx.components.processing.converter import convert_to_dataframe\nfrom lfx.custom import Component\nfrom lfx.io import (\n    BoolInput,\n    DropdownInput,\n    HandleInput,\n    IntInput,\n    Output,\n    SecretStrInput,\n    StrInput,\n    TableInput,\n)\nfrom lfx.schema.data import Data\nfrom lfx.schema.table import EditMode\nfrom lfx.services.deps import (\n    get_settings_service,\n    get_variable_service,\n    session_scope,\n)\n\nif TYPE_CHECKING:\n    from lfx.schema.dataframe import DataFrame\n\nHUGGINGFACE_MODEL_NAMES = [\n    \"sentence-transformers/all-MiniLM-L6-v2\",\n    \"sentence-transformers/all-mpnet-base-v2\",\n]\nCOHERE_MODEL_NAMES = [\"embed-english-v3.0\", \"embed-multilingual-v3.0\"]\n\nsettings = get_settings_service().settings\nknowledge_directory = settings.knowledge_bases_dir\nif not knowledge_directory:\n    msg = \"Knowledge bases directory is not set in the settings.\"\n    raise ValueError(msg)\nKNOWLEDGE_BASES_ROOT_PATH = Path(knowledge_directory).expanduser()\n\n\nclass KnowledgeIngestionComponent(Component):\n    \"\"\"Create or append to Langflow Knowledge from a DataFrame.\"\"\"\n\n    # ------ UI metadata ---------------------------------------------------\n    display_name = \"Knowledge Ingestion\"\n    description = \"Create or update knowledge in Langflow.\"\n    icon = \"upload\"\n    name = \"KnowledgeIngestion\"\n\n    def __init__(self, *args, **kwargs) -> None:\n        super().__init__(*args, **kwargs)\n        self._cached_kb_path: Path | None = None\n\n    @dataclass\n    class NewKnowledgeBaseInput:\n        functionality: str = \"create\"\n        fields: dict[str, dict] = field(\n            default_factory=lambda: {\n                \"data\": {\n                    \"node\": {\n                        \"name\": \"create_knowledge_base\",\n                        \"description\": \"Create new knowledge in Langflow.\",\n                        \"display_name\": \"Create new knowledge\",\n                        \"field_order\": [\n                            \"01_new_kb_name\",\n                            \"02_embedding_model\",\n                            \"03_api_key\",\n                        ],\n                        \"template\": {\n                            \"01_new_kb_name\": StrInput(\n                                name=\"new_kb_name\",\n                                display_name=\"Knowledge Name\",\n                                info=\"Name of the new knowledge to create.\",\n                                required=True,\n                            ),\n                            \"02_embedding_model\": DropdownInput(\n                                name=\"embedding_model\",\n                                display_name=\"Choose Embedding\",\n                                info=\"Select the embedding model to use for this knowledge base.\",\n                                required=True,\n                                options=OPENAI_EMBEDDING_MODEL_NAMES + HUGGINGFACE_MODEL_NAMES + COHERE_MODEL_NAMES,\n                                options_metadata=[{\"icon\": \"OpenAI\"} for _ in OPENAI_EMBEDDING_MODEL_NAMES]\n                                + [{\"icon\": \"HuggingFace\"} for _ in HUGGINGFACE_MODEL_NAMES]\n                                + [{\"icon\": \"Cohere\"} for _ in COHERE_MODEL_NAMES],\n                            ),\n                            \"03_api_key\": SecretStrInput(\n                                name=\"api_key\",\n                                display_name=\"API Key\",\n                                info=\"Provider API key for embedding model\",\n                                required=True,\n                                load_from_db=False,\n                            ),\n                        },\n                    },\n                }\n            }\n        )\n\n    # ------ Inputs --------------------------------------------------------\n    inputs = [\n        DropdownInput(\n            name=\"knowledge_base\",\n            display_name=\"Knowledge\",\n            info=\"Select the knowledge to load data from.\",\n            required=True,\n            options=[],\n            refresh_button=True,\n            real_time_refresh=True,\n            dialog_inputs=asdict(NewKnowledgeBaseInput()),\n        ),\n        HandleInput(\n            name=\"input_df\",\n            display_name=\"Input\",\n            info=(\n                \"Table with all original columns (already chunked / processed). \"\n                \"Accepts Data or DataFrame. If Data is provided, it is converted to a DataFrame automatically.\"\n            ),\n            input_types=[\"Data\", \"DataFrame\"],\n            required=True,\n        ),\n        TableInput(\n            name=\"column_config\",\n            display_name=\"Column Configuration\",\n            info=\"Configure column behavior for the knowledge base.\",\n            required=True,\n            table_schema=[\n                {\n                    \"name\": \"column_name\",\n                    \"display_name\": \"Column Name\",\n                    \"type\": \"str\",\n                    \"description\": \"Name of the column in the source DataFrame\",\n                    \"edit_mode\": EditMode.INLINE,\n                },\n                {\n                    \"name\": \"vectorize\",\n                    \"display_name\": \"Vectorize\",\n                    \"type\": \"boolean\",\n                    \"description\": \"Create embeddings for this column\",\n                    \"default\": False,\n                    \"edit_mode\": EditMode.INLINE,\n                },\n                {\n                    \"name\": \"identifier\",\n                    \"display_name\": \"Identifier\",\n                    \"type\": \"boolean\",\n                    \"description\": \"Use this column as unique identifier\",\n                    \"default\": False,\n                    \"edit_mode\": EditMode.INLINE,\n                },\n            ],\n            value=[\n                {\n                    \"column_name\": \"text\",\n                    \"vectorize\": True,\n                    \"identifier\": True,\n                },\n            ],\n        ),\n        IntInput(\n            name=\"chunk_size\",\n            display_name=\"Chunk Size\",\n            info=\"Batch size for processing embeddings\",\n            advanced=True,\n            value=1000,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"Embedding Provider API Key\",\n            info=\"API key for the embedding provider to generate embeddings.\",\n            advanced=True,\n            required=False,\n        ),\n        BoolInput(\n            name=\"allow_duplicates\",\n            display_name=\"Allow Duplicates\",\n            info=\"Allow duplicate rows in the knowledge base\",\n            advanced=True,\n            value=False,\n        ),\n    ]\n\n    # ------ Outputs -------------------------------------------------------\n    outputs = [Output(display_name=\"Results\", name=\"dataframe_output\", method=\"build_kb_info\")]\n\n    # ------ Internal helpers ---------------------------------------------\n    def _get_kb_root(self) -> Path:\n        \"\"\"Return the root directory for knowledge bases.\"\"\"\n        return KNOWLEDGE_BASES_ROOT_PATH\n\n    def _validate_column_config(self, df_source: pd.DataFrame) -> list[dict[str, Any]]:\n        \"\"\"Validate column configuration using Structured Output patterns.\"\"\"\n        if not self.column_config:\n            msg = \"Column configuration cannot be empty\"\n            raise ValueError(msg)\n\n        # Convert table input to list of dicts (similar to Structured Output)\n        config_list = self.column_config if isinstance(self.column_config, list) else []\n\n        # Validate column names exist in DataFrame\n        df_columns = set(df_source.columns)\n        for config in config_list:\n            col_name = config.get(\"column_name\")\n            if col_name not in df_columns:\n                msg = f\"Column '{col_name}' not found in DataFrame. Available columns: {sorted(df_columns)}\"\n                raise ValueError(msg)\n\n        return config_list\n\n    def _get_embedding_provider(self, embedding_model: str) -> str:\n        \"\"\"Get embedding provider by matching model name to lists.\"\"\"\n        if embedding_model in OPENAI_EMBEDDING_MODEL_NAMES:\n            return \"OpenAI\"\n        if embedding_model in HUGGINGFACE_MODEL_NAMES:\n            return \"HuggingFace\"\n        if embedding_model in COHERE_MODEL_NAMES:\n            return \"Cohere\"\n        return \"Custom\"\n\n    def _build_embeddings(self, embedding_model: str, api_key: str):\n        \"\"\"Build embedding model using provider patterns.\"\"\"\n        # Get provider by matching model name to lists\n        provider = self._get_embedding_provider(embedding_model)\n\n        # Validate provider and model\n        if provider == \"OpenAI\":\n            from langchain_openai import OpenAIEmbeddings\n\n            if not api_key:\n                msg = \"OpenAI API key is required when using OpenAI provider\"\n                raise ValueError(msg)\n            return OpenAIEmbeddings(\n                model=embedding_model,\n                api_key=api_key,\n                chunk_size=self.chunk_size,\n            )\n        if provider == \"HuggingFace\":\n            from langchain_huggingface import HuggingFaceEmbeddings\n\n            return HuggingFaceEmbeddings(\n                model=embedding_model,\n            )\n        if provider == \"Cohere\":\n            from langchain_cohere import CohereEmbeddings\n\n            if not api_key:\n                msg = \"Cohere API key is required when using Cohere provider\"\n                raise ValueError(msg)\n            return CohereEmbeddings(\n                model=embedding_model,\n                cohere_api_key=api_key,\n            )\n        if provider == \"Custom\":\n            # For custom embedding models, we would need additional configuration\n            msg = \"Custom embedding models not yet supported\"\n            raise NotImplementedError(msg)\n        msg = f\"Unknown provider: {provider}\"\n        raise ValueError(msg)\n\n    def _build_embedding_metadata(self, embedding_model, api_key) -> dict[str, Any]:\n        \"\"\"Build embedding model metadata.\"\"\"\n        # Get provider by matching model name to lists\n        embedding_provider = self._get_embedding_provider(embedding_model)\n\n        api_key_to_save = None\n        if api_key and hasattr(api_key, \"get_secret_value\"):\n            api_key_to_save = api_key.get_secret_value()\n        elif isinstance(api_key, str):\n            api_key_to_save = api_key\n\n        encrypted_api_key = None\n        if api_key_to_save:\n            settings_service = get_settings_service()\n            try:\n                encrypted_api_key = encrypt_api_key(api_key_to_save, settings_service=settings_service)\n            except (TypeError, ValueError) as e:\n                self.log(f\"Could not encrypt API key: {e}\")\n\n        return {\n            \"embedding_provider\": embedding_provider,\n            \"embedding_model\": embedding_model,\n            \"api_key\": encrypted_api_key,\n            \"api_key_used\": bool(api_key),\n            \"chunk_size\": self.chunk_size,\n            \"created_at\": datetime.now(timezone.utc).isoformat(),\n        }\n\n    def _save_embedding_metadata(self, kb_path: Path, embedding_model: str, api_key: str) -> None:\n        \"\"\"Save embedding model metadata.\"\"\"\n        embedding_metadata = self._build_embedding_metadata(embedding_model, api_key)\n        metadata_path = kb_path / \"embedding_metadata.json\"\n        metadata_path.write_text(json.dumps(embedding_metadata, indent=2))\n\n    def _save_kb_files(\n        self,\n        kb_path: Path,\n        config_list: list[dict[str, Any]],\n    ) -> None:\n        \"\"\"Save KB files using File Component storage patterns.\"\"\"\n        try:\n            # Create directory (following File Component patterns)\n            kb_path.mkdir(parents=True, exist_ok=True)\n\n            # Save column configuration\n            # Only do this if the file doesn't exist already\n            cfg_path = kb_path / \"schema.json\"\n            if not cfg_path.exists():\n                cfg_path.write_text(json.dumps(config_list, indent=2))\n\n        except (OSError, TypeError, ValueError) as e:\n            self.log(f\"Error saving KB files: {e}\")\n\n    def _build_column_metadata(self, config_list: list[dict[str, Any]], df_source: pd.DataFrame) -> dict[str, Any]:\n        \"\"\"Build detailed column metadata.\"\"\"\n        metadata: dict[str, Any] = {\n            \"total_columns\": len(df_source.columns),\n            \"mapped_columns\": len(config_list),\n            \"unmapped_columns\": len(df_source.columns) - len(config_list),\n            \"columns\": [],\n            \"summary\": {\"vectorized_columns\": [], \"identifier_columns\": []},\n        }\n\n        for config in config_list:\n            col_name = config.get(\"column_name\")\n            vectorize = config.get(\"vectorize\") == \"True\" or config.get(\"vectorize\") is True\n            identifier = config.get(\"identifier\") == \"True\" or config.get(\"identifier\") is True\n\n            # Add to columns list\n            metadata[\"columns\"].append(\n                {\n                    \"name\": col_name,\n                    \"vectorize\": vectorize,\n                    \"identifier\": identifier,\n                }\n            )\n\n            # Update summary\n            if vectorize:\n                metadata[\"summary\"][\"vectorized_columns\"].append(col_name)\n            if identifier:\n                metadata[\"summary\"][\"identifier_columns\"].append(col_name)\n\n        return metadata\n\n    async def _create_vector_store(\n        self,\n        df_source: pd.DataFrame,\n        config_list: list[dict[str, Any]],\n        embedding_model: str,\n        api_key: str,\n    ) -> None:\n        \"\"\"Create vector store following Local DB component pattern.\"\"\"\n        try:\n            # Set up vector store directory\n            vector_store_dir = await self._kb_path()\n            if not vector_store_dir:\n                msg = \"Knowledge base path is not set. Please create a new knowledge base first.\"\n                raise ValueError(msg)\n            vector_store_dir.mkdir(parents=True, exist_ok=True)\n\n            # Create embeddings model\n            embedding_function = self._build_embeddings(embedding_model, api_key)\n\n            # Convert DataFrame to Data objects (following Local DB pattern)\n            data_objects = await self._convert_df_to_data_objects(df_source, config_list)\n\n            # Create vector store\n            chroma = Chroma(\n                persist_directory=str(vector_store_dir),\n                embedding_function=embedding_function,\n                collection_name=self.knowledge_base,\n            )\n\n            # Convert Data objects to LangChain Documents\n            documents = []\n            for data_obj in data_objects:\n                doc = data_obj.to_lc_document()\n                documents.append(doc)\n\n            # Add documents to vector store\n            if documents:\n                chroma.add_documents(documents)\n                self.log(f\"Added {len(documents)} documents to vector store '{self.knowledge_base}'\")\n\n        except (OSError, ValueError, RuntimeError) as e:\n            self.log(f\"Error creating vector store: {e}\")\n\n    async def _convert_df_to_data_objects(\n        self, df_source: pd.DataFrame, config_list: list[dict[str, Any]]\n    ) -> list[Data]:\n        \"\"\"Convert DataFrame to Data objects for vector store.\"\"\"\n        data_objects: list[Data] = []\n\n        # Set up vector store directory\n        kb_path = await self._kb_path()\n\n        # If we don't allow duplicates, we need to get the existing hashes\n        chroma = Chroma(\n            persist_directory=str(kb_path),\n            collection_name=self.knowledge_base,\n        )\n\n        # Get all documents and their metadata\n        all_docs = chroma.get()\n\n        # Extract all _id values from metadata\n        id_list = [metadata.get(\"_id\") for metadata in all_docs[\"metadatas\"] if metadata.get(\"_id\")]\n\n        # Get column roles\n        content_cols = []\n        identifier_cols = []\n\n        for config in config_list:\n            col_name = config.get(\"column_name\")\n            vectorize = config.get(\"vectorize\") == \"True\" or config.get(\"vectorize\") is True\n            identifier = config.get(\"identifier\") == \"True\" or config.get(\"identifier\") is True\n\n            if vectorize:\n                content_cols.append(col_name)\n            elif identifier:\n                identifier_cols.append(col_name)\n\n        # Convert each row to a Data object\n        for _, row in df_source.iterrows():\n            # Build content text from identifier columns using list comprehension\n            identifier_parts = [str(row[col]) for col in content_cols if col in row and pd.notna(row[col])]\n\n            # Join all parts into a single string\n            page_content = \" \".join(identifier_parts)\n\n            # Build metadata from NON-vectorized columns only (simple key-value pairs)\n            data_dict = {\n                \"text\": page_content,  # Main content for vectorization\n            }\n\n            # Add identifier columns if they exist\n            if identifier_cols:\n                identifier_parts = [str(row[col]) for col in identifier_cols if col in row and pd.notna(row[col])]\n                page_content = \" \".join(identifier_parts)\n\n            # Add metadata columns as simple key-value pairs\n            for col in df_source.columns:\n                if col not in content_cols and col in row and pd.notna(row[col]):\n                    # Convert to simple types for Chroma metadata\n                    value = row[col]\n                    data_dict[col] = str(value)  # Convert complex types to string\n\n            # Hash the page_content for unique ID\n            page_content_hash = hashlib.sha256(page_content.encode()).hexdigest()\n            data_dict[\"_id\"] = page_content_hash\n\n            # If duplicates are disallowed, and hash exists, prevent adding this row\n            if not self.allow_duplicates and page_content_hash in id_list:\n                self.log(f\"Skipping duplicate row with hash {page_content_hash}\")\n                continue\n\n            # Create Data object - everything except \"text\" becomes metadata\n            data_obj = Data(data=data_dict)\n            data_objects.append(data_obj)\n\n        return data_objects\n\n    def is_valid_collection_name(self, name, min_length: int = 3, max_length: int = 63) -> bool:\n        \"\"\"Validates collection name against conditions 1-3.\n\n        1. Contains 3-63 characters\n        2. Starts and ends with alphanumeric character\n        3. Contains only alphanumeric characters, underscores, or hyphens.\n\n        Args:\n            name (str): Collection name to validate\n            min_length (int): Minimum length of the name\n            max_length (int): Maximum length of the name\n\n        Returns:\n            bool: True if valid, False otherwise\n        \"\"\"\n        # Check length (condition 1)\n        if not (min_length <= len(name) <= max_length):\n            return False\n\n        # Check start/end with alphanumeric (condition 2)\n        if not (name[0].isalnum() and name[-1].isalnum()):\n            return False\n\n        # Check allowed characters (condition 3)\n        return re.match(r\"^[a-zA-Z0-9_-]+$\", name) is not None\n\n    async def _kb_path(self) -> Path | None:\n        # Check if we already have the path cached\n        cached_path = getattr(self, \"_cached_kb_path\", None)\n        if cached_path is not None:\n            return cached_path\n\n        # If not cached, compute it\n        async with session_scope() as db:\n            if not self.user_id:\n                msg = \"User ID is required for fetching knowledge base path.\"\n                raise ValueError(msg)\n            current_user = await get_user_by_id(db, self.user_id)\n            if not current_user:\n                msg = f\"User with ID {self.user_id} not found.\"\n                raise ValueError(msg)\n            kb_user = current_user.username\n\n        kb_root = self._get_kb_root()\n\n        # Cache the result\n        self._cached_kb_path = kb_root / kb_user / self.knowledge_base\n\n        return self._cached_kb_path\n\n    # ---------------------------------------------------------------------\n    #                         OUTPUT METHODS\n    # ---------------------------------------------------------------------\n    async def build_kb_info(self) -> Data:\n        \"\"\"Main ingestion routine → returns a dict with KB metadata.\"\"\"\n        try:\n            input_value = self.input_df[0] if isinstance(self.input_df, list) else self.input_df\n            df_source: DataFrame = convert_to_dataframe(input_value, auto_parse=False)\n\n            # Validate column configuration (using Structured Output patterns)\n            config_list = self._validate_column_config(df_source)\n            column_metadata = self._build_column_metadata(config_list, df_source)\n\n            # Read the embedding info from the knowledge base folder\n            kb_path = await self._kb_path()\n            if not kb_path:\n                msg = \"Knowledge base path is not set. Please create a new knowledge base first.\"\n                raise ValueError(msg)\n            metadata_path = kb_path / \"embedding_metadata.json\"\n\n            # If the API key is not provided, try to read it from the metadata file\n            if metadata_path.exists():\n                settings_service = get_settings_service()\n                metadata = json.loads(metadata_path.read_text())\n                embedding_model = metadata.get(\"embedding_model\")\n                try:\n                    api_key = decrypt_api_key(metadata[\"api_key\"], settings_service)\n                except (InvalidToken, TypeError, ValueError) as e:\n                    self.log(f\"Could not decrypt API key. Please provide it manually. Error: {e}\")\n\n            # Check if a custom API key was provided, update metadata if so\n            if self.api_key:\n                api_key = self.api_key\n                self._save_embedding_metadata(\n                    kb_path=kb_path,\n                    embedding_model=embedding_model,\n                    api_key=api_key,\n                )\n\n            # Create vector store following Local DB component pattern\n            await self._create_vector_store(df_source, config_list, embedding_model=embedding_model, api_key=api_key)\n\n            # Save KB files (using File Component storage patterns)\n            self._save_kb_files(kb_path, config_list)\n\n            # Build metadata response\n            meta: dict[str, Any] = {\n                \"kb_id\": str(uuid.uuid4()),\n                \"kb_name\": self.knowledge_base,\n                \"rows\": len(df_source),\n                \"column_metadata\": column_metadata,\n                \"path\": str(kb_path),\n                \"config_columns\": len(config_list),\n                \"timestamp\": datetime.now(tz=timezone.utc).isoformat(),\n            }\n\n            # Set status message\n            self.status = f\"✅ KB **{self.knowledge_base}** saved · {len(df_source)} chunks.\"\n\n            return Data(data=meta)\n\n        except (OSError, ValueError, RuntimeError, KeyError) as e:\n            msg = f\"Error during KB ingestion: {e}\"\n            raise RuntimeError(msg) from e\n\n    async def _get_api_key_variable(self, field_value: dict[str, Any]):\n        async with session_scope() as db:\n            if not self.user_id:\n                msg = \"User ID is required for fetching global variables.\"\n                raise ValueError(msg)\n            current_user = await get_user_by_id(db, self.user_id)\n            if not current_user:\n                msg = f\"User with ID {self.user_id} not found.\"\n                raise ValueError(msg)\n            variable_service = get_variable_service()\n\n            # Process the api_key field variable\n            return await variable_service.get_variable(\n                user_id=current_user.id,\n                name=field_value[\"03_api_key\"],\n                field=\"\",\n                session=db,\n            )\n\n    async def update_build_config(\n        self,\n        build_config,\n        field_value: Any,\n        field_name: str | None = None,\n    ):\n        \"\"\"Update build configuration based on provider selection.\"\"\"\n        # Create a new knowledge base\n        if field_name == \"knowledge_base\":\n            async with session_scope() as db:\n                if not self.user_id:\n                    msg = \"User ID is required for fetching knowledge base list.\"\n                    raise ValueError(msg)\n                current_user = await get_user_by_id(db, self.user_id)\n                if not current_user:\n                    msg = f\"User with ID {self.user_id} not found.\"\n                    raise ValueError(msg)\n                kb_user = current_user.username\n            if isinstance(field_value, dict) and \"01_new_kb_name\" in field_value:\n                # Validate the knowledge base name - Make sure it follows these rules:\n                if not self.is_valid_collection_name(field_value[\"01_new_kb_name\"]):\n                    msg = f\"Invalid knowledge base name: {field_value['01_new_kb_name']}\"\n                    raise ValueError(msg)\n\n                api_key = field_value.get(\"03_api_key\", None)\n                with contextlib.suppress(Exception):\n                    # If the API key is a variable, resolve it\n                    api_key = await self._get_api_key_variable(field_value)\n\n                # Make sure api_key is a string\n                if not isinstance(api_key, str):\n                    msg = \"API key must be a string.\"\n                    raise ValueError(msg)\n\n                # We need to test the API Key one time against the embedding model\n                embed_model = self._build_embeddings(embedding_model=field_value[\"02_embedding_model\"], api_key=api_key)\n\n                # Try to generate a dummy embedding to validate the API key without blocking the event loop\n                try:\n                    await asyncio.wait_for(\n                        asyncio.to_thread(embed_model.embed_query, \"test\"),\n                        timeout=10,\n                    )\n                except TimeoutError as e:\n                    msg = \"Embedding validation timed out. Please verify network connectivity and key.\"\n                    raise ValueError(msg) from e\n                except Exception as e:\n                    msg = f\"Embedding validation failed: {e!s}\"\n                    raise ValueError(msg) from e\n\n                # Create the new knowledge base directory\n                kb_path = KNOWLEDGE_BASES_ROOT_PATH / kb_user / field_value[\"01_new_kb_name\"]\n                kb_path.mkdir(parents=True, exist_ok=True)\n\n                # Save the embedding metadata\n                build_config[\"knowledge_base\"][\"value\"] = field_value[\"01_new_kb_name\"]\n                self._save_embedding_metadata(\n                    kb_path=kb_path,\n                    embedding_model=field_value[\"02_embedding_model\"],\n                    api_key=api_key,\n                )\n\n            # Update the knowledge base options dynamically\n            build_config[\"knowledge_base\"][\"options\"] = await get_knowledge_bases(\n                KNOWLEDGE_BASES_ROOT_PATH,\n                user_id=self.user_id,\n            )\n\n            # If the selected knowledge base is not available, reset it\n            if build_config[\"knowledge_base\"][\"value\"] not in build_config[\"knowledge_base\"][\"options\"]:\n                build_config[\"knowledge_base\"][\"value\"] = None\n\n        return build_config\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "column_config": {
+                "tool_mode": false,
+                "is_list": true,
+                "list_add_label": "Add More",
+                "table_schema": [
+                  {
+                    "name": "column_name",
+                    "display_name": "Column Name",
+                    "type": "str",
+                    "description": "Name of the column in the source DataFrame",
+                    "edit_mode": "inline"
+                  },
+                  {
+                    "name": "vectorize",
+                    "display_name": "Vectorize",
+                    "type": "boolean",
+                    "description": "Create embeddings for this column",
+                    "default": false,
+                    "edit_mode": "inline"
+                  },
+                  {
+                    "name": "identifier",
+                    "display_name": "Identifier",
+                    "type": "boolean",
+                    "description": "Use this column as unique identifier",
+                    "default": false,
+                    "edit_mode": "inline"
+                  }
+                ],
+                "trigger_text": "Open table",
+                "trigger_icon": "Table",
+                "table_icon": "Table",
+                "trace_as_metadata": true,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "column_config",
+                "value": [
+                  {
+                    "name": "content",
+                    "type": "text"
+                  },
+                  {
+                    "name": "title",
+                    "type": "text"
+                  },
+                  {
+                    "name": "metadata",
+                    "type": "json"
+                  }
+                ],
+                "display_name": "Column Configuration",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Configure column behavior for the knowledge base.",
+                "title_case": false,
+                "type": "table",
+                "_input_type": "TableInput"
+              },
+              "knowledge_base": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {
+                  "functionality": "create",
+                  "fields": {
+                    "data": {
+                      "node": {
+                        "name": "create_knowledge_base",
+                        "description": "Create new knowledge in Langflow.",
+                        "display_name": "Create new knowledge",
+                        "field_order": [
+                          "01_new_kb_name",
+                          "02_embedding_model",
+                          "03_api_key"
+                        ],
+                        "template": {
+                          "01_new_kb_name": {
+                            "tool_mode": false,
+                            "trace_as_metadata": true,
+                            "load_from_db": false,
+                            "list": false,
+                            "list_add_label": "Add More",
+                            "required": true,
+                            "placeholder": "",
+                            "show": true,
+                            "name": "new_kb_name",
+                            "value": "",
+                            "display_name": "Knowledge Name",
+                            "advanced": false,
+                            "dynamic": false,
+                            "info": "Name of the new knowledge to create.",
+                            "title_case": false,
+                            "type": "str",
+                            "_input_type": "StrInput"
+                          },
+                          "02_embedding_model": {
+                            "tool_mode": false,
+                            "trace_as_metadata": true,
+                            "options": [
+                              "text-embedding-3-small",
+                              "text-embedding-3-large",
+                              "text-embedding-ada-002",
+                              "sentence-transformers/all-MiniLM-L6-v2",
+                              "sentence-transformers/all-mpnet-base-v2",
+                              "embed-english-v3.0",
+                              "embed-multilingual-v3.0"
+                            ],
+                            "options_metadata": [
+                              {
+                                "icon": "OpenAI"
+                              },
+                              {
+                                "icon": "OpenAI"
+                              },
+                              {
+                                "icon": "OpenAI"
+                              },
+                              {
+                                "icon": "HuggingFace"
+                              },
+                              {
+                                "icon": "HuggingFace"
+                              },
+                              {
+                                "icon": "Cohere"
+                              },
+                              {
+                                "icon": "Cohere"
+                              }
+                            ],
+                            "combobox": false,
+                            "dialog_inputs": {},
+                            "toggle": false,
+                            "required": true,
+                            "placeholder": "",
+                            "show": true,
+                            "name": "embedding_model",
+                            "value": "",
+                            "display_name": "Choose Embedding",
+                            "advanced": false,
+                            "dynamic": false,
+                            "info": "Select the embedding model to use for this knowledge base.",
+                            "title_case": false,
+                            "external_options": {},
+                            "type": "str",
+                            "_input_type": "DropdownInput"
+                          },
+                          "03_api_key": {
+                            "load_from_db": false,
+                            "required": true,
+                            "placeholder": "",
+                            "show": true,
+                            "name": "api_key",
+                            "value": "",
+                            "display_name": "API Key",
+                            "advanced": false,
+                            "input_types": [],
+                            "dynamic": false,
+                            "info": "Provider API key for embedding model",
+                            "title_case": false,
+                            "password": true,
+                            "type": "str",
+                            "_input_type": "SecretStrInput"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "toggle": false,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "knowledge_base",
+                "value": "web_content_kb",
+                "display_name": "Knowledge",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Select the knowledge to load data from.",
+                "real_time_refresh": true,
+                "refresh_button": true,
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              }
+            }
+          },
+          "selected_output": "dataframe_output",
+          "type": "KnowledgeIngestion"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "KnowledgeIngestion-3iJkL",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 910,
+          "y": 380
+        },
+        "positionAbsolute": {
+          "x": 910,
+          "y": 380
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Chroma Vector Store with search capabilities",
+          "display_name": "Chroma Vector Store",
+          "id": "Chroma-8yZaB",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Chroma Vector Store with search capabilities",
+            "display_name": "Chroma Vector Store",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "allow_duplicates",
+              "chroma_server_ssl_enabled",
+              "collection_name",
+              "number_of_results",
+              "search_type",
+              "should_cache_vector_store",
+              "path"
+            ],
+            "frozen": false,
+            "icon": "component",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "Data",
+              "DataFrame"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Search Results",
+                "group_outputs": false,
+                "method": "search_documents",
+                "name": "search_results",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "group_outputs": false,
+                "method": "as_dataframe",
+                "name": "dataframe",
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "embedding": {
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "embedding",
+                "value": "",
+                "display_name": "Embedding",
+                "advanced": false,
+                "input_types": [
+                  "Embeddings"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "ingest_data": {
+                "trace_as_metadata": true,
+                "list": true,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "ingest_data",
+                "value": "",
+                "display_name": "Ingest Data",
+                "advanced": false,
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "other",
+                "_input_type": "HandleInput"
+              },
+              "allow_duplicates": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "allow_duplicates",
+                "value": false,
+                "display_name": "Allow Duplicates",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If false, will not add documents that are already in the Vector Store.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "chroma_server_cors_allow_origins": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chroma_server_cors_allow_origins",
+                "value": "",
+                "display_name": "Server CORS Allow Origins",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "chroma_server_grpc_port": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chroma_server_grpc_port",
+                "value": "",
+                "display_name": "Server gRPC Port",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "chroma_server_host": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chroma_server_host",
+                "value": "",
+                "display_name": "Server Host",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "chroma_server_http_port": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chroma_server_http_port",
+                "value": "",
+                "display_name": "Server HTTP Port",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "chroma_server_ssl_enabled": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "chroma_server_ssl_enabled",
+                "value": false,
+                "display_name": "Server SSL Enabled",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from copy import deepcopy\nfrom typing import TYPE_CHECKING\n\nfrom chromadb.config import Settings\nfrom langchain_chroma import Chroma\nfrom typing_extensions import override\n\nfrom lfx.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom lfx.base.vectorstores.utils import chroma_collection_to_data\nfrom lfx.inputs.inputs import BoolInput, DropdownInput, HandleInput, IntInput, StrInput\nfrom lfx.schema.data import Data\n\nif TYPE_CHECKING:\n    from lfx.schema.dataframe import DataFrame\n\n\nclass ChromaVectorStoreComponent(LCVectorStoreComponent):\n    \"\"\"Chroma Vector Store with search capabilities.\"\"\"\n\n    display_name: str = \"Chroma DB\"\n    description: str = \"Chroma Vector Store with search capabilities\"\n    name = \"Chroma\"\n    icon = \"Chroma\"\n\n    inputs = [\n        StrInput(\n            name=\"collection_name\",\n            display_name=\"Collection Name\",\n            value=\"langflow\",\n        ),\n        StrInput(\n            name=\"persist_directory\",\n            display_name=\"Persist Directory\",\n        ),\n        *LCVectorStoreComponent.inputs,\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n        StrInput(\n            name=\"chroma_server_cors_allow_origins\",\n            display_name=\"Server CORS Allow Origins\",\n            advanced=True,\n        ),\n        StrInput(\n            name=\"chroma_server_host\",\n            display_name=\"Server Host\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_http_port\",\n            display_name=\"Server HTTP Port\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_grpc_port\",\n            display_name=\"Server gRPC Port\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"chroma_server_ssl_enabled\",\n            display_name=\"Server SSL Enabled\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"allow_duplicates\",\n            display_name=\"Allow Duplicates\",\n            advanced=True,\n            info=\"If false, will not add documents that are already in the Vector Store.\",\n        ),\n        DropdownInput(\n            name=\"search_type\",\n            display_name=\"Search Type\",\n            options=[\"Similarity\", \"MMR\"],\n            value=\"Similarity\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            advanced=True,\n            value=10,\n        ),\n        IntInput(\n            name=\"limit\",\n            display_name=\"Limit\",\n            advanced=True,\n            info=\"Limit the number of records to compare when Allow Duplicates is False.\",\n        ),\n    ]\n\n    @override\n    @check_cached_vector_store\n    def build_vector_store(self) -> Chroma:\n        \"\"\"Builds the Chroma object.\"\"\"\n        try:\n            from chromadb import Client\n            from langchain_chroma import Chroma\n        except ImportError as e:\n            msg = \"Could not import Chroma integration package. Please install it with `pip install langchain-chroma`.\"\n            raise ImportError(msg) from e\n        # Chroma settings\n        chroma_settings = None\n        client = None\n        if self.chroma_server_host:\n            chroma_settings = Settings(\n                chroma_server_cors_allow_origins=self.chroma_server_cors_allow_origins or [],\n                chroma_server_host=self.chroma_server_host,\n                chroma_server_http_port=self.chroma_server_http_port or None,\n                chroma_server_grpc_port=self.chroma_server_grpc_port or None,\n                chroma_server_ssl_enabled=self.chroma_server_ssl_enabled,\n            )\n            client = Client(settings=chroma_settings)\n\n        # Check persist_directory and expand it if it is a relative path\n        persist_directory = self.resolve_path(self.persist_directory) if self.persist_directory is not None else None\n\n        chroma = Chroma(\n            persist_directory=persist_directory,\n            client=client,\n            embedding_function=self.embedding,\n            collection_name=self.collection_name,\n        )\n\n        self._add_documents_to_vector_store(chroma)\n        self.status = chroma_collection_to_data(chroma.get(limit=self.limit))\n        return chroma\n\n    def _add_documents_to_vector_store(self, vector_store: \"Chroma\") -> None:\n        \"\"\"Adds documents to the Vector Store.\"\"\"\n        ingest_data: list | Data | DataFrame = self.ingest_data\n        if not ingest_data:\n            self.status = \"\"\n            return\n\n        # Convert DataFrame to Data if needed using parent's method\n        ingest_data = self._prepare_ingest_data()\n\n        stored_documents_without_id = []\n        if self.allow_duplicates:\n            stored_data = []\n        else:\n            stored_data = chroma_collection_to_data(vector_store.get(limit=self.limit))\n            for value in deepcopy(stored_data):\n                del value.id\n                stored_documents_without_id.append(value)\n\n        documents = []\n        for _input in ingest_data or []:\n            if isinstance(_input, Data):\n                if _input not in stored_documents_without_id:\n                    documents.append(_input.to_lc_document())\n            else:\n                msg = \"Vector Store Inputs must be Data objects.\"\n                raise TypeError(msg)\n\n        if documents and self.embedding is not None:\n            self.log(f\"Adding {len(documents)} documents to the Vector Store.\")\n            # Filter complex metadata to prevent ChromaDB errors\n            try:\n                from langchain_community.vectorstores.utils import filter_complex_metadata\n\n                filtered_documents = filter_complex_metadata(documents)\n                vector_store.add_documents(filtered_documents)\n            except ImportError:\n                self.log(\"Warning: Could not import filter_complex_metadata. Adding documents without filtering.\")\n                vector_store.add_documents(documents)\n        else:\n            self.log(\"No documents to add to the Vector Store.\")\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "collection_name": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "collection_name",
+                "value": "web_content_kb",
+                "display_name": "Collection Name",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "limit": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "limit",
+                "value": "",
+                "display_name": "Limit",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Limit the number of records to compare when Allow Duplicates is False.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "number_of_results": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "number_of_results",
+                "value": 10,
+                "display_name": "Number of Results",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Number of results to return.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "persist_directory": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "persist_directory",
+                "value": "",
+                "display_name": "Persist Directory",
+                "advanced": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "search_query": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "Enter a query...",
+                "show": true,
+                "name": "search_query",
+                "value": "",
+                "display_name": "Search Query",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Enter a query to run a similarity search.",
+                "title_case": false,
+                "type": "query",
+                "_input_type": "QueryInput"
+              },
+              "search_type": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "Similarity",
+                  "MMR"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "search_type",
+                "value": "Similarity",
+                "display_name": "Search Type",
+                "advanced": true,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "should_cache_vector_store": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "should_cache_vector_store",
+                "value": true,
+                "display_name": "Cache Vector Store",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "path": {
+                "name": "path",
+                "type": "str",
+                "value": "./chroma_db",
+                "display_name": "path",
+                "show": true,
+                "required": false,
+                "dynamic": true,
+                "advanced": false,
+                "input_types": [
+                  "Message",
+                  "Text",
+                  "Data"
+                ]
+              }
+            }
+          },
+          "selected_output": "search_results",
+          "type": "Chroma"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "Chroma-8yZaB",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 1290,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 1290,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Search and retrieve data from knowledge.",
+          "display_name": "Knowledge Retrieval",
+          "id": "KnowledgeRetrieval-9cDeF",
+          "node": {
+            "base_classes": [
+              "DataFrame"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Search and retrieve data from knowledge.",
+            "display_name": "Knowledge Retrieval",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "include_embeddings",
+              "include_metadata",
+              "top_k"
+            ],
+            "frozen": false,
+            "icon": "component",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "DataFrame"
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Results",
+                "group_outputs": false,
+                "method": "retrieve_data",
+                "name": "retrieve_data",
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "load_from_db": true,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "api_key",
+                "value": "",
+                "display_name": "Embedding Provider API Key",
+                "advanced": true,
+                "input_types": [],
+                "dynamic": false,
+                "info": "API key for the embedding provider to generate embeddings.",
+                "title_case": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "import json\nfrom pathlib import Path\nfrom typing import Any\n\nfrom cryptography.fernet import InvalidToken\nfrom langchain_chroma import Chroma\nfrom langflow.services.auth.utils import decrypt_api_key\nfrom langflow.services.database.models.user.crud import get_user_by_id\nfrom pydantic import SecretStr\n\nfrom lfx.base.knowledge_bases.knowledge_base_utils import get_knowledge_bases\nfrom lfx.custom import Component\nfrom lfx.io import BoolInput, DropdownInput, IntInput, MessageTextInput, Output, SecretStrInput\nfrom lfx.log.logger import logger\nfrom lfx.schema.data import Data\nfrom lfx.schema.dataframe import DataFrame\nfrom lfx.services.deps import get_settings_service, session_scope\n\nsettings = get_settings_service().settings\nknowledge_directory = settings.knowledge_bases_dir\nif not knowledge_directory:\n    msg = \"Knowledge bases directory is not set in the settings.\"\n    raise ValueError(msg)\nKNOWLEDGE_BASES_ROOT_PATH = Path(knowledge_directory).expanduser()\n\n\nclass KnowledgeRetrievalComponent(Component):\n    display_name = \"Knowledge Retrieval\"\n    description = \"Search and retrieve data from knowledge.\"\n    icon = \"download\"\n    name = \"KnowledgeRetrieval\"\n\n    inputs = [\n        DropdownInput(\n            name=\"knowledge_base\",\n            display_name=\"Knowledge\",\n            info=\"Select the knowledge to load data from.\",\n            required=True,\n            options=[],\n            refresh_button=True,\n            real_time_refresh=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"Embedding Provider API Key\",\n            info=\"API key for the embedding provider to generate embeddings.\",\n            advanced=True,\n            required=False,\n        ),\n        MessageTextInput(\n            name=\"search_query\",\n            display_name=\"Search Query\",\n            info=\"Optional search query to filter knowledge base data.\",\n            tool_mode=True,\n        ),\n        IntInput(\n            name=\"top_k\",\n            display_name=\"Top K Results\",\n            info=\"Number of top results to return from the knowledge base.\",\n            value=5,\n            advanced=True,\n            required=False,\n        ),\n        BoolInput(\n            name=\"include_metadata\",\n            display_name=\"Include Metadata\",\n            info=\"Whether to include all metadata in the output. If false, only content is returned.\",\n            value=True,\n            advanced=False,\n        ),\n        BoolInput(\n            name=\"include_embeddings\",\n            display_name=\"Include Embeddings\",\n            info=\"Whether to include embeddings in the output. Only applicable if 'Include Metadata' is enabled.\",\n            value=False,\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(\n            name=\"retrieve_data\",\n            display_name=\"Results\",\n            method=\"retrieve_data\",\n            info=\"Returns the data from the selected knowledge base.\",\n        ),\n    ]\n\n    async def update_build_config(self, build_config, field_value, field_name=None):  # noqa: ARG002\n        if field_name == \"knowledge_base\":\n            # Update the knowledge base options dynamically\n            build_config[\"knowledge_base\"][\"options\"] = await get_knowledge_bases(\n                KNOWLEDGE_BASES_ROOT_PATH,\n                user_id=self.user_id,  # Use the user_id from the component context\n            )\n\n            # If the selected knowledge base is not available, reset it\n            if build_config[\"knowledge_base\"][\"value\"] not in build_config[\"knowledge_base\"][\"options\"]:\n                build_config[\"knowledge_base\"][\"value\"] = None\n\n        return build_config\n\n    def _get_kb_metadata(self, kb_path: Path) -> dict:\n        \"\"\"Load and process knowledge base metadata.\"\"\"\n        metadata: dict[str, Any] = {}\n        metadata_file = kb_path / \"embedding_metadata.json\"\n        if not metadata_file.exists():\n            logger.warning(f\"Embedding metadata file not found at {metadata_file}\")\n            return metadata\n\n        try:\n            with metadata_file.open(\"r\", encoding=\"utf-8\") as f:\n                metadata = json.load(f)\n        except json.JSONDecodeError:\n            logger.error(f\"Error decoding JSON from {metadata_file}\")\n            return {}\n\n        # Decrypt API key if it exists\n        if \"api_key\" in metadata and metadata.get(\"api_key\"):\n            settings_service = get_settings_service()\n            try:\n                decrypted_key = decrypt_api_key(metadata[\"api_key\"], settings_service)\n                metadata[\"api_key\"] = decrypted_key\n            except (InvalidToken, TypeError, ValueError) as e:\n                logger.error(f\"Could not decrypt API key. Please provide it manually. Error: {e}\")\n                metadata[\"api_key\"] = None\n        return metadata\n\n    def _build_embeddings(self, metadata: dict):\n        \"\"\"Build embedding model from metadata.\"\"\"\n        runtime_api_key = self.api_key.get_secret_value() if isinstance(self.api_key, SecretStr) else self.api_key\n        provider = metadata.get(\"embedding_provider\")\n        model = metadata.get(\"embedding_model\")\n        api_key = runtime_api_key or metadata.get(\"api_key\")\n        chunk_size = metadata.get(\"chunk_size\")\n\n        # Handle various providers\n        if provider == \"OpenAI\":\n            from langchain_openai import OpenAIEmbeddings\n\n            if not api_key:\n                msg = \"OpenAI API key is required. Provide it in the component's advanced settings.\"\n                raise ValueError(msg)\n            return OpenAIEmbeddings(\n                model=model,\n                api_key=api_key,\n                chunk_size=chunk_size,\n            )\n        if provider == \"HuggingFace\":\n            from langchain_huggingface import HuggingFaceEmbeddings\n\n            return HuggingFaceEmbeddings(\n                model=model,\n            )\n        if provider == \"Cohere\":\n            from langchain_cohere import CohereEmbeddings\n\n            if not api_key:\n                msg = \"Cohere API key is required when using Cohere provider\"\n                raise ValueError(msg)\n            return CohereEmbeddings(\n                model=model,\n                cohere_api_key=api_key,\n            )\n        if provider == \"Custom\":\n            # For custom embedding models, we would need additional configuration\n            msg = \"Custom embedding models not yet supported\"\n            raise NotImplementedError(msg)\n        # Add other providers here if they become supported in ingest\n        msg = f\"Embedding provider '{provider}' is not supported for retrieval.\"\n        raise NotImplementedError(msg)\n\n    async def retrieve_data(self) -> DataFrame:\n        \"\"\"Retrieve data from the selected knowledge base by reading the Chroma collection.\n\n        Returns:\n            A DataFrame containing the data rows from the knowledge base.\n        \"\"\"\n        # Get the current user\n        async with session_scope() as db:\n            if not self.user_id:\n                msg = \"User ID is required for fetching Knowledge Base data.\"\n                raise ValueError(msg)\n            current_user = await get_user_by_id(db, self.user_id)\n            if not current_user:\n                msg = f\"User with ID {self.user_id} not found.\"\n                raise ValueError(msg)\n            kb_user = current_user.username\n        kb_path = KNOWLEDGE_BASES_ROOT_PATH / kb_user / self.knowledge_base\n\n        metadata = self._get_kb_metadata(kb_path)\n        if not metadata:\n            msg = f\"Metadata not found for knowledge base: {self.knowledge_base}. Ensure it has been indexed.\"\n            raise ValueError(msg)\n\n        # Build the embedder for the knowledge base\n        embedding_function = self._build_embeddings(metadata)\n\n        # Load vector store\n        chroma = Chroma(\n            persist_directory=str(kb_path),\n            embedding_function=embedding_function,\n            collection_name=self.knowledge_base,\n        )\n\n        # If a search query is provided, perform a similarity search\n        if self.search_query:\n            # Use the search query to perform a similarity search\n            logger.info(f\"Performing similarity search with query: {self.search_query}\")\n            results = chroma.similarity_search_with_score(\n                query=self.search_query or \"\",\n                k=self.top_k,\n            )\n        else:\n            results = chroma.similarity_search(\n                query=self.search_query or \"\",\n                k=self.top_k,\n            )\n\n            # For each result, make it a tuple to match the expected output format\n            results = [(doc, 0) for doc in results]  # Assign a dummy score of 0\n\n        # If include_embeddings is enabled, get embeddings for the results\n        id_to_embedding = {}\n        if self.include_embeddings and results:\n            doc_ids = [doc[0].metadata.get(\"_id\") for doc in results if doc[0].metadata.get(\"_id\")]\n\n            # Only proceed if we have valid document IDs\n            if doc_ids:\n                # Access underlying client to get embeddings\n                collection = chroma._client.get_collection(name=self.knowledge_base)\n                embeddings_result = collection.get(where={\"_id\": {\"$in\": doc_ids}}, include=[\"metadatas\", \"embeddings\"])\n\n                # Create a mapping from document ID to embedding\n                for i, metadata in enumerate(embeddings_result.get(\"metadatas\", [])):\n                    if metadata and \"_id\" in metadata:\n                        id_to_embedding[metadata[\"_id\"]] = embeddings_result[\"embeddings\"][i]\n\n        # Build output data based on include_metadata setting\n        data_list = []\n        for doc in results:\n            kwargs = {\n                \"content\": doc[0].page_content,\n            }\n            if self.search_query:\n                kwargs[\"_score\"] = -1 * doc[1]\n            if self.include_metadata:\n                # Include all metadata, embeddings, and content\n                kwargs.update(doc[0].metadata)\n            if self.include_embeddings:\n                kwargs[\"_embeddings\"] = id_to_embedding.get(doc[0].metadata.get(\"_id\"))\n\n            data_list.append(Data(**kwargs))\n\n        # Return the DataFrame containing the data\n        return DataFrame(data=data_list)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "include_embeddings": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "include_embeddings",
+                "value": false,
+                "display_name": "Include Embeddings",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Whether to include embeddings in the output. Only applicable if 'Include Metadata' is enabled.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "include_metadata": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "include_metadata",
+                "value": true,
+                "display_name": "Include Metadata",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Whether to include all metadata in the output. If false, only content is returned.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "knowledge_base": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "knowledge_base",
+                "value": "",
+                "display_name": "Knowledge",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Select the knowledge to load data from.",
+                "real_time_refresh": true,
+                "refresh_button": true,
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "search_query": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "search_query",
+                "value": "",
+                "display_name": "Search Query",
+                "advanced": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "Optional search query to filter knowledge base data.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "top_k": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "top_k",
+                "value": 5,
+                "display_name": "Top K Results",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Number of top results to return from the knowledge base.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              }
+            }
+          },
+          "selected_output": "retrieve_data",
+          "type": "KnowledgeRetrieval"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "KnowledgeRetrieval-9cDeF",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 1670,
+          "y": 80
+        },
+        "positionAbsolute": {
+          "x": 1670,
+          "y": 80
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      },
+      {
+        "data": {
+          "description": "Fetch content from one or more web pages, following links recursively.",
+          "display_name": "URL Fetcher/Scraper",
+          "id": "URLComponent-ntoL5",
+          "node": {
+            "base_classes": [
+              "DataFrame",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Fetch content from one or more web pages, following links recursively.",
+            "display_name": "URL Fetcher/Scraper",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "autoset_encoding",
+              "check_response_status",
+              "continue_on_failure",
+              "filter_text_html",
+              "format",
+              "headers",
+              "max_depth",
+              "prevent_outside",
+              "timeout",
+              "use_async"
+            ],
+            "frozen": false,
+            "icon": "component",
+            "legacy": false,
+            "lf_version": "1.0.0",
+            "metadata": {},
+            "output_types": [
+              "DataFrame",
+              null
+            ],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Extracted Pages",
+                "group_outputs": false,
+                "method": "fetch_content",
+                "name": "page_results",
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Raw Content",
+                "group_outputs": false,
+                "method": "fetch_content_as_message",
+                "name": "raw_results",
+                "selected": null,
+                "tool_mode": false,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "autoset_encoding": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "autoset_encoding",
+                "value": true,
+                "display_name": "Autoset Encoding",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If enabled, automatically sets the encoding of the request.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "check_response_status": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "check_response_status",
+                "value": false,
+                "display_name": "Check Response Status",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If enabled, checks the response status of the request.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "import importlib\nimport re\n\nimport requests\nfrom bs4 import BeautifulSoup\nfrom langchain_community.document_loaders import RecursiveUrlLoader\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.field_typing.range_spec import RangeSpec\nfrom lfx.helpers.data import safe_convert\nfrom lfx.io import BoolInput, DropdownInput, IntInput, MessageTextInput, Output, SliderInput, TableInput\nfrom lfx.log.logger import logger\nfrom lfx.schema.dataframe import DataFrame\nfrom lfx.schema.message import Message\nfrom lfx.utils.request_utils import get_user_agent\n\n# Constants\nDEFAULT_TIMEOUT = 30\nDEFAULT_MAX_DEPTH = 1\nDEFAULT_FORMAT = \"Text\"\n\n\nURL_REGEX = re.compile(\n    r\"^(https?:\\/\\/)?\" r\"(www\\.)?\" r\"([a-zA-Z0-9.-]+)\" r\"(\\.[a-zA-Z]{2,})?\" r\"(:\\d+)?\" r\"(\\/[^\\s]*)?$\",\n    re.IGNORECASE,\n)\n\nUSER_AGENT = None\n# Check if langflow is installed using importlib.util.find_spec(name))\nif importlib.util.find_spec(\"langflow\"):\n    langflow_installed = True\n    USER_AGENT = get_user_agent()\nelse:\n    langflow_installed = False\n    USER_AGENT = \"lfx\"\n\n\nclass URLComponent(Component):\n    \"\"\"A component that loads and parses content from web pages recursively.\n\n    This component allows fetching content from one or more URLs, with options to:\n    - Control crawl depth\n    - Prevent crawling outside the root domain\n    - Use async loading for better performance\n    - Extract either raw HTML or clean text\n    - Configure request headers and timeouts\n    \"\"\"\n\n    display_name = \"URL\"\n    description = \"Fetch content from one or more web pages, following links recursively.\"\n    documentation: str = \"https://docs.langflow.org/components-data#url\"\n    icon = \"layout-template\"\n    name = \"URLComponent\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"urls\",\n            display_name=\"URLs\",\n            info=\"Enter one or more URLs to crawl recursively, by clicking the '+' button.\",\n            is_list=True,\n            tool_mode=True,\n            placeholder=\"Enter a URL...\",\n            list_add_label=\"Add URL\",\n            input_types=[],\n        ),\n        SliderInput(\n            name=\"max_depth\",\n            display_name=\"Depth\",\n            info=(\n                \"Controls how many 'clicks' away from the initial page the crawler will go:\\n\"\n                \"- depth 1: only the initial page\\n\"\n                \"- depth 2: initial page + all pages linked directly from it\\n\"\n                \"- depth 3: initial page + direct links + links found on those direct link pages\\n\"\n                \"Note: This is about link traversal, not URL path depth.\"\n            ),\n            value=DEFAULT_MAX_DEPTH,\n            range_spec=RangeSpec(min=1, max=5, step=1),\n            required=False,\n            min_label=\" \",\n            max_label=\" \",\n            min_label_icon=\"None\",\n            max_label_icon=\"None\",\n            # slider_input=True\n        ),\n        BoolInput(\n            name=\"prevent_outside\",\n            display_name=\"Prevent Outside\",\n            info=(\n                \"If enabled, only crawls URLs within the same domain as the root URL. \"\n                \"This helps prevent the crawler from going to external websites.\"\n            ),\n            value=True,\n            required=False,\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"use_async\",\n            display_name=\"Use Async\",\n            info=(\n                \"If enabled, uses asynchronous loading which can be significantly faster \"\n                \"but might use more system resources.\"\n            ),\n            value=True,\n            required=False,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"format\",\n            display_name=\"Output Format\",\n            info=\"Output Format. Use 'Text' to extract the text from the HTML or 'HTML' for the raw HTML content.\",\n            options=[\"Text\", \"HTML\"],\n            value=DEFAULT_FORMAT,\n            advanced=True,\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            info=\"Timeout for the request in seconds.\",\n            value=DEFAULT_TIMEOUT,\n            required=False,\n            advanced=True,\n        ),\n        TableInput(\n            name=\"headers\",\n            display_name=\"Headers\",\n            info=\"The headers to send with the request\",\n            table_schema=[\n                {\n                    \"name\": \"key\",\n                    \"display_name\": \"Header\",\n                    \"type\": \"str\",\n                    \"description\": \"Header name\",\n                },\n                {\n                    \"name\": \"value\",\n                    \"display_name\": \"Value\",\n                    \"type\": \"str\",\n                    \"description\": \"Header value\",\n                },\n            ],\n            value=[{\"key\": \"User-Agent\", \"value\": USER_AGENT}],\n            advanced=True,\n            input_types=[\"DataFrame\"],\n        ),\n        BoolInput(\n            name=\"filter_text_html\",\n            display_name=\"Filter Text/HTML\",\n            info=\"If enabled, filters out text/css content type from the results.\",\n            value=True,\n            required=False,\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"continue_on_failure\",\n            display_name=\"Continue on Failure\",\n            info=\"If enabled, continues crawling even if some requests fail.\",\n            value=True,\n            required=False,\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"check_response_status\",\n            display_name=\"Check Response Status\",\n            info=\"If enabled, checks the response status of the request.\",\n            value=False,\n            required=False,\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"autoset_encoding\",\n            display_name=\"Autoset Encoding\",\n            info=\"If enabled, automatically sets the encoding of the request.\",\n            value=True,\n            required=False,\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Extracted Pages\", name=\"page_results\", method=\"fetch_content\"),\n        Output(display_name=\"Raw Content\", name=\"raw_results\", method=\"fetch_content_as_message\", tool_mode=False),\n    ]\n\n    @staticmethod\n    def validate_url(url: str) -> bool:\n        \"\"\"Validates if the given string matches URL pattern.\n\n        Args:\n            url: The URL string to validate\n\n        Returns:\n            bool: True if the URL is valid, False otherwise\n        \"\"\"\n        return bool(URL_REGEX.match(url))\n\n    def ensure_url(self, url: str) -> str:\n        \"\"\"Ensures the given string is a valid URL.\n\n        Args:\n            url: The URL string to validate and normalize\n\n        Returns:\n            str: The normalized URL\n\n        Raises:\n            ValueError: If the URL is invalid\n        \"\"\"\n        url = url.strip()\n        if not url.startswith((\"http://\", \"https://\")):\n            url = \"https://\" + url\n\n        if not self.validate_url(url):\n            msg = f\"Invalid URL: {url}\"\n            raise ValueError(msg)\n\n        return url\n\n    def _create_loader(self, url: str) -> RecursiveUrlLoader:\n        \"\"\"Creates a RecursiveUrlLoader instance with the configured settings.\n\n        Args:\n            url: The URL to load\n\n        Returns:\n            RecursiveUrlLoader: Configured loader instance\n        \"\"\"\n        headers_dict = {header[\"key\"]: header[\"value\"] for header in self.headers if header[\"value\"] is not None}\n        extractor = (lambda x: x) if self.format == \"HTML\" else (lambda x: BeautifulSoup(x, \"lxml\").get_text())\n\n        return RecursiveUrlLoader(\n            url=url,\n            max_depth=self.max_depth,\n            prevent_outside=self.prevent_outside,\n            use_async=self.use_async,\n            extractor=extractor,\n            timeout=self.timeout,\n            headers=headers_dict,\n            check_response_status=self.check_response_status,\n            continue_on_failure=self.continue_on_failure,\n            base_url=url,  # Add base_url to ensure consistent domain crawling\n            autoset_encoding=self.autoset_encoding,  # Enable automatic encoding detection\n            exclude_dirs=[],  # Allow customization of excluded directories\n            link_regex=None,  # Allow customization of link filtering\n        )\n\n    def fetch_url_contents(self) -> list[dict]:\n        \"\"\"Load documents from the configured URLs.\n\n        Returns:\n            List[Data]: List of Data objects containing the fetched content\n\n        Raises:\n            ValueError: If no valid URLs are provided or if there's an error loading documents\n        \"\"\"\n        try:\n            urls = list({self.ensure_url(url) for url in self.urls if url.strip()})\n            logger.debug(f\"URLs: {urls}\")\n            if not urls:\n                msg = \"No valid URLs provided.\"\n                raise ValueError(msg)\n\n            all_docs = []\n            for url in urls:\n                logger.debug(f\"Loading documents from {url}\")\n\n                try:\n                    loader = self._create_loader(url)\n                    docs = loader.load()\n\n                    if not docs:\n                        logger.warning(f\"No documents found for {url}\")\n                        continue\n\n                    logger.debug(f\"Found {len(docs)} documents from {url}\")\n                    all_docs.extend(docs)\n\n                except requests.exceptions.RequestException as e:\n                    logger.exception(f\"Error loading documents from {url}: {e}\")\n                    continue\n\n            if not all_docs:\n                msg = \"No documents were successfully loaded from any URL\"\n                raise ValueError(msg)\n\n            # data = [Data(text=doc.page_content, **doc.metadata) for doc in all_docs]\n            data = [\n                {\n                    \"text\": safe_convert(doc.page_content, clean_data=True),\n                    \"url\": doc.metadata.get(\"source\", \"\"),\n                    \"title\": doc.metadata.get(\"title\", \"\"),\n                    \"description\": doc.metadata.get(\"description\", \"\"),\n                    \"content_type\": doc.metadata.get(\"content_type\", \"\"),\n                    \"language\": doc.metadata.get(\"language\", \"\"),\n                }\n                for doc in all_docs\n            ]\n        except Exception as e:\n            error_msg = e.message if hasattr(e, \"message\") else e\n            msg = f\"Error loading documents: {error_msg!s}\"\n            logger.exception(msg)\n            raise ValueError(msg) from e\n        return data\n\n    def fetch_content(self) -> DataFrame:\n        \"\"\"Convert the documents to a DataFrame.\"\"\"\n        return DataFrame(data=self.fetch_url_contents())\n\n    def fetch_content_as_message(self) -> Message:\n        \"\"\"Convert the documents to a Message.\"\"\"\n        url_contents = self.fetch_url_contents()\n        return Message(text=\"\\n\\n\".join([x[\"text\"] for x in url_contents]), data={\"data\": url_contents})\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "continue_on_failure": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "continue_on_failure",
+                "value": true,
+                "display_name": "Continue on Failure",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If enabled, continues crawling even if some requests fail.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "filter_text_html": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "filter_text_html",
+                "value": true,
+                "display_name": "Filter Text/HTML",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If enabled, filters out text/css content type from the results.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "format": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "Text",
+                  "HTML"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "format",
+                "value": "Text",
+                "display_name": "Output Format",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Output Format. Use 'Text' to extract the text from the HTML or 'HTML' for the raw HTML content.",
+                "title_case": false,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              },
+              "headers": {
+                "tool_mode": false,
+                "is_list": true,
+                "list_add_label": "Add More",
+                "table_schema": [
+                  {
+                    "name": "key",
+                    "display_name": "Header",
+                    "type": "str",
+                    "description": "Header name"
+                  },
+                  {
+                    "name": "value",
+                    "display_name": "Value",
+                    "type": "str",
+                    "description": "Header value"
+                  }
+                ],
+                "trigger_text": "Open table",
+                "trigger_icon": "Table",
+                "table_icon": "Table",
+                "trace_as_metadata": true,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "headers",
+                "value": [
+                  {
+                    "key": "User-Agent",
+                    "value": null
+                  }
+                ],
+                "display_name": "Headers",
+                "advanced": true,
+                "input_types": [
+                  "DataFrame"
+                ],
+                "dynamic": false,
+                "info": "The headers to send with the request",
+                "title_case": false,
+                "type": "table",
+                "_input_type": "TableInput"
+              },
+              "max_depth": {
+                "tool_mode": false,
+                "min_label": " ",
+                "max_label": " ",
+                "min_label_icon": "None",
+                "max_label_icon": "None",
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "range_spec": {
+                  "step_type": "float",
+                  "min": 1.0,
+                  "max": 5.0,
+                  "step": 1.0
+                },
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "max_depth",
+                "value": 1,
+                "display_name": "Depth",
+                "advanced": false,
+                "dynamic": false,
+                "info": "Controls how many 'clicks' away from the initial page the crawler will go:\n- depth 1: only the initial page\n- depth 2: initial page + all pages linked directly from it\n- depth 3: initial page + direct links + links found on those direct link pages\nNote: This is about link traversal, not URL path depth.",
+                "title_case": false,
+                "type": "slider",
+                "_input_type": "SliderInput"
+              },
+              "prevent_outside": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "prevent_outside",
+                "value": true,
+                "display_name": "Prevent Outside",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If enabled, only crawls URLs within the same domain as the root URL. This helps prevent the crawler from going to external websites.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              },
+              "timeout": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "timeout",
+                "value": 30,
+                "display_name": "Timeout",
+                "advanced": true,
+                "dynamic": false,
+                "info": "Timeout for the request in seconds.",
+                "title_case": false,
+                "type": "int",
+                "_input_type": "IntInput"
+              },
+              "urls": {
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": true,
+                "list_add_label": "Add URL",
+                "required": false,
+                "placeholder": "Enter a URL...",
+                "show": true,
+                "name": "urls",
+                "value": "",
+                "display_name": "URLs",
+                "advanced": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "Enter one or more URLs to crawl recursively, by clicking the '+' button.",
+                "title_case": false,
+                "type": "str",
+                "_input_type": "MessageTextInput"
+              },
+              "use_async": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "use_async",
+                "value": true,
+                "display_name": "Use Async",
+                "advanced": true,
+                "dynamic": false,
+                "info": "If enabled, uses asynchronous loading which can be significantly faster but might use more system resources.",
+                "title_case": false,
+                "type": "bool",
+                "_input_type": "BoolInput"
+              }
+            }
+          },
+          "selected_output": "page_results",
+          "type": "URLComponent"
+        },
+        "dragging": false,
+        "height": 400,
+        "id": "URLComponent-ntoL5",
+        "measured": {
+          "height": 400,
+          "width": 320
+        },
+        "position": {
+          "x": 150,
+          "y": 380
+        },
+        "positionAbsolute": {
+          "x": 150,
+          "y": 380
+        },
+        "selected": false,
+        "type": "genericNode",
+        "width": 320
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 0.75
+    }
+  },
+  "description": "An example of creating a Knowledge Base and ingesting data into it from a web URL.",
+  "endpoint_name": null,
+  "id": "acc6abcf-133d-4b78-bb25-ea80c18971c4",
+  "is_component": false,
+  "last_tested_version": "1.0.0",
+  "name": "Knowledge Base Ingestion",
+  "tags": [],
+  "webhook": false
+}
